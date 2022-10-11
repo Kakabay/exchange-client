@@ -1,0 +1,27 @@
+.header {
+  background: $base-light-blue;
+}
+.header-wrapper {
+  padding: 1.6rem 0;
+  color: $base-black;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-nav-list {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.header-nav-list-item a {
+  padding: 0.8rem;
+  font-size: 1.6rem;
+}
+
+.sign-in-item {
+  font-size: 1.6rem;
+  padding: 0.8rem;
+  font-weight: 700;
+}
