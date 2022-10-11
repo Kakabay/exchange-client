@@ -1,0 +1,44 @@
+.hero {
+  height: 72rem;
+  background: url('../images/hero.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-wrapper,
+.hero .container {
+  height: 100%;
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+
+.buttons-wrapper {
+  display: flex;
+}
+
+.hero-button {
+  // display: block;
+  width: 34.8rem;
+  height: 11rem;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  line-height: 150%;
+
+  &:first-child {
+    background: $base-blue;
+    color: $base-white;
+  }
+
+  &:last-child {
+    background: $base-light-blue;
+    color: $base-black;
+  }
+}
