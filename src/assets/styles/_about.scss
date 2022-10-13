@@ -1,0 +1,55 @@
+.about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  max-width: 73.6rem;
+  gap: 2.4rem;
+}
+
+.about-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  max-width: 73.6rem;
+  margin-bottom: 2.6rem;
+}
+
+.about-text {
+  color: $base-gray;
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+
+.about-link-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.about-link {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  transition: all 0.2s linear;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.about-link-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $base-blue;
+}
+
+.about-right {
+  width: 73.6rem;
+  background: $base-gray;
+  height: 41.4rem;
+}

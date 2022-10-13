@@ -1,0 +1,10 @@
+.news-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.news-post-wrapper {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,24 @@
+.document-link {
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid $base-gray;
+  max-width: 47.7rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s linear;
+
+  &:hover {
+    background: $base-blue;
+    .document-title {
+      color: $base-white;
+    }
+  }
+}
+
+.document-title {
+  color: $base-blue;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 150%;
+}
