@@ -8,13 +8,19 @@ import Ticker from '../components/Ticker';
 import arrow from '../assets/icons/arrow.svg';
 import NewsPost from '../components/NewsPost';
 import DocumentLink from '../components/DocumentLink';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
     <main className="home-main">
       <div>
+        {/* Hero section */}
         <Hero />
+        {/* Hero section ./ =========== */}
+
+        {/* Ticker section */}
         <Ticker />
+        {/* Ticker section ./ =========== */}
       </div>
 
       {/* About section */}
@@ -97,6 +103,10 @@ const Home = () => {
         </div>
       </section>
       {/* Documents section ./========= */}
+
+      {/* Footer section */}
+      <Footer />
+      {/* Footer section ./========= */}
     </main>
   );
 };
