@@ -7,7 +7,7 @@ import Ticker from '../components/Ticker';
 import NewsPost from '../components/NewsPost';
 import DocumentLink from '../components/DocumentLink';
 import VideoPlayer from '../components/VideoPlayer';
-import LineChart from '../components/LineChart';
+import DataChart from '../components/DataChart';
 // Icons
 import arrow from '../assets/icons/arrow.svg';
 
@@ -23,8 +23,6 @@ const Home = () => {
         <Ticker />
         {/* Ticker section ./ =========== */}
       </div>
-
-      <LineChart />
 
       {/* About section */}
       <section className="about">
@@ -72,6 +70,10 @@ const Home = () => {
         </div>
       </section>
       {/* About section ./========= */}
+
+      {/* Chart section */}
+      <DataChart />
+      {/* Chart section ./========= */}
 
       {/* News section ./========= */}
       <section className="news">

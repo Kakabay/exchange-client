@@ -1,0 +1,67 @@
+.chart {
+  padding: 8rem 0;
+  background: #272727;
+  width: 100%;
+}
+
+.chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+.tab {
+  width: 47.7rem;
+  height: 5.9rem;
+  color: $base-white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  background: transparent;
+  border-radius: 0.5rem;
+
+  &::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 0.1rem;
+    background: #4b8dff;
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+  }
+
+  span {
+    z-index: 20;
+  }
+}
+
+.tab:hover.tab::after {
+  height: 100%;
+}
+
+.chart-tabs {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  .active {
+    background: #4b8dff;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.chart-data {
+  display: flex;
+  gap: 3.9rem;
+  justify-content: space-between;
+  // align-items: center;
+}
