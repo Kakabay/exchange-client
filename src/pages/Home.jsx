@@ -6,7 +6,6 @@ import SectionTitle from '../components/SectionTitle';
 import Ticker from '../components/Ticker';
 import NewsPost from '../components/NewsPost';
 import DocumentLink from '../components/DocumentLink';
-import Footer from '../components/Footer';
 import VideoPlayer from '../components/VideoPlayer';
 import LineChart from '../components/LineChart';
 // Icons
@@ -109,10 +108,6 @@ const Home = () => {
         </div>
       </section>
       {/* Documents section ./========= */}
-
-      {/* Footer section */}
-      <Footer />
-      {/* Footer section ./========= */}
     </main>
   );
 };
