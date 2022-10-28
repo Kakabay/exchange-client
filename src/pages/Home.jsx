@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import SectionTitle from '../components/SectionTitle';
 import Ticker from '../components/Ticker';
-// Icons
-import arrow from '../assets/icons/arrow.svg';
 import NewsPost from '../components/NewsPost';
 import DocumentLink from '../components/DocumentLink';
 import Footer from '../components/Footer';
+import VideoPlayer from '../components/VideoPlayer';
+import LineChart from '../components/LineChart';
+// Icons
+import arrow from '../assets/icons/arrow.svg';
 
 const Home = () => {
   return (
@@ -22,6 +24,8 @@ const Home = () => {
         <Ticker />
         {/* Ticker section ./ =========== */}
       </div>
+
+      {/* <LineChart /> */}
 
       {/* About section */}
       <section className="about">
@@ -62,7 +66,9 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="about-right"></div>
+            <div className="about-right">
+              <VideoPlayer videoUrl={''} />
+            </div>
           </div>
         </div>
       </section>
