@@ -2,6 +2,7 @@
 
 // Components
 import SectionTitle from '../components/SectionTitle';
+
 const Gtsbt = () => {
   return (
     <main>

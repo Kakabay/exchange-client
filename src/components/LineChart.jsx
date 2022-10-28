@@ -1,32 +1,58 @@
 // Modules
-import { Bar } from "react-chartjs-2";
+import { Line } from 'react-chartjs-2';
 import {
-  Chart as CharJS,
-  CategoryScale,
+  Chart as ChartJS,
+  LineElement,
+  PointElement,
   LinearScale,
-  BarElement,
-} from "chart.js";
-CharJS.register(CategoryScale, LinearScale, BarElement);
+  Title,
+  CategoryScale,
+} from 'chart.js';
+
+ChartJS.register(LineElement, PointElement, LinearScale, Title, CategoryScale);
 
 const LineChart = () => {
+  const data = {
+    labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+    datasets: [
+      {
+        data: [222, 217, 220, 215, 219, 221, 216, 218],
+        backgroundColor: 'transparent',
+        borderColor: '#f26c6d',
+        // pointBorderColor: 'transparent',
+        pointBorderWidth: 5,
+        tension: 0.3,
+      },
+    ],
+  };
+
+  const options = {
+    plugins: {
+      legend: false,
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        // min: 2,
+        // max: 5,
+        ticks: {
+          stepSize: 2,
+          callback: (value) => value + 'K',
+        },
+        grid: {
+          borderDash: [10],
+        },
+      },
+    },
+  };
+
   return (
-    <div>
-      <Bar
-        data={{
-          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-          datasets: [
-            {
-              label: "# of votes",
-              data: [12, 19, 3, 5, 2, 3],
-            },
-          ],
-        }}
-        options={{
-          maintainAspectRatio: false,
-        }}
-        height={500}
-        width={400}
-      />
+    <div className="chart">
+      <Line data={data} options={options} />
     </div>
   );
 };

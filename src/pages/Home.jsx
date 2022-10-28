@@ -24,7 +24,7 @@ const Home = () => {
         {/* Ticker section ./ =========== */}
       </div>
 
-      {/* <LineChart /> */}
+      <LineChart />
 
       {/* About section */}
       <section className="about">
