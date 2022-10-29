@@ -6,20 +6,3 @@ $base-blue: #05172d;
 $base-light-blue: #afbfcb;
 
 // Styles
-.text-wrappper {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-
-  p {
-    font-size: 1.8rem;
-    line-height: 150%;
-    color: $base-black;
-  }
-}
-
-.text-title {
-  font-size: 1.8rem;
-  color: $base-blue;
-  line-height: 150%;
-}

@@ -15,10 +15,10 @@ const Header = () => {
             </div>
             <ul className="nav-top-list">
               <li className="nav-top-list-item">
-                <Link to={'/'}>ГТСБТ</Link>
+                <Link to={'/gtsbt'}>ГТСБТ</Link>
               </li>
               <li className="nav-top-list-item">
-                <Link to={'/'}>Нормативная база</Link>
+                <Link to={'/norm'}>Нормативная база</Link>
               </li>
               <li className="nav-top-list-item">
                 <Link to={'/'}>Новости</Link>
@@ -43,16 +43,16 @@ const Header = () => {
           <div className="nav-bottom-wrapper">
             <ul className="nav-bottom-list">
               <li className="nav-bottom-list-item">
-                <Link>Биржевые торги</Link>
+                <Link to={'/trade'}>Биржевые торги</Link>
               </li>
               <li className="nav-bottom-list-item">
-                <Link>Финансовый мониторинг</Link>
+                <Link to={'/fin'}>Финансовый мониторинг</Link>
               </li>
               <li className="nav-bottom-list-item">
-                <Link>Регистрация договоров</Link>
+                <Link to={'/register'}>Регистрация договоров</Link>
               </li>
               <li className="nav-bottom-list-item">
-                <Link>Тарифы и сборы</Link>
+                <Link to={'/trade'}>Тарифы и сборы</Link>
               </li>
             </ul>
           </div>

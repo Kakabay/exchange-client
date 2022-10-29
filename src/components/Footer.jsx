@@ -48,28 +48,44 @@ const Footer = () => {
           <div className="footer-bottom-wrapper">
             <ul className="footer-nav-list">
               <li className="footer-nav-list-item">
-                <Link className="footer-nav-list-link">ГТСБТ</Link>
+                <Link to={'/gtsbt'} className="footer-nav-list-link">
+                  ГТСБТ
+                </Link>
               </li>
               <li className="footer-nav-list-item">
-                <Link className="footer-nav-list-link">Нормативная база</Link>
+                <Link to={'/norm'} className="footer-nav-list-link">
+                  Нормативная база
+                </Link>
               </li>
               <li className="footer-nav-list-item">
-                <Link className="footer-nav-list-link">Биржевые торги</Link>
+                <Link to={'/trade'} className="footer-nav-list-link">
+                  Биржевые торги
+                </Link>
               </li>
               <li className="footer-nav-list-item">
-                <Link className="footer-nav-list-link">Мильтимедия</Link>
+                <Link to={'/'} className="footer-nav-list-link">
+                  Мильтимедия
+                </Link>
               </li>
               <li className="footer-nav-list-item">
-                <Link className="footer-nav-list-link">Финансовый мониторинг</Link>
+                <Link to={'/fin'} className="footer-nav-list-link">
+                  Финансовый мониторинг
+                </Link>
               </li>
               <li className="footer-nav-list-item">
-                <Link className="footer-nav-list-link">Новости</Link>
+                <Link to={'/'} className="footer-nav-list-link">
+                  Новости
+                </Link>
               </li>
               <li className="footer-nav-list-item">
-                <Link className="footer-nav-list-link">Регистрация договоров</Link>
+                <Link to={'/register'} className="footer-nav-list-link">
+                  Регистрация договоров
+                </Link>
               </li>
               <li className="footer-nav-list-item">
-                <Link className="footer-nav-list-link">Контакты</Link>
+                <Link to={'/'} className="footer-nav-list-link">
+                  Контакты
+                </Link>
               </li>
             </ul>
           </div>
