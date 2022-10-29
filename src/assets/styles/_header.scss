@@ -48,3 +48,29 @@
     padding: 0.8rem;
   }
 }
+
+@media (max-width: 1024px) {
+  .nav-top-list-item a {
+    font-size: 1.4rem;
+  }
+
+  .sign-in-item {
+    font-size: 1.4rem;
+  }
+
+  .logo {
+    width: auto;
+  }
+
+  .nav-bottom-list {
+    padding: 2.4rem 0;
+    gap: 2.4rem;
+
+    a {
+      color: $base-white;
+      font-size: 1.4rem;
+      font-weight: 600;
+      padding: 0.8rem;
+    }
+  }
+}

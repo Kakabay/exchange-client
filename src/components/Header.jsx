@@ -10,9 +10,9 @@ const Header = () => {
       <nav className="nav-top">
         <div className="container">
           <div className="nav-top-wrapper">
-            <div className="logo">
+            <Link to={'/'} className="logo">
               <img src={logo} alt="logo" />
-            </div>
+            </Link>
             <ul className="nav-top-list">
               <li className="nav-top-list-item">
                 <Link to={'/gtsbt'}>ГТСБТ</Link>

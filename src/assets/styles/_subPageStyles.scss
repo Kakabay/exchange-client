@@ -38,10 +38,10 @@
 }
 
 .sub-page-list-item {
-  display: flex;
-  // flex-direction: column;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
+  gap: 4rem;
 }
 
 .sub-page-title-text {

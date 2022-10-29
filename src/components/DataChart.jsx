@@ -20,7 +20,9 @@ const DataChart = () => {
           </div>
           <div className="chart-data">
             <ChartTable />
-            <LineChart />
+            <div className="line-chart-wrapper">
+              <LineChart />
+            </div>
           </div>
         </div>
       </div>
