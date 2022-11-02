@@ -14,15 +14,9 @@ import arrow from '../assets/icons/arrow.svg';
 const Home = () => {
   return (
     <main className="home-main">
-      <div>
-        {/* Hero section */}
-        <Hero />
-        {/* Hero section ./ =========== */}
-
-        {/* Ticker section */}
-        <Ticker />
-        {/* Ticker section ./ =========== */}
-      </div>
+      {/* Hero section */}
+      <Hero />
+      {/* Hero section ./ =========== */}
 
       {/* About section */}
       <section className="about">

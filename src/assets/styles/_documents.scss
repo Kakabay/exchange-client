@@ -10,7 +10,15 @@
 
 .documents-links-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(auto-fill, minmax(47.7rem, 1fr));
   column-gap: 4rem;
   row-gap: 2.4rem;
+}
+
+@media (max-width: 1540px) {
+  .documents-links-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(30.2rem, 1fr));
+    column-gap: 2.4rem;
+    row-gap: 2.4rem;
+  }
 }

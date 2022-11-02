@@ -21,7 +21,6 @@
 }
 
 .hero-button {
-  // display: block;
   width: 34.8rem;
   height: 11rem;
   font-size: 2rem;
@@ -31,6 +30,7 @@
   align-items: center;
   text-transform: uppercase;
   line-height: 150%;
+  padding: 0 5rem;
 
   &:first-child {
     background: $base-blue;
@@ -40,5 +40,43 @@
   &:last-child {
     background: $base-light-blue;
     color: $base-black;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-button {
+    width: 24rem;
+    height: 8rem;
+    font-size: 1.6rem;
+    padding: 1.6rem;
+  }
+
+  .hero {
+    margin-top: 8.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-button {
+    width: 20rem;
+    height: 8rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    left: 0;
+  }
+  .hero-button {
+    width: 100%;
+    padding: 0.8rem;
+    height: 7rem;
+    font-size: 1.4rem;
   }
 }

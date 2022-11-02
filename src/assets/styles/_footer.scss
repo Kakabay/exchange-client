@@ -59,3 +59,19 @@
     color: $base-white;
   }
 }
+
+@media (max-width: 500px) {
+  .footer-top-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom,
+  .footer-top {
+    padding: 3.2rem 0;
+  }
+
+  .footer-nav-list {
+    grid-template-columns: 1fr;
+    row-gap: 2.4rem;
+  }
+}

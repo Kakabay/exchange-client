@@ -7,4 +7,12 @@
 .news-post-wrapper {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 2.4rem;
+}
+
+@media (max-width: 1160px) {
+  .news-post-wrapper {
+    gap: 2.4rem;
+  }
 }

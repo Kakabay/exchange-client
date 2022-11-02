@@ -9,10 +9,10 @@ const Hero = () => {
         <div className="hero-wrapper">
           <div className="buttons-wrapper">
             <Link to={'/'} className="hero-button">
-              Перейти на торговую <br /> площадку
+              Перейти на торговую площадку
             </Link>
             <Link to={'/'} className="hero-button">
-              Подать документы <br /> онлайн
+              Подать документы онлайн
             </Link>
           </div>
         </div>

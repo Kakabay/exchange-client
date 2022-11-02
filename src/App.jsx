@@ -15,10 +15,12 @@ import Finance from './pages/Finance';
 import Normative from './pages/Normative';
 import Trade from './pages/Trade';
 import Register from './pages/Register';
+import Ticker from './components/Ticker';
 
 const App = () => {
   return (
     <div className="App">
+      <Ticker />
       <Header />
       <Routes>
         <Route index element={<Home />} />
