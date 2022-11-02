@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/icons/logo.svg';
 import burger from '../assets/icons/burger.svg';
 import { ReactComponent as Close } from '../assets/icons/close.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Header = () => {
   // States
   const [navActive, setNavActive] = useState(false);
-
+  const [data, setData] = useState();
   // Functions
-  const togleNav = () => {
+  const toggleNav = () => {
     setNavActive(!navActive);
   };
 
@@ -82,7 +82,7 @@ const Header = () => {
             <Link to={'/'} className="logo">
               <img src={logo} alt="logo" />
             </Link>
-            <div className="burger" onClick={togleNav}>
+            <div className="burger" onClick={toggleNav}>
               <img src={burger} />
             </div>
           </div>
@@ -90,35 +90,35 @@ const Header = () => {
       </div>
 
       <nav className={`mobile-nav-content ${navActive ? 'active' : null}`}>
-        <div className="close-burger" onClick={togleNav}>
+        <div className="close-burger" onClick={toggleNav}>
           <Close />
         </div>
         <ul className="mobile-nav-list">
-          <li className="mobile-nav-list-item" onClick={togleNav}>
+          <li className="mobile-nav-list-item" onClick={toggleNav}>
             <Link to={'/gtsbt'}>ГТСБТ</Link>
           </li>
-          <li className="mobile-nav-list-item" onClick={togleNav}>
+          <li className="mobile-nav-list-item" onClick={toggleNav}>
             <Link to={'/norm'}>Нормативная база</Link>
           </li>
-          <li className="mobile-nav-list-item" onClick={togleNav}>
+          <li className="mobile-nav-list-item" onClick={toggleNav}>
             <Link to={'/'}>Новости</Link>
           </li>
-          <li className="mobile-nav-list-item" onClick={togleNav}>
+          <li className="mobile-nav-list-item" onClick={toggleNav}>
             <Link to={'/'}>Мультимедия</Link>
           </li>
-          <li className="mobile-nav-list-item" onClick={togleNav}>
+          <li className="mobile-nav-list-item" onClick={toggleNav}>
             <Link to={'/'}>Контакты</Link>
           </li>
-          <li className="mobile-nav-list-item" onClick={togleNav}>
+          <li className="mobile-nav-list-item" onClick={toggleNav}>
             <Link to={'/trade'}>Биржевые торги</Link>
           </li>
-          <li className="mobile-nav-list-item" onClick={togleNav}>
+          <li className="mobile-nav-list-item" onClick={toggleNav}>
             <Link to={'/fin'}>Финансовый мониторинг</Link>
           </li>
-          <li className="mobile-nav-list-item" onClick={togleNav}>
+          <li className="mobile-nav-list-item" onClick={toggleNav}>
             <Link to={'/register'}>Регистрация договоров</Link>
           </li>
-          <li className="mobile-nav-list-item" onClick={togleNav}>
+          <li className="mobile-nav-list-item" onClick={toggleNav}>
             <Link to={'/trade'}>Тарифы и сборы</Link>
           </li>
         </ul>

@@ -1,9 +1,9 @@
 // Modules
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // Components
 import Hero from '../components/Hero';
 import SectionTitle from '../components/SectionTitle';
-import Ticker from '../components/Ticker';
 import NewsPost from '../components/NewsPost';
 import DocumentLink from '../components/DocumentLink';
 import VideoPlayer from '../components/VideoPlayer';
@@ -12,6 +12,10 @@ import DataChart from '../components/DataChart';
 import arrow from '../assets/icons/arrow.svg';
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="home-main">
       {/* Hero section */}

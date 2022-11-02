@@ -1,6 +1,13 @@
+// Modules
+import { useEffect } from 'react';
+// Components
 import SectionTitle from '../components/SectionTitle';
 
 export const Normative = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main>
       <div className="container">

@@ -1,6 +1,10 @@
 import SectionTitle from '../components/SectionTitle';
 
 const Finance = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main>
       <div className="container">
