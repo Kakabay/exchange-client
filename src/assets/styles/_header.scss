@@ -53,9 +53,8 @@
   display: none;
   background: $base-light-blue;
   padding: 1.6rem 0;
-  position: fixed;
   width: 100%;
-  z-index: 999;
+  z-index: 1100;
 }
 
 .burger {
@@ -79,23 +78,22 @@
 }
 
 .mobile-nav-content {
-  position: fixed;
-  right: 0;
+  height: auto;
+  position: absolute;
   top: 0;
-  height: 100vh;
+  left: 0;
   background: $base-blue;
-  z-index: 500;
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s linear;
-  transform: translateX(100%);
-  z-index: 1000;
+  transform: translateY(-100%);
+  z-index: 1;
 }
 
 .active {
-  transform: translateX(0%);
+  transform: translateY(23%);
 
   .mobile-nav-list {
     opacity: 1;
@@ -123,11 +121,12 @@
 }
 
 .mobile-nav-list {
-  height: 80%;
+  padding: 2.4rem 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 70%;
+  // justify-content: space-around;
+  gap: 2.4rem;
   opacity: 0;
   transition: all 1.5s ease;
 }

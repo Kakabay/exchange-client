@@ -90,9 +90,6 @@ const Header = () => {
       </div>
 
       <nav className={`mobile-nav-content ${navActive ? 'active' : null}`}>
-        <div className="close-burger" onClick={toggleNav}>
-          <Close />
-        </div>
         <ul className="mobile-nav-list">
           <li className="mobile-nav-list-item" onClick={toggleNav}>
             <Link to={'/gtsbt'}>ГТСБТ</Link>

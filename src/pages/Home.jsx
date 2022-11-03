@@ -12,6 +12,7 @@ import DataChart from '../components/DataChart';
 import arrow from '../assets/icons/arrow.svg';
 
 const Home = () => {
+  // Scroll to top
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

@@ -1,6 +1,10 @@
+// Modules
+import { useEffect } from 'react';
+// Conmponents
 import SectionTitle from '../components/SectionTitle';
 
 const Finance = () => {
+  // Scroll to top
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

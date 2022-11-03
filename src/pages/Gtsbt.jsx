@@ -1,9 +1,14 @@
-// Styles
-
+// Modules
+import { useEffect } from 'react';
 // Components
 import SectionTitle from '../components/SectionTitle';
 
 const Gtsbt = () => {
+  // Scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main>
       <div className="container">

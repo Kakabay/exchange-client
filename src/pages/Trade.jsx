@@ -1,6 +1,14 @@
+// Modules
+import { useEffect } from 'react';
+// Components
 import SectionTitle from '../components/SectionTitle';
 
 const Trade = () => {
+  // Scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main>
       <div className="container">
