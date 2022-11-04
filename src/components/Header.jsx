@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 // Icons
 import logo from '../assets/icons/logo.svg';
 import burger from '../assets/icons/burger.svg';
-import { ReactComponent as Close } from '../assets/icons/close.svg';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const Header = () => {
   // States
