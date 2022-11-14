@@ -16,7 +16,7 @@ export const Register = () => {
           <SectionTitle title="Регистрация договоров" />
 
           <div className="sub-page-content-wrapper">
-            <div className="sub-page-list">
+            <div className="sub-page-list-wrapper">
               <h2 className="sub-page-title">
                 Регистрация договоров на государственной товарно-сырьевой бирже Туркменистана
                 осуществляется по приведенной схеме:
@@ -45,6 +45,55 @@ export const Register = () => {
                 <div className="sub-page-list-item">
                   <div className="sub-page-list-num">6</div>
                   <h3 className="sub-page-list-item-text">Передача на подпись руководителям.</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="sub-page-text-wrapper">
+            <p>
+              Также участники биржи могут отслеживать процесс регистрации контрактов онлайн на сайте
+              с помощью Личного кабинета. Для этого достаточно зарегистрироваться в системе, перейти
+              в соответствующий раздел и следовать дальнейшим указаниям. Работа на сайте идентична с
+              работой через терминалы в здании биржи.
+            </p>
+          </div>
+
+          <div className="sub-page-content-wrapper">
+            <div className="sub-page-list-wrapper">
+              <h2 className="sub-page-title">
+                Перечень необходимых документов для выставления товаров на биржевые торги:
+              </h2>
+              <div className="sub-page-list">
+                <div className="sub-page-list-item">
+                  <div className="sub-page-list-num">1</div>
+                  <h3 className="sub-page-list-item-text">
+                    Письмо-обращение с просьбой о разрешении выставить товар на биржевые торги.
+                  </h3>
+                </div>
+                <div className="sub-page-list-item">
+                  <div className="sub-page-list-num">2</div>
+                  <h3 className="sub-page-list-item-text">
+                    Письмо-обращение о продаже товара, заполненное в установленной форме.
+                  </h3>
+                </div>
+                <div className="sub-page-list-item">
+                  <div className="sub-page-list-num">3</div>
+                  <h3 className="sub-page-list-item-text">
+                    Спецификация товара, составленная в соответствии с требованиями ГТСБТ.
+                  </h3>
+                </div>
+                <div className="sub-page-list-item">
+                  <div className="sub-page-list-num">4</div>
+                  <h3 className="sub-page-list-item-text">
+                    Документы, подтверждающие право заниматься предпринимательской деятельностью.
+                  </h3>
+                </div>
+                <div className="sub-page-list-item">
+                  <div className="sub-page-list-num">5</div>
+                  <h3 className="sub-page-list-item-text">
+                    Документы, подтверждающие происхождение товара.
+                  </h3>
                 </div>
               </div>
             </div>

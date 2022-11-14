@@ -25,7 +25,7 @@ const Trade = () => {
               </p>
             </div>
 
-            <div className="sub-page-list">
+            <div className="sub-page-list-wrapper">
               <h2 className="sub-page-title">
                 Биржевые торги организуются на основании следующих принципов:
               </h2>
@@ -69,7 +69,7 @@ const Trade = () => {
               </p>
             </div>
 
-            <div className="sub-page-list">
+            <div className="sub-page-list-wrapper">
               <h2 className="sub-page-title">
                 Перечень необходимых документов для выставления товаров на биржевые торги:
               </h2>

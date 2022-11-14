@@ -23,7 +23,7 @@ export const Normative = () => {
               </p>
             </div>
 
-            <div className="sub-page-list">
+            <div className="sub-page-list-wrapper">
               <h2 className="sub-page-title">В компетенцию Арбитражной комиссии входит:</h2>
               <div className="sub-page-list">
                 <div className="sub-page-list-item">
@@ -64,6 +64,16 @@ export const Normative = () => {
                   </h3>
                 </div>
               </div>
+            </div>
+
+            <div className="sub-page-text-wrapper">
+              <p>Инструкция о порядке консульской легализации</p>
+              <p>
+                Консульская легализация заключается в установлении и засвидетельствовании
+                подлинности подписей на ъдокументах и актах, а также соответствия их законам
+                государства пребывания консула путем совершения легализационной надписи или
+                проставления легализационного штампа на государственном и английском языках.
+              </p>
             </div>
           </div>
         </div>

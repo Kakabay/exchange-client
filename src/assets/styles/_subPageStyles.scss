@@ -3,7 +3,6 @@
   flex-direction: column;
   gap: 2.4rem;
   margin-top: 4rem;
-  margin-bottom: 8rem;
 }
 
 .sub-page-content-wrapper {
@@ -37,6 +36,15 @@
   gap: 2.4rem;
 }
 
+.sub-page-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  background: $base-light-blue;
+  border-radius: 0.5rem;
+  padding: 3.2rem 2.4rem;
+}
+
 .sub-page-list-item {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -61,10 +69,34 @@
   border-radius: 50rem;
   font-size: 1.8rem;
   font-weight: 700;
+  align-self: flex-start;
 }
 
 .sub-page-list-item-text {
   font-size: 1.8rem;
   color: $base-black;
   font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .sub-page-list-wrapper {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .sub-page-list-item {
+    gap: 2.4rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .sub-page-list-wrapper {
+    padding: 1.6rem 1.6rem;
+  }
+
+  .sub-page-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
 }

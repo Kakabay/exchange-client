@@ -31,24 +31,24 @@ const Gtsbt = () => {
               </p>
             </div>
 
-            <div className="sub-page-list">
+            <div className="sub-page-list-wrapper">
               <h2 className="sub-page-title">Задачи и цели биржи</h2>
               <div className="sub-page-list">
                 <div className="sub-page-list-item">
                   <div className="sub-page-list-num">1</div>
                   <h3 className="sub-page-list-item-text">
-                    создать равные условия для ее участников – деловым иностранным людям и
+                    Создать равные условия для ее участников – деловым иностранным людям и
                     предпринимателям Туркменистана
                   </h3>
                 </div>
                 <div className="sub-page-list-item">
                   <div className="sub-page-list-num">2</div>
-                  <h3 className="sub-page-list-item-text">увеличить и ускорить товарооборот</h3>
+                  <h3 className="sub-page-list-item-text">Увеличить и ускорить товарооборот</h3>
                 </div>
                 <div className="sub-page-list-item">
                   <div className="sub-page-list-num">3</div>
                   <h3 className="sub-page-list-item-text">
-                    насытить внутренний рынок необходимыми товарами народного потребления,
+                    Насытить внутренний рынок необходимыми товарами народного потребления,
                     продукцией производственно-технического назначения и оборудованием,
                     предназначенным для модернизации народно-хозяйственного комплекса страны.
                   </h3>
@@ -89,7 +89,7 @@ const Gtsbt = () => {
               </div>
             </div>
 
-            <div className="sub-page-list">
+            <div className="sub-page-list-wrapper">
               <h2 className="sub-page-title">
                 Биржевые торги организуются на основании следующих принципов:
               </h2>
