@@ -6,7 +6,10 @@ import ChartTable from './ChartTable';
 import LineChart from './LineChart';
 
 const DataChart = () => {
+  // States
   const [activeTab, setActiveTab] = useState(1);
+  // Functions
+
   return (
     <section className="chart">
       <div className="container">

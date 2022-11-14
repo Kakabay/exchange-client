@@ -18,10 +18,9 @@ const LineChart = () => {
     labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
     datasets: [
       {
-        label: 'fsf',
         data: [222, 217, 220, 215, 219, 221, 216, 218],
         borderColor: '#4b8dff',
-        pointBorderWidth: 5,
+        pointBorderWidth: 4,
         pointBackgroundColor: '#4b8dff',
         tension: 0.3,
 
@@ -42,13 +41,10 @@ const LineChart = () => {
   };
 
   const options = {
-    responcive: true,
+    responsive: true,
     radius: 5,
     hitRadius: 30,
     hoverRadius: 10,
-    plugins: {
-      legend: false,
-    },
     scales: {
       x: {
         grid: {
@@ -59,7 +55,7 @@ const LineChart = () => {
         // min: 2,
         // max: 5,
         ticks: {
-          stepSize: 2,
+          stepSize: 1.5,
           callback: (value) => value + 'K',
         },
         grid: {
