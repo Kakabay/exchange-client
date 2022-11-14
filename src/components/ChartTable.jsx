@@ -1,4 +1,18 @@
+// Modules
+import { useState } from 'react';
+// Components
+import TableRow from './TableRow';
+
 const ChartTable = () => {
+  const plus = 0.56;
+  const minus = -0.56;
+  const [activeRow, setActiveRow] = useState(1);
+
+  // Functions
+  const rowActive = (num) => {
+    setActiveRow(num);
+  };
+
   return (
     <div className="table">
       <div className="table-top">
@@ -7,26 +21,26 @@ const ChartTable = () => {
         <h4 className="table-title">Текущая цена</h4>
       </div>
       <div className="table-bottom">
-        <div className="table-row active">
-          <span className="table-product-name">Арматура</span>
-          <span className="table-product-rate">-0,56 %</span>
-          <span className="table-product-price">1780.00</span>
-        </div>
-        <div className="table-row">
-          <span className="table-product-name">Арматура</span>
-          <span className="table-product-rate">-0,56 %</span>
-          <span className="table-product-price">1780.00</span>
-        </div>
-        <div className="table-row active">
-          <span className="table-product-name">Арматура</span>
-          <span className="table-product-rate">-0,56 %</span>
-          <span className="table-product-price">1780.00</span>
-        </div>
-        <div className="table-row">
-          <span className="table-product-name">Арматура</span>
-          <span className="table-product-rate">-0,56 %</span>
-          <span className="table-product-price">1780.00</span>
-        </div>
+        <TableRow
+          status={minus}
+          onClick={() => rowActive(1)}
+          active={activeRow === 1 ? 'active' : ''}
+        />
+        <TableRow
+          status={plus}
+          onClick={() => rowActive(2)}
+          active={activeRow === 2 ? 'active' : ''}
+        />
+        <TableRow
+          status={minus}
+          onClick={() => rowActive(3)}
+          active={activeRow === 3 ? 'active' : ''}
+        />
+        <TableRow
+          status={plus}
+          onClick={() => rowActive(4)}
+          active={activeRow === 4 ? 'active' : ''}
+        />
       </div>
     </div>
   );
