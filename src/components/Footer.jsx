@@ -43,6 +43,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
       <div className="footer-bottom">
         <div className="container">
           <div className="footer-bottom-wrapper">

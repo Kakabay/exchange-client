@@ -78,6 +78,25 @@
   font-weight: 400;
 }
 
+.sub-page-list-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.sub-page-list-item-list {
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding-left: 2.4rem;
+}
+
+.sub-page-list-item-list-item {
+  font-size: 1.8rem;
+  color: $base-black;
+}
+
 @media (max-width: 768px) {
   .sub-page-list-wrapper {
     padding: 2.4rem 1.6rem;
