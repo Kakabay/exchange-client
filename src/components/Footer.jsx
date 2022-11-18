@@ -65,7 +65,7 @@ const Footer = () => {
               </li>
               <li className="footer-nav-list-item">
                 <Link to={'/'} className="footer-nav-list-link">
-                  Мильтимедия
+                  Мультимедиа
                 </Link>
               </li>
               <li className="footer-nav-list-item">

@@ -35,16 +35,16 @@ const Header = () => {
                 <Link to={'/'}>Новости</Link>
               </li>
               <li className="nav-top-list-item">
-                <Link to={'/'}>Мультимедия</Link>
+                <Link to={'/'}>Мультимедиа</Link>
               </li>
               <li className="nav-top-list-item">
                 <Link to={'/'}>Контакты</Link>
               </li>
             </ul>
             <div className="sign-in">
-              <Link to={'/'} className="sign-in-item">
+              <a href="https://tmex.gov.tm/tm/habarlar/1" target="_blank" className="sign-in-item">
                 Войти / Регистрация
-              </Link>
+              </a>
             </div>
           </div>
         </div>
