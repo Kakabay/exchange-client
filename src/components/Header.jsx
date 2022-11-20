@@ -32,13 +32,13 @@ const Header = () => {
                 <Link to={'/norm'}>Нормативная база</Link>
               </li>
               <li className="nav-top-list-item">
-                <Link to={'/'}>Новости</Link>
+                <Link to={'/news'}>Новости</Link>
               </li>
               <li className="nav-top-list-item">
                 <Link to={'/'}>Мультимедиа</Link>
               </li>
               <li className="nav-top-list-item">
-                <Link to={'/'}>Контакты</Link>
+                <Link to={'/contacts'}>Контакты</Link>
               </li>
             </ul>
             <div className="sign-in">

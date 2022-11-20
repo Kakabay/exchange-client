@@ -17,6 +17,8 @@ import Normative from './pages/Normative';
 import Trade from './pages/Trade';
 import Register from './pages/Register';
 import Ticker from './components/Ticker';
+import Contacts from './pages/Contacts';
+import NewsPage from './pages/NewsPage';
 
 const App = () => {
   return (
@@ -30,6 +32,8 @@ const App = () => {
         <Route path="/norm" element={<Normative />} />
         <Route path="/trade" element={<Trade />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/news" element={<NewsPage />} />
       </Routes>
       <Footer />
     </div>

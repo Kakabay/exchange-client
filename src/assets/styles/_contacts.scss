@@ -1,0 +1,23 @@
+.contacts-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+@media (max-width: 1077px) {
+  .contacts-wrapper {
+    gap: 2.4rem;
+  }
+}
+
+@media (max-width: 880px) {
+  .contacts-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .contacts-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

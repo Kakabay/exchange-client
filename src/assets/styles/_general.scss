@@ -35,3 +35,21 @@ a {
   color: $base-black;
   text-decoration: none;
 }
+
+p,
+span,
+a,
+input,
+button,
+ul,
+li,
+ol,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 150%;
+}
