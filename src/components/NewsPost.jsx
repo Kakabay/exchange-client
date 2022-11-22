@@ -20,7 +20,7 @@ const NewsPost = () => {
           заключено 7 сделок на общую сумму $1,4 млн и 9,7 туркменских манат.
         </p>
       </div>
-      <Link className="news-post-link" to={'/'}>
+      <Link className="news-post-link" to={'/post'}>
         <img src={arrow} alt="arrow" />
         <h3>Читать полностью </h3>
       </Link>

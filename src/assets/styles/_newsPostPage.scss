@@ -1,0 +1,96 @@
+.post-page-wrapper {
+  padding-top: 4.8rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  // display: flex;
+  gap: 4rem;
+}
+
+.post-page-main-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  max-width: 99.5rem;
+}
+
+.post-page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.post-page-title {
+  font-size: 2.4rem;
+  color: $base-blue;
+}
+
+.post-page-main-date {
+  font-size: 1.6rem;
+  color: $base-gray;
+  font-weight: 400;
+}
+
+.post-page-img {
+  margin-bottom: 0.8rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.post-page-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.post-page-text-item {
+  font-size: 1.8rem;
+  color: $base-black;
+}
+
+.post-page-latest-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.post-page-latest-title {
+  font-size: 2.4rem;
+}
+
+@media (max-width: 1440px) {
+  .post-page-wrapper {
+    gap: 2.4rem;
+  }
+}
+@media (max-width: 1024px) {
+  .post-page-latest-wrapper {
+    gap: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .post-page-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .post-page-main-wrapper {
+    gap: 1.6rem;
+  }
+
+  .post-page-wrapper {
+    gap: 4rem;
+  }
+
+  .post-page-text {
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .post-page-wrapper {
+    padding-top: 2.4rem;
+  }
+}

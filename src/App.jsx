@@ -19,6 +19,7 @@ import Register from './pages/Register';
 import Ticker from './components/Ticker';
 import Contacts from './pages/Contacts';
 import NewsPage from './pages/NewsPage';
+import NewsPostPage from './pages/NewsPostPage';
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/news" element={<NewsPage />} />
+        <Route path="/post" element={<NewsPostPage />} />
       </Routes>
       <Footer />
     </div>
