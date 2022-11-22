@@ -1,0 +1,19 @@
+.tarif-wrapper-top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  margin-top: 2.4rem;
+}
+
+.tarif-table {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+@media (max-width: 768px) {
+  .tarif-wrapper-top {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}

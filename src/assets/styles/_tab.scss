@@ -1,0 +1,52 @@
+.tab-dark {
+  height: 5.9rem;
+  color: $base-blue;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  background: transparent;
+  border-radius: 0.5rem;
+
+  &:hover {
+    color: $base-white;
+  }
+
+  &::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 0.1rem;
+    background: $base-blue;
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+  }
+
+  span {
+    z-index: 20;
+  }
+}
+
+.tab-dark:hover.tab-dark::after {
+  height: 100%;
+}
+
+.active-tab {
+  color: $base-white;
+  // background: $base-blue;
+}
+
+.active-tab.tab-dark::after {
+  height: 100%;
+}
+
+@media (max-width: 425px) {
+  .tab-dark {
+    font-size: 1.6rem;
+  }
+}
