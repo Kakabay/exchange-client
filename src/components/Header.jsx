@@ -35,7 +35,7 @@ const Header = () => {
                 <Link to={'/news'}>Новости</Link>
               </li>
               <li className="nav-top-list-item">
-                <Link to={'/'}>Мультимедиа</Link>
+                <Link to={'/multimedia'}>Мультимедиа</Link>
               </li>
               <li className="nav-top-list-item">
                 <Link to={'/contacts'}>Контакты</Link>
@@ -66,7 +66,7 @@ const Header = () => {
                 <Link to={'/register'}>Регистрация договоров</Link>
               </li>
               <li className="nav-bottom-list-item">
-                <Link to={'/trade'}>Тарифы и сборы</Link>
+                <Link to={'/tarif'}>Тарифы и сборы</Link>
               </li>
             </ul>
           </div>

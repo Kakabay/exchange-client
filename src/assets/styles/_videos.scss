@@ -1,0 +1,31 @@
+.videos-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  width: 100%;
+}
+
+@media (max-width: 1440px) {
+  .videos-wrapper {
+    gap: 2.4rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .videos-wrapper {
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .videos-wrapper {
+    grid-template-columns: 73.5rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .videos-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

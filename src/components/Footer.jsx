@@ -64,7 +64,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="footer-nav-list-item">
-                <Link to={'/'} className="footer-nav-list-link">
+                <Link to={'/multimedia'} className="footer-nav-list-link">
                   Мультимедиа
                 </Link>
               </li>

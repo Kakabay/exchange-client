@@ -21,6 +21,7 @@ import Contacts from './pages/Contacts';
 import NewsPage from './pages/NewsPage';
 import NewsPostPage from './pages/NewsPostPage';
 import Tarif from './pages/Tarif';
+import Multimedia from './pages/Multimedia';
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
         <Route path="/news" element={<NewsPage />} />
         <Route path="/post" element={<NewsPostPage />} />
         <Route path="/tarif" element={<Tarif />} />
+        <Route path="/multimedia" element={<Multimedia />} />
       </Routes>
       <Footer />
     </div>

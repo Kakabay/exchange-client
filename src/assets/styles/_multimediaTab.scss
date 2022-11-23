@@ -1,0 +1,23 @@
+.multimedia-tab {
+  font-size: 1.8rem;
+  color: $base-blue;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 1.6rem;
+
+  &:hover {
+    color: $base-bright-blue;
+  }
+}
+
+.m-tab-active {
+  color: $base-bright-blue;
+}
+
+@media (max-width: 500px) {
+  .multimedia-tab {
+    font-size: 1.8rem;
+    padding: 0.8rem;
+  }
+}
