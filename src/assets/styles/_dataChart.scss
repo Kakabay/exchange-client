@@ -75,29 +75,24 @@
     height: 5.9rem;
     font-size: 1.8rem;
   }
-}
-
-@media (max-width: 1200px) {
-  .chart-data {
-    flex-direction: column;
-  }
 
   .line-chart-wrapper {
     display: flex;
     justify-content: center;
   }
 
+  .chart-data {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1200px) {
   .tab {
     font-size: 1.6rem;
   }
 }
 
 @media (max-width: 1200px) {
-  .line-chart-wrapper {
-    display: flex;
-    justify-content: center;
-  }
-
   .tab {
     font-size: 1.4rem;
   }
@@ -116,15 +111,18 @@
   .chart-data {
     gap: 2.4rem;
   }
-}
-@media (max-width: 425px) {
+
   .chart-tabs {
     flex-direction: column;
     gap: 1.6rem;
   }
-
   .tab {
     width: 100%;
     font-size: 1.2rem;
+  }
+
+  .line-chart-wrapper {
+    width: 100%;
+    height: 100%;
   }
 }
