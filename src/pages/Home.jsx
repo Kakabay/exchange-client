@@ -63,7 +63,7 @@ const Home = () => {
               </div>
             </div>
             <div className="about-right">
-              <VideoPlayer videoUrl={''} />
+              <VideoPlayer videoUrl={'https://www.youtube.com/'} />
             </div>
           </div>
         </div>

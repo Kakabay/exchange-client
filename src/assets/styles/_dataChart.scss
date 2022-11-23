@@ -31,7 +31,7 @@
     position: absolute;
     bottom: 0;
     height: 0.1rem;
-    background: #4b8dff;
+    background: $base-bright-blue;
     transition: all 0.3s ease;
     border-radius: 0.5rem;
   }
@@ -50,12 +50,16 @@
   width: 100%;
   justify-content: space-between;
 
-  .active {
-    background: #4b8dff;
+  // .active {
+  //   background: #4b8dff;
 
-    &::after {
-      display: none;
-    }
+  //   &::after {
+  //     display: none;
+  //   }
+  // }
+
+  .active.tab::after {
+    height: 100%;
   }
 }
 
