@@ -35,6 +35,11 @@
 .ticker-title {
   font-size: 1.8rem;
   font-weight: 400;
+  max-width: 24rem;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .ticker-content {

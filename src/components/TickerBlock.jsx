@@ -4,17 +4,21 @@ import React from 'react';
 import arrowUp from '../assets/icons/arrow-up.svg';
 import arrowDown from '../assets/icons/arrow-down.svg';
 
-const TickerBlock = ({ status }) => {
+const TickerBlock = ({ title, change, price, oldPrice, currency }) => {
   return (
     <div className="ticker-block">
-      <h3 className="ticker-title">Арматура</h3>
+      <h3 className="ticker-title">{title}</h3>
       <div className="ticker-content">
-        <div className="ticker-price">1780.00</div>
+        <div className="ticker-price">
+          {price} {currency}
+        </div>
         <div className="ticker-status">
           <div className="ticker-arrow">
-            <img src={status > 0 ? arrowUp : arrowDown} />
+            <img src={price >= oldPrice ? arrowUp : arrowDown} />
           </div>
-          <span className={`ticker-status-title ${status > 0 ? 'green' : 'red'}`}>{status}</span>
+          <span className={`ticker-status-title ${price >= oldPrice ? 'green' : 'red'}`}>
+            {change}
+          </span>
         </div>
       </div>
     </div>
