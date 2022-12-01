@@ -1,5 +1,5 @@
 // Modules
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 // Components
 import Hero from '../components/Hero';
@@ -10,11 +10,27 @@ import VideoPlayer from '../components/VideoPlayer';
 import DataChart from '../components/DataChart';
 // Icons
 import arrow from '../assets/icons/arrow.svg';
+import axios from 'axios';
+import { Api } from '../helpers/api';
 
 const Home = () => {
   // Scroll to top
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
+  }, []);
+
+  // Sets
+  const [docsData, setDocsData] = useState();
+  const [newsData, setNewsData] = useState();
+
+  useEffect(() => {
+    // Documents fetch
+    const DocumentsApi = new Api('http://tmex.gov.tm:8765/api/documents', docsData, setDocsData);
+    DocumentsApi.get({ 'X-Localization': 'en' });
+
+    // Documents fetch
+    const NewsApi = new Api('http://tmex.gov.tm:8765/api/news', newsData, setNewsData);
+    NewsApi.get({ 'X-Localization': 'en' });
   }, []);
 
   return (
@@ -80,9 +96,21 @@ const Home = () => {
           <div className="news-wrapper">
             <SectionTitle title="Новости" />
             <div className="news-post-wrapper">
-              <NewsPost />
-              <NewsPost />
-              <NewsPost />
+              {
+                newsData
+                  ? newsData.data.map((news) => {
+                      return (
+                        <NewsPost
+                          key={news.id}
+                          title={news.title.en}
+                          shortDes={news.short_description.en}
+                          date={news.date}
+                          image={news.image}
+                        />
+                      );
+                    })
+                  : '' //loader
+              }
             </div>
           </div>
         </div>
@@ -95,15 +123,13 @@ const Home = () => {
           <div className="documents-wrapper">
             <SectionTitle title="Документы для скачивания" />
             <div className="documents-links-wrapper">
-              <DocumentLink title="Внутрений контроль по противодействию леголизации доходов" />
-              <DocumentLink title="Внутрений контроль по противодействию леголизации доходов" />
-              <DocumentLink title="Внутрений контроль по противодействию леголизации доходов" />
-              <DocumentLink title="Внутрений контроль по противодействию леголизации доходов" />
-              <DocumentLink title="Внутрений контроль по противодействию леголизации доходов" />
-              <DocumentLink title="Внутрений контроль по противодействию леголизации доходов" />
-              <DocumentLink title="Внутрений контроль по противодействию леголизации доходов" />
-              <DocumentLink title="Внутрений контроль по противодействию леголизации доходов" />
-              <DocumentLink title="Внутрений контроль по противодействию леголизации доходов" />
+              {
+                docsData
+                  ? docsData.data.map((doc) => {
+                      return <DocumentLink key={doc.id} title={doc.title.en} link={doc.file} />;
+                    })
+                  : '' //loader
+              }
             </div>
           </div>
         </div>

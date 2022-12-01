@@ -26,13 +26,14 @@ export class Api {
   }
 
   /**
+   * @param {Object} headers
    * @param {boolean} load
    */
 
-  get(load = false) {
+  get(headers, load = false) {
     try {
       return axios
-        .get(this.destination)
+        .get(this.destination, { headers: headers })
         .then((res) => {
           if (load) {
             this.setLoader(true);
