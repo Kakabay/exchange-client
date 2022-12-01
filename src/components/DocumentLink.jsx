@@ -1,17 +1,16 @@
 // Modules
 import React from 'react';
-import { Link } from 'react-router-dom';
 // Icons
 import { ReactComponent as File } from '../assets/icons/file.svg';
 
-const DocumentLink = ({ title }) => {
+const DocumentLink = ({ title, link }) => {
   return (
-    <Link className="document-link" to={'/'}>
+    <a href={link} target={'_blank'} download className="document-link">
       <div className="document-img">
         <File />
       </div>
       <h3 className="document-title">{title}</h3>
-    </Link>
+    </a>
   );
 };
 
