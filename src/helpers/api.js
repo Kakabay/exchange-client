@@ -33,7 +33,7 @@ export class Api {
   get(headers, load = false) {
     try {
       return axios
-        .get(this.destination, { headers: headers })
+        .get(this.destination, headers ? { headers: headers } : null)
         .then((res) => {
           if (load) {
             this.setLoader(true);
