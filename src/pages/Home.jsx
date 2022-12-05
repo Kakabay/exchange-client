@@ -10,7 +10,6 @@ import VideoPlayer from '../components/VideoPlayer';
 import DataChart from '../components/DataChart';
 // Icons
 import arrow from '../assets/icons/arrow.svg';
-import axios from 'axios';
 import { Api } from '../helpers/api';
 
 const Home = () => {

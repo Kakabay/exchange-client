@@ -1,6 +1,7 @@
 // Modules
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Api } from '../helpers/api';
 // Components
 import ChartTable from './ChartTable';
 import LineChart from './LineChart';
@@ -8,28 +9,31 @@ import LineChart from './LineChart';
 const DataChart = () => {
   // States
   const [activeTab, setActiveTab] = useState(1);
-  // Functions
+  const [tabData, setTabData] = useState();
+
+  useEffect(() => {
+    // Table data fetch
+    const TabData = new Api('http://tmex.gov.tm:8765/api/categories', tabData, setTabData);
+    TabData.get();
+  }, []);
 
   return (
     <section className="chart">
       <div className="container">
         <div className="chart-wrapper">
           <div className="chart-tabs">
-            <div
-              className={`${activeTab === 1 ? 'active' : ''} tab`}
-              onClick={() => setActiveTab(1)}>
-              <span>Металопродукция</span>
-            </div>
-            <div
-              className={`${activeTab === 2 ? 'active' : ''} tab`}
-              onClick={() => setActiveTab(2)}>
-              <span>Сельхозпродукция</span>
-            </div>
-            <div
-              className={`${activeTab === 3 ? 'active' : ''} tab`}
-              onClick={() => setActiveTab(3)}>
-              <span>Лесопродукция</span>
-            </div>
+            {tabData
+              ? tabData.data.map((tab, index) => {
+                  return index <= 2 ? (
+                    <div
+                      key={tab.id}
+                      className={`${activeTab === index ? 'active' : ''} tab`}
+                      onClick={() => setActiveTab(index)}>
+                      <span>{tab.title}</span>
+                    </div>
+                  ) : null;
+                })
+              : null}
           </div>
           <div className="chart-data">
             <ChartTable />

@@ -3,17 +3,28 @@
 import arrowUp from '../assets/icons/arrow-up.svg';
 import arrowDown from '../assets/icons/arrow-down.svg';
 
-const TableRow = ({ active, status, onClick }) => {
+const TableRow = ({ active, onClick, title, priceChange, price, currency, titleHide }) => {
   return (
     <div className={`table-row ${active}`} onClick={() => onClick()}>
-      <span className="table-product-name">Арматура</span>
+      <div className={`table-product-name ${titleHide}`}>{title}</div>
       <div className="table-row-status">
         <div className="table-row-arrow">
-          <img src={status > 0 ? arrowUp : arrowDown} />
+          <img src={priceChange > 0 ? arrowUp : priceChange < 0 ? arrowDown : ''} />
         </div>
-        <span className={`table-row-status-title ${status > 0 ? 'green' : 'red'}`}>{status}</span>
+        <span
+          className={
+            priceChange > 0
+              ? 'table-row-status-title green'
+              : priceChange < 0
+              ? 'table-row-status-title red'
+              : 'table-row-status-title'
+          }>
+          {priceChange}
+        </span>
       </div>
-      <span className="table-product-price">1780.00</span>
+      <div className="table-product-price">
+        {price} {currency}
+      </div>
     </div>
   );
 };

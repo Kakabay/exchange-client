@@ -1,33 +1,46 @@
 .table-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
   align-items: center;
-  gap: 2.6rem;
-  height: 5.9rem;
-  justify-content: space-between;
   cursor: pointer;
   transition: 0.3s all ease;
   border-radius: 0.5rem;
+  padding: 2.4rem 0rem;
 
   &:hover {
     background: #1b3656;
   }
 
-  span {
-    display: block;
+  div {
     font-size: 1.8rem;
     color: $base-white;
     font-weight: 400;
-    width: 21.7rem;
-    // height: 100%;
-    text-align: center;
   }
+}
+
+.table-product-name {
+  text-align: left;
+  padding: 0 0 0 1.6rem;
+}
+
+.title-hide {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-product-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .table-row-status {
   display: flex;
   align-items: center;
   color: #6eeb83;
-  gap: 0.8rem;
+  // gap: 0.8rem;
+  justify-content: center;
 
   span {
     display: inline-block;
@@ -41,5 +54,19 @@
 
   .red {
     color: #ff5e5b;
+  }
+}
+
+@media (max-width: 600px) {
+  .table-row {
+    gap: 1rem;
+
+    .table-row-status-title {
+      font-size: 1.4rem;
+    }
+
+    div {
+      font-size: 1.4rem;
+    }
   }
 }
