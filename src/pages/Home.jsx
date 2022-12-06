@@ -97,16 +97,20 @@ const Home = () => {
             <div className="news-post-wrapper">
               {
                 newsData
-                  ? newsData.data.map((news) => {
-                      return (
-                        <NewsPost
-                          key={news.id}
-                          title={news.title.en}
-                          shortDes={news.short_description.en}
-                          date={news.date}
-                          image={news.image}
-                        />
-                      );
+                  ? newsData.data.map((news, index) => {
+                      if (index <= 2) {
+                        return (
+                          <NewsPost
+                            key={news.id}
+                            title={news.title}
+                            shortDes={news.short_description}
+                            date={news.date}
+                            image={news.image}
+                          />
+                        );
+                      } else {
+                        return null;
+                      }
                     })
                   : '' //loader
               }
@@ -125,7 +129,7 @@ const Home = () => {
               {
                 docsData
                   ? docsData.data.map((doc) => {
-                      return <DocumentLink key={doc.id} title={doc.title.en} link={doc.file} />;
+                      return <DocumentLink key={doc.id} title={doc.title} link={doc.file} />;
                     })
                   : '' //loader
               }

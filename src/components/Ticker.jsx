@@ -5,6 +5,8 @@ import { Api } from '../helpers/api';
 // Components
 import TickerBlock from './TickerBlock';
 
+const tickerSpeed = 40;
+
 const Ticker = () => {
   // States
   const [tickerData, setTickerData] = useState();
@@ -16,7 +18,7 @@ const Ticker = () => {
   }, []);
 
   return (
-    <Marquee className="ticker" gradient={false} speed={40}>
+    <Marquee className="ticker" gradient={false} speed={tickerSpeed}>
       <div className="ticker-wrapper">
         {tickerData
           ? tickerData.data.map((item) => {
