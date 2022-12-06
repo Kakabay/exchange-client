@@ -8,6 +8,7 @@ import LineChart from './LineChart';
 
 const DataChart = () => {
   // States
+  const [activeRow, setActiveRow] = useState(1);
   const [activeTab, setActiveTab] = useState(1);
   const [tabData, setTabData] = useState();
 
@@ -36,9 +37,9 @@ const DataChart = () => {
               : null}
           </div>
           <div className="chart-data">
-            <ChartTable />
+            <ChartTable activeRow={activeRow} setActiveRow={setActiveRow} />
             <div className="line-chart-wrapper">
-              <LineChart />
+              <LineChart activeRow={activeRow} />
             </div>
           </div>
         </div>

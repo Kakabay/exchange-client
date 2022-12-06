@@ -4,8 +4,7 @@ import { Api } from '../helpers/api';
 // Components
 import TableRow from './TableRow';
 
-const ChartTable = () => {
-  const [activeRow, setActiveRow] = useState(1);
+const ChartTable = ({ activeRow, setActiveRow }) => {
   const [dataTable, setDataTable] = useState();
 
   // Functions

@@ -8,21 +8,47 @@ import {
   Title,
   CategoryScale,
 } from 'chart.js';
+import { Api } from '../helpers/api';
+import { useState, useEffect } from 'react';
 
 ChartJS.register(LineElement, PointElement, LinearScale, Title, CategoryScale);
 
-const LineChart = () => {
+const LineChart = ({ activeRow }) => {
+  const [dataLineChart, setDataLineChart] = useState();
+  useEffect(() => {
+    // Table data fetch
+    const LineChartData = new Api(
+      'http://tmex.gov.tm:8765/api/categories/8/tradings',
+      dataLineChart,
+      setDataLineChart,
+    );
+    LineChartData.get();
+  }, []);
+
   let delayed;
 
   const data = {
-    labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+    labels: dataLineChart
+      ? dataLineChart.data[activeRow].all_prices.map((price) =>
+          price.date.split(' ')[0].replace('-', '.').replace('-', '.'),
+        )
+      : [''],
+
     datasets: [
       {
-        data: [222, 217, 220, 215, 219, 221, 216, 218],
+        data: dataLineChart
+          ? dataLineChart.data[activeRow].all_prices.map((price, index) => {
+              if (index <= 9) {
+                return price.price;
+              } else {
+                return '';
+              }
+            })
+          : [''],
         borderColor: '#4b8dff',
-        pointBorderWidth: 4,
+        pointBorderWidth: 2,
         pointBackgroundColor: '#4b8dff',
-        tension: 0.3,
+        tension: 0.2,
 
         animation: {
           onComplete: () => {
@@ -44,7 +70,7 @@ const LineChart = () => {
     responsive: true,
     radius: 5,
     hitRadius: 30,
-    hoverRadius: 10,
+    hoverRadius: 7,
     scales: {
       x: {
         grid: {
@@ -55,8 +81,7 @@ const LineChart = () => {
         // min: 2,
         // max: 5,
         ticks: {
-          stepSize: 1.5,
-          callback: (value) => value + 'K',
+          callback: (value) => value,
         },
         grid: {
           borderDash: [10],
