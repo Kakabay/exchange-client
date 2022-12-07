@@ -10,7 +10,7 @@ const VideoPlayer = ({ videoUrl }) => {
     <div className="video-player">
       <ReactPlayer
         // url={hosting + videoUrl}
-        url={videoUrl}
+        url={`${videoUrl}`}
         controls
         // playIcon={videoUrl.length > 0 ? <PlayIcon /> : undefined}
         volume={1}

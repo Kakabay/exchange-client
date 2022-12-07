@@ -13,23 +13,26 @@ import arrow from '../assets/icons/arrow.svg';
 import { Api } from '../helpers/api';
 
 const Home = () => {
-  // Scroll to top
-  useEffect(() => {
-    // window.scrollTo(0, 0);
-  }, []);
-
   // Sets
   const [docsData, setDocsData] = useState();
   const [newsData, setNewsData] = useState();
+  const [videoData, setVideoData] = useState();
 
   useEffect(() => {
+    // Video fetch
+    const VideoApi = new Api('http://tmex.gov.tm:8765/api/video', videoData, setVideoData);
+    VideoApi.get();
+
+    // News fetch
+    const NewsApi = new Api('http://tmex.gov.tm:8765/api/news', newsData, setNewsData);
+    NewsApi.get({ 'X-Localization': 'en' });
+
     // Documents fetch
     const DocumentsApi = new Api('http://tmex.gov.tm:8765/api/documents', docsData, setDocsData);
     DocumentsApi.get({ 'X-Localization': 'en' });
 
-    // Documents fetch
-    const NewsApi = new Api('http://tmex.gov.tm:8765/api/news', newsData, setNewsData);
-    NewsApi.get({ 'X-Localization': 'en' });
+    // Scroll to top
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -78,7 +81,7 @@ const Home = () => {
               </div>
             </div>
             <div className="about-right">
-              <VideoPlayer videoUrl={'https://www.youtube.com/'} />
+              {videoData ? <VideoPlayer videoUrl={videoData.data.video} /> : null}
             </div>
           </div>
         </div>

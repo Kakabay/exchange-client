@@ -27,6 +27,7 @@ const NewsPage = () => {
                       key={news.id}
                       title={news.title}
                       shortDes={news.short_description}
+                      description={news.description}
                       date={news.date}
                       image={news.image}
                     />

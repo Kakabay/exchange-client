@@ -8,7 +8,7 @@ import LineChart from './LineChart';
 
 const DataChart = () => {
   // States
-  const [activeRow, setActiveRow] = useState(1);
+  const [activeRow, setActiveRow] = useState(0);
   const [activeTab, setActiveTab] = useState(1);
   const [tabData, setTabData] = useState();
 

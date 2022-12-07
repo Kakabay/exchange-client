@@ -1,6 +1,7 @@
 // Modules
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Api } from '../helpers/api';
 // Components
 import Tab from '../components/Tab';
 import SectionTitle from '../components/SectionTitle';
@@ -8,6 +9,12 @@ import TarifService from '../components/TarifService';
 
 const Tarif = () => {
   const [activeTab, setActiveTab] = useState(2);
+  const [tarifData, setTarifData] = useState();
+
+  useEffect(() => {
+    const TarifApi = new Api('http://tmex.gov.tm:8765/api/tariffs', tarifData, setTarifData);
+    TarifApi.get({ 'X-Localization': 'en' });
+  }, []);
 
   return (
     <main>

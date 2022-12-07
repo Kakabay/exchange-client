@@ -1,9 +1,18 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
+import { Api } from '../helpers/api';
 // Images
 import postPageImg from '../assets/images/post-img.png';
 import LatestNew from '../components/LatestNew';
 
 const NewsPostPage = () => {
+  const [newsPageData, setNewsPageData] = useState();
+
+  useEffect(() => {
+    const NewsPageApi = new Api('http://tmex.gov.tm:8765/api/news', newsPageData, setNewsPageData);
+    NewsPageApi.get({ 'X-localization': 'en' });
+  }, []);
+
   return (
     <div className="container">
       <div className="post-page-wrapper">
@@ -46,7 +55,11 @@ const NewsPostPage = () => {
           <div className="post-page-latest-wrapper">
             <h2 className="post-page-latest-title">Последние новости</h2>
             <div className="post-page-latest-news">
-              <LatestNew />
+              {newsPageData
+                ? newsPageData.data.map((news, index) => {
+                    index <= 6 ? <LatestNew title={news.title} /> : null;
+                  })
+                : null}
               <LatestNew />
               <LatestNew />
               <LatestNew />

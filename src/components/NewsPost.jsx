@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import arrow from '../assets/icons/arrow.svg';
 
-const NewsPost = ({ title, shortDes, date, image }) => {
+const NewsPost = ({ title, shortDes, description, date, image }) => {
   return (
     <div className="news-post">
       <div className="news-post-img">

@@ -48,7 +48,7 @@ const LineChart = ({ activeRow }) => {
         borderColor: '#4b8dff',
         pointBorderWidth: 2,
         pointBackgroundColor: '#4b8dff',
-        tension: 0.2,
+        tension: 0.1,
 
         animation: {
           onComplete: () => {
