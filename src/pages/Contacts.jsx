@@ -20,7 +20,6 @@ const Contacts = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  console.log(contactsData);
   return (
     <main>
       <div className="container">

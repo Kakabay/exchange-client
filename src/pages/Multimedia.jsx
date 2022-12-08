@@ -1,25 +1,40 @@
 // Modules
-import React from "react";
-import { useState, useEffect } from "react";
-import { Api } from "../helpers/api";
+import React from 'react';
+import { useState, useEffect } from 'react';
+import { Api } from '../helpers/api';
 // Components
-import SectionTitle from "../components/SectionTitle";
-import MultimediaTab from "../components/MultimediaTab";
-import Gallery from "../components/Gallery";
-import Videos from "../components/Videos";
+import SectionTitle from '../components/SectionTitle';
+import MultimediaTab from '../components/MultimediaTab';
+import Gallery from '../components/Gallery';
+import Videos from '../components/Videos';
 
 const Multimedia = () => {
-  const [activeTab, setActiveTab] = useState(1);
+  const [imageTab, setImageTab] = useState(0);
+  const [imageTabIndex, setImageTabIndex] = useState();
+
+  const [videoTab, setVideoTab] = useState(0);
+
   const [multimediaData, setMultimediaData] = useState();
 
   useEffect(() => {
     const MultimediaApi = new Api(
-      "http://tmex.gov.tm:8765/api/media/categories",
+      'http://tmex.gov.tm:8765/api/media/categories',
       multimediaData,
-      setMultimediaData
+      setMultimediaData,
     );
-    MultimediaApi.get({ "X-Localization": "ru" });
+    MultimediaApi.get({ 'X-Localization': 'ru' });
   }, []);
+
+  const imageTabSwitch = (imageIndex, imageTabId) => {
+    setImageTab(imageIndex);
+    setImageTabIndex(imageTabId);
+    setVideoTab(null);
+  };
+
+  const videoTabSwitch = (videoIndex) => {
+    setVideoTab(videoIndex);
+    setImageTab(null);
+  };
 
   return (
     <main>
@@ -30,53 +45,35 @@ const Multimedia = () => {
             <nav className="multimedia-nav">
               <div className="multimedia-top-gallery">
                 {multimediaData
-                  ? multimediaData.data.map((tab) => {
-                      return tab.type === "image" ? (
+                  ? multimediaData.data.map((tab, index) => {
+                      return tab.type === 'image' ? (
                         <MultimediaTab
                           key={tab.id}
                           title={tab.title}
-                          active={activeTab === 1 ? true : false}
-                          onClick={() => setActiveTab(1)}
+                          active={imageTab === index ? true : false}
+                          onClick={() => imageTabSwitch(index, tab.id)}
                         />
                       ) : null;
                     })
                   : null}
-                {/* <MultimediaTab
-                  // key={tab.id}
-                  title={"Nebit-himiýa önümleri"}
-                  active={activeTab === 1 ? true : false}
-                  onClick={() => setActiveTab(1)}
-                />
-                <MultimediaTab
-                  // key={tab.id}
-                  title={"Ýeňil senagat önümleri"}
-                  active={activeTab === 2 ? true : false}
-                  onClick={() => setActiveTab(2)}
-                /> */}
               </div>
               <div className="multimedia-top-video">
-                {/* {multimediaData
-                  ? multimediaData.data.map((tab) => {
-                      tab.type === 'video' ? (
+                {multimediaData
+                  ? multimediaData.data.map((tab, index) => {
+                      return tab.type === 'video' ? (
                         <MultimediaTab
                           key={tab.id}
                           title={tab.title}
-                          active={activeTab === 1 ? true : false}
-                          onClick={() => setActiveTab(1)}
+                          active={videoTab === index ? true : false}
+                          onClick={() => videoTabSwitch(index)}
                         />
                       ) : null;
                     })
-                  : null} */}
-                <MultimediaTab
-                  // key={tab.id}
-                  title={"Videolar"}
-                  active={activeTab === 3 ? true : false}
-                  onClick={() => setActiveTab(3)}
-                />
+                  : null}
               </div>
             </nav>
 
-            {activeTab === 3 ? <Videos /> : <Gallery activeTab={activeTab} />}
+            {videoTab ? <Videos /> : <Gallery activeTab={imageTab} imageTabIndex={imageTabIndex} />}
           </div>
         </div>
       </div>

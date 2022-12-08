@@ -6,7 +6,6 @@ import ReactPlayer from 'react-player';
 // import PlayIcon from './PlayIcon';
 
 const VideoPlayer = ({ videoUrl }) => {
-  console.log(typeof videoUrl);
   return (
     <div className="video-player">
       <ReactPlayer
