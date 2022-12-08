@@ -32,7 +32,7 @@ const Home = () => {
     DocumentsApi.get({ 'X-Localization': 'en' });
 
     // Scroll to top
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }, []);
 
   return (
