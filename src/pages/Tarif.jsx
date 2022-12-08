@@ -8,7 +8,7 @@ import SectionTitle from '../components/SectionTitle';
 import TarifService from '../components/TarifService';
 
 const Tarif = () => {
-  const [activeTab, setActiveTab] = useState(2);
+  const [activeTab, setActiveTab] = useState(1);
   const [tarifData, setTarifData] = useState();
 
   useEffect(() => {
