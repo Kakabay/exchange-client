@@ -9,7 +9,7 @@ import Gallery from '../components/Gallery';
 import Videos from '../components/Videos';
 
 const Multimedia = () => {
-  const [imageTab, setImageTab] = useState(0);
+  const [imageTab, setImageTab] = useState();
   const [imageTabIndex, setImageTabIndex] = useState();
 
   const [videoTab, setVideoTab] = useState(0);
