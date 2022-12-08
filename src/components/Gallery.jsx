@@ -3,11 +3,6 @@ import { useState, useEffect } from 'react';
 import { Api } from '../helpers/api';
 // Components
 import GalleryItem from '../components/GalleryItem';
-// Images
-import materialOne from '../assets/images/material-1.png';
-import materialTwo from '../assets/images/material-2.png';
-import materialThree from '../assets/images/material-3.png';
-import materialFour from '../assets/images/material-4.png';
 
 const Gallery = ({ imageTabIndex }) => {
   const [galleryData, setGalleryData] = useState();
@@ -18,15 +13,24 @@ const Gallery = ({ imageTabIndex }) => {
       galleryData,
       setGalleryData,
     ).get();
+  }, []);
+
+  useEffect(() => {
+    const GalleryApi = new Api(
+      `http://tmex.gov.tm:8765/api/medias/${imageTabIndex}`,
+      galleryData,
+      setGalleryData,
+    ).get();
   }, [imageTabIndex]);
-  console.log(imageTabIndex);
+
+  console.log(galleryData, imageTabIndex);
 
   return (
     <div className="gallery-wrapper">
       <div className="gallery">
         {galleryData
           ? galleryData.data.map((image) => {
-              return <GalleryItem img={image.media} />;
+              return <GalleryItem key={image.id} img={image.media} />;
             })
           : null}
       </div>

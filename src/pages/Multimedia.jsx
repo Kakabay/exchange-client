@@ -13,6 +13,7 @@ const Multimedia = () => {
   const [imageTabIndex, setImageTabIndex] = useState();
 
   const [videoTab, setVideoTab] = useState(0);
+  const [videoTabIndex, setVideoTabIndex] = useState();
 
   const [multimediaData, setMultimediaData] = useState();
 
@@ -31,8 +32,9 @@ const Multimedia = () => {
     setVideoTab(null);
   };
 
-  const videoTabSwitch = (videoIndex) => {
+  const videoTabSwitch = (videoIndex, videoTabId) => {
     setVideoTab(videoIndex);
+    setVideoTabIndex(videoTabId);
     setImageTab(null);
   };
 
@@ -65,7 +67,7 @@ const Multimedia = () => {
                           key={tab.id}
                           title={tab.title}
                           active={videoTab === index ? true : false}
-                          onClick={() => videoTabSwitch(index)}
+                          onClick={() => videoTabSwitch(index, tab.id)}
                         />
                       ) : null;
                     })
@@ -73,7 +75,11 @@ const Multimedia = () => {
               </div>
             </nav>
 
-            {videoTab ? <Videos /> : <Gallery activeTab={imageTab} imageTabIndex={imageTabIndex} />}
+            {videoTab ? (
+              <Videos videoTabIndex={videoTabIndex} />
+            ) : (
+              <Gallery imageTabIndex={imageTabIndex} />
+            )}
           </div>
         </div>
       </div>
