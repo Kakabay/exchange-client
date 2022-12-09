@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Api } from '../helpers/api';
+import { dateReverse } from '../helpers/functions';
 // Images
 import postPageImg from '../assets/images/post-img.png';
 import LatestNew from '../components/LatestNew';
@@ -57,13 +58,21 @@ const NewsPostPage = () => {
             <div className="post-page-latest-news">
               {newsPageData
                 ? newsPageData.data.map((news, index) => {
-                    index <= 6 ? <LatestNew title={news.title} /> : null;
+                    return index <= 6 ? (
+                      <LatestNew
+                        title={news.title}
+                        date={dateReverse(news.date)
+                          .split(' ')[0]
+                          .replace('-', '.')
+                          .replace('-', '.')}
+                      />
+                    ) : null;
                   })
                 : null}
+              {/* <LatestNew />
               <LatestNew />
               <LatestNew />
-              <LatestNew />
-              <LatestNew />
+              <LatestNew /> */}
             </div>
           </div>
         </aside>
