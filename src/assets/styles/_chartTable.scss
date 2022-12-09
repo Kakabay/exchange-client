@@ -39,10 +39,6 @@
 }
 
 @media (max-width: 1500px) {
-  .table {
-    max-width: 100%;
-  }
-
   .table-top {
     gap: 1.8rem;
   }
@@ -63,6 +59,14 @@
 @media (max-width: 1200px) {
   .table {
     max-width: 100%;
+  }
+
+  .table-row {
+    gap: 1rem;
+
+    div {
+      font-size: 1.4rem;
+    }
   }
 }
 

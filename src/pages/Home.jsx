@@ -11,6 +11,7 @@ import DataChart from '../components/DataChart';
 // Icons
 import arrow from '../assets/icons/arrow.svg';
 import { Api } from '../helpers/api';
+import { dateReverse } from '../helpers/functions';
 
 const Home = () => {
   // Sets
@@ -107,7 +108,7 @@ const Home = () => {
                             key={news.id}
                             title={news.title}
                             shortDes={news.short_description}
-                            date={news.date}
+                            date={dateReverse(news.date)}
                             image={news.image}
                           />
                         );

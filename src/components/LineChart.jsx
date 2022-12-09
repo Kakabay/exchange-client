@@ -3,15 +3,15 @@ import { Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
   LineElement,
-  PointElement,
-  LinearScale,
-  Title,
   CategoryScale,
+  LinearScale,
+  PointElement,
+  Tooltip,
 } from 'chart.js';
 import { Api } from '../helpers/api';
 import { useState, useEffect } from 'react';
 
-ChartJS.register(LineElement, PointElement, LinearScale, Title, CategoryScale);
+ChartJS.register(LineElement, PointElement, LinearScale, Tooltip, CategoryScale);
 
 const LineChart = ({ activeRow }) => {
   const [dataLineChart, setDataLineChart] = useState();
@@ -67,7 +67,8 @@ const LineChart = ({ activeRow }) => {
   };
 
   const options = {
-    responsive: true,
+    // responsive: true,
+    maintainAspectRatio: false,
     radius: 5,
     hitRadius: 30,
     hoverRadius: 7,
@@ -78,8 +79,6 @@ const LineChart = ({ activeRow }) => {
         },
       },
       y: {
-        // min: 2,
-        // max: 5,
         ticks: {
           callback: (value) => value,
         },

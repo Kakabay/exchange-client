@@ -64,9 +64,9 @@
 }
 
 .chart-data {
-  display: flex;
-  gap: 3.9rem;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2.4rem;
 }
 
 @media (max-width: 1500px) {
@@ -80,21 +80,23 @@
     display: flex;
     justify-content: center;
   }
+}
+
+@media (max-width: 1200px) {
+  .tab {
+    font-size: 1.4rem;
+  }
 
   .chart-data {
     flex-direction: column;
   }
 }
 
-@media (max-width: 1200px) {
-  .tab {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width: 1200px) {
-  .tab {
-    font-size: 1.4rem;
+@media (max-width: 1100px) {
+  .chart-data {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
   }
 }
 
