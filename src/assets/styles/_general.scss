@@ -8,11 +8,21 @@
 }
 
 .container {
-  padding: 0 2rem;
+  padding: 0 3rem;
   margin: 0 auto;
-  max-width: 155.2rem;
+  max-width: 158.2rem;
   width: 100%;
   // overflow-x: hidden;
+}
+
+.chart {
+  .container {
+    padding: 0 2rem;
+    margin: 0 auto;
+    max-width: 155.2rem;
+    width: 100%;
+    // overflow-x: hidden;
+  }
 }
 
 html {

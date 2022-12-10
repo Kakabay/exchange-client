@@ -23,8 +23,6 @@ const Gallery = ({ imageTabIndex }) => {
     ).get();
   }, [imageTabIndex]);
 
-  console.log(galleryData, imageTabIndex);
-
   return (
     <div className="gallery-wrapper">
       <div className="gallery">
