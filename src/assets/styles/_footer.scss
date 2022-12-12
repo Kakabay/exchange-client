@@ -17,6 +17,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 2.4rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-top-item {
@@ -52,6 +54,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 1.6rem;
+  justify-content: center;
 }
 
 .footer-nav-list-link {
@@ -61,6 +64,36 @@
 
   &:hover {
     color: $base-white;
+  }
+}
+
+@media (max-width: 1440px) {
+  .footer-top-content {
+    grid-template-columns: repeat(2, 47.4rem);
+    column-gap: 8rem;
+  }
+
+  .footer-nav-list {
+    grid-template-columns: repeat(2, 47.4rem);
+    column-gap: 8rem;
+    row-gap: 1.6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer-top-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2.4rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-nav-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.6rem;
+    justify-content: center;
   }
 }
 
