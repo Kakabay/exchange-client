@@ -5,7 +5,7 @@ import { Api } from '../helpers/api';
 import SectionTitle from '../components/SectionTitle';
 import ContactsCard from '../components/ContactsCard';
 
-const Contacts = () => {
+const Contacts = ({ lang }) => {
   const [contactsData, setContactsData] = useState();
 
   useEffect(() => {
@@ -13,17 +13,24 @@ const Contacts = () => {
       'http://tmex.gov.tm:8765/api/contacts',
       contactsData,
       setContactsData,
-    );
-    ContactsApi.get({ 'X-Localization': 'ru' });
+    ).get({ 'X-Localization': lang });
 
     // Scroll to top
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    const ContactsApi = new Api(
+      'http://tmex.gov.tm:8765/api/contacts',
+      contactsData,
+      setContactsData,
+    ).get({ 'X-Localization': lang });
+  }, [lang]);
+
   return (
     <main>
       <div className="container">
-        <div className="sub-page-wrapper">
+        <div className="sub-page-wrapper sub-page-full">
           <SectionTitle title="Контакты" />
           <div className="contacts-wrapper">
             {contactsData

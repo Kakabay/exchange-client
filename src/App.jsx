@@ -24,22 +24,24 @@ import Tarif from './pages/Tarif';
 import Multimedia from './pages/Multimedia';
 
 const App = () => {
+  const [lang, setLang] = useState('ru');
+
   return (
     <div className="App">
       <Ticker />
-      <Header />
+      <Header lang={lang} setLang={setLang} />
       <Routes>
-        <Route index element={<Home />} />
+        <Route index element={<Home lang={lang} />} />
         <Route path="/gtsbt" element={<Gtsbt />} />
-        <Route path="/fin" element={<Finance />} />
-        <Route path="/norm" element={<Normative />} />
-        <Route path="/trade" element={<Trade />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/contacts" element={<Contacts />} />
-        <Route path="/news" element={<NewsPage />} />
+        <Route path="/norm" element={<Normative lang={lang} />} />
+        <Route path="/news" element={<NewsPage lang={lang} />} />
+        <Route path="/multimedia" element={<Multimedia lang={lang} />} />
+        <Route path="/contacts" element={<Contacts lang={lang} />} />
+        <Route path="/trade" element={<Trade lang={lang} />} />
+        <Route path="/fin" element={<Finance lang={lang} />} />
+        <Route path="/register" element={<Register lang={lang} />} />
+        <Route path="/tarif" element={<Tarif lang={lang} />} />
         <Route path="/post" element={<NewsPostPage />} />
-        <Route path="/tarif" element={<Tarif />} />
-        <Route path="/multimedia" element={<Multimedia />} />
       </Routes>
       <Footer />
     </div>

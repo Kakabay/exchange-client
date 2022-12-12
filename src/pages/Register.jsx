@@ -5,17 +5,26 @@ import { Api } from '../helpers/api';
 import SectionTitle from '../components/SectionTitle';
 import DocumentLink from '../components/DocumentLink';
 
-export const Register = () => {
+export const Register = ({ lang }) => {
   const [docsData, setDocsData] = useState();
 
   useEffect(() => {
     // Documents fetch
     const DocumentsApi = new Api('http://tmex.gov.tm:8765/api/documents', docsData, setDocsData);
-    DocumentsApi.get({ 'X-Localization': 'en' });
+    DocumentsApi.get({ 'X-Localization': lang });
 
     // Scroll to top
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    // Documents fetch
+    const DocumentsApi = new Api(
+      'http://tmex.gov.tm:8765/api/documents',
+      docsData,
+      setDocsData,
+    ).get({ 'X-Localization': lang });
+  }, [lang]);
 
   return (
     <main>

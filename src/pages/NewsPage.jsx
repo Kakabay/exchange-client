@@ -1,18 +1,28 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+// Functions
 import { Api } from '../helpers/api';
+import { dateReverse } from '../helpers/functions';
 // Components
 import SectionTitle from '../components/SectionTitle';
 import NewsPost from '../components/NewsPost';
 
-const NewsPage = () => {
+const NewsPage = ({ lang }) => {
   const [postsData, setPostsData] = useState();
 
   useEffect(() => {
-    // Table data fetch
-    const PostsData = new Api('http://tmex.gov.tm:8765/api/news', postsData, setPostsData);
-    PostsData.get();
+    // News fetch
+    const PostsData = new Api('http://tmex.gov.tm:8765/api/news', postsData, setPostsData).get({
+      'X-Localization': lang,
+    });
   }, []);
+
+  useEffect(() => {
+    // News fetch
+    const PostsData = new Api('http://tmex.gov.tm:8765/api/news', postsData, setPostsData).get({
+      'X-Localization': lang,
+    });
+  }, [lang]);
 
   return (
     <main>
@@ -28,7 +38,7 @@ const NewsPage = () => {
                       title={news.title}
                       shortDes={news.short_description}
                       description={news.description}
-                      date={news.date}
+                      date={dateReverse(news.date)}
                       image={news.image}
                     />
                   );

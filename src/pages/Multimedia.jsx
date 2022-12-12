@@ -8,7 +8,7 @@ import MultimediaTab from '../components/MultimediaTab';
 import Gallery from '../components/Gallery';
 import Videos from '../components/Videos';
 
-const Multimedia = () => {
+const Multimedia = ({ lang }) => {
   const [imageTab, setImageTab] = useState();
   const [imageTabIndex, setImageTabIndex] = useState();
 
@@ -22,9 +22,19 @@ const Multimedia = () => {
       'http://tmex.gov.tm:8765/api/media/categories',
       multimediaData,
       setMultimediaData,
-    );
-    MultimediaApi.get({ 'X-Localization': 'ru' });
+    ).get({ 'X-Localization': lang });
+
+    // Scroll to top
+    window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    const MultimediaApi = new Api(
+      'http://tmex.gov.tm:8765/api/media/categories',
+      multimediaData,
+      setMultimediaData,
+    ).get({ 'X-Localization': lang });
+  }, [lang]);
 
   const imageTabSwitch = (imageIndex, imageTabId) => {
     setImageTab(imageIndex);

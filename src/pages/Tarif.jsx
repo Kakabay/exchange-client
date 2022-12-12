@@ -7,14 +7,24 @@ import Tab from '../components/Tab';
 import SectionTitle from '../components/SectionTitle';
 import TarifService from '../components/TarifService';
 
-const Tarif = () => {
+const Tarif = ({ lang }) => {
   const [activeTab, setActiveTab] = useState(1);
   const [tarifData, setTarifData] = useState();
 
   useEffect(() => {
-    const TarifApi = new Api('http://tmex.gov.tm:8765/api/tariffs', tarifData, setTarifData);
-    TarifApi.get({ 'X-Localization': 'ru' });
+    const TarifApi = new Api('http://tmex.gov.tm:8765/api/tariffs', tarifData, setTarifData).get({
+      'X-Localization': lang,
+    });
+
+    // Scroll to top
+    window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    const TarifApi = new Api('http://tmex.gov.tm:8765/api/tariffs', tarifData, setTarifData).get({
+      'X-Localization': lang,
+    });
+  }, [lang]);
 
   return (
     <main>

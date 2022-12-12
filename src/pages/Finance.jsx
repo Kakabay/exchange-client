@@ -5,18 +5,29 @@ import { Api } from '../helpers/api';
 import SectionTitle from '../components/SectionTitle';
 import DocumentLink from '../components/DocumentLink';
 
-const Finance = () => {
+const Finance = ({ lang }) => {
   const [docsData, setDocsData] = useState();
 
-  // Scroll to top
   useEffect(() => {
     // Documents fetch
-    const DocumentsApi = new Api('http://tmex.gov.tm:8765/api/documents', docsData, setDocsData);
-    DocumentsApi.get({ 'X-Localization': 'en' });
+    const DocumentsApi = new Api(
+      'http://tmex.gov.tm:8765/api/documents',
+      docsData,
+      setDocsData,
+    ).get({ 'X-Localization': lang });
 
     // Scroll to top
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    // Documents fetch
+    const DocumentsApi = new Api(
+      'http://tmex.gov.tm:8765/api/documents',
+      docsData,
+      setDocsData,
+    ).get({ 'X-Localization': lang });
+  }, [lang]);
 
   return (
     <main>

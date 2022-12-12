@@ -6,10 +6,9 @@ import logo from '../assets/icons/logo.svg';
 import burger from '../assets/icons/burger.svg';
 import { useState } from 'react';
 
-const Header = () => {
+const Header = ({ lang, setLang }) => {
   // States
   const [navActive, setNavActive] = useState(false);
-  const [data, setData] = useState();
   // Functions
   const toggleNav = () => {
     setNavActive(!navActive);
@@ -69,6 +68,23 @@ const Header = () => {
                 <Link to={'/tarif'}>Тарифы и сборы</Link>
               </li>
             </ul>
+            <div className="nav-lang-wrapper">
+              <button
+                className={`nav-lang-item ${lang === 'en' ? 'lang-active' : ''}`}
+                onClick={() => setLang('en')}>
+                EN
+              </button>
+              <button
+                className={`nav-lang-item ${lang === 'tm' ? 'lang-active' : ''}`}
+                onClick={() => setLang('tm')}>
+                TK
+              </button>
+              <button
+                className={`nav-lang-item ${lang === 'ru' ? 'lang-active' : ''}`}
+                onClick={() => setLang('ru')}>
+                RU
+              </button>
+            </div>
           </div>
         </div>
       </nav>
@@ -89,35 +105,54 @@ const Header = () => {
       </div>
 
       <nav className={`mobile-nav-content ${navActive ? 'active' : null}`}>
-        <ul className="mobile-nav-list">
-          <li className="mobile-nav-list-item" onClick={toggleNav}>
-            <Link to={'/gtsbt'}>ГТСБТ</Link>
-          </li>
-          <li className="mobile-nav-list-item" onClick={toggleNav}>
-            <Link to={'/norm'}>Нормативная база</Link>
-          </li>
-          <li className="mobile-nav-list-item" onClick={toggleNav}>
-            <Link to={'/'}>Новости</Link>
-          </li>
-          <li className="mobile-nav-list-item" onClick={toggleNav}>
-            <Link to={'/'}>Мультимедия</Link>
-          </li>
-          <li className="mobile-nav-list-item" onClick={toggleNav}>
-            <Link to={'/'}>Контакты</Link>
-          </li>
-          <li className="mobile-nav-list-item" onClick={toggleNav}>
-            <Link to={'/trade'}>Биржевые торги</Link>
-          </li>
-          <li className="mobile-nav-list-item" onClick={toggleNav}>
-            <Link to={'/fin'}>Финансовый мониторинг</Link>
-          </li>
-          <li className="mobile-nav-list-item" onClick={toggleNav}>
-            <Link to={'/register'}>Регистрация договоров</Link>
-          </li>
-          <li className="mobile-nav-list-item" onClick={toggleNav}>
-            <Link to={'/trade'}>Тарифы и сборы</Link>
-          </li>
-        </ul>
+        <div className="mobile-nav-content-wrapper">
+          <ul className="mobile-nav-list">
+            <li className="mobile-nav-list-item" onClick={toggleNav}>
+              <Link to={'/gtsbt'}>ГТСБТ</Link>
+            </li>
+            <li className="mobile-nav-list-item" onClick={toggleNav}>
+              <Link to={'/norm'}>Нормативная база</Link>
+            </li>
+            <li className="mobile-nav-list-item" onClick={toggleNav}>
+              <Link to={'/'}>Новости</Link>
+            </li>
+            <li className="mobile-nav-list-item" onClick={toggleNav}>
+              <Link to={'/'}>Мультимедия</Link>
+            </li>
+            <li className="mobile-nav-list-item" onClick={toggleNav}>
+              <Link to={'/'}>Контакты</Link>
+            </li>
+            <li className="mobile-nav-list-item" onClick={toggleNav}>
+              <Link to={'/trade'}>Биржевые торги</Link>
+            </li>
+            <li className="mobile-nav-list-item" onClick={toggleNav}>
+              <Link to={'/fin'}>Финансовый мониторинг</Link>
+            </li>
+            <li className="mobile-nav-list-item" onClick={toggleNav}>
+              <Link to={'/register'}>Регистрация договоров</Link>
+            </li>
+            <li className="mobile-nav-list-item" onClick={toggleNav}>
+              <Link to={'/trade'}>Тарифы и сборы</Link>
+            </li>
+          </ul>
+          <div className="nav-lang-wrapper-mobile">
+            <button
+              className={`nav-lang-item ${lang === 'en' ? 'lang-active' : ''}`}
+              onClick={() => setLang('en')}>
+              EN
+            </button>
+            <button
+              className={`nav-lang-item ${lang === 'tm' ? 'lang-active' : ''}`}
+              onClick={() => setLang('tm')}>
+              TK
+            </button>
+            <button
+              className={`nav-lang-item ${lang === 'ru' ? 'lang-active' : ''}`}
+              onClick={() => setLang('ru')}>
+              RU
+            </button>
+          </div>
+        </div>
       </nav>
       {/* Nav mobile ================== */}
     </header>

@@ -37,6 +37,42 @@
   background: $base-blue;
 }
 
+.nav-bottom-wrapper {
+  display: flex;
+  width: 100%;
+  position: relative;
+  // justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-lang-wrapper {
+  display: flex;
+  gap: 1.6rem;
+  justify-self: end;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-lang-item {
+  color: $base-light-blue;
+  font-weight: 700;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0.8rem;
+
+  &:hover {
+    color: $base-white;
+  }
+}
+
+.lang-active {
+  color: $base-white;
+}
+
 .nav-bottom-list {
   padding: 2.4rem 0;
   display: flex;
@@ -57,7 +93,7 @@
   background: $base-light-blue;
   padding: 1.6rem 0;
   width: 100%;
-  z-index: 1100;
+  z-index: 3;
 }
 
 .burger {
@@ -92,7 +128,12 @@
   align-items: center;
   transition: all 0.3s linear;
   transform: translateY(-100%);
-  z-index: -1;
+  // z-index: -1;
+  flex-direction: column;
+}
+
+.nav-lang-wrapper-mobile {
+  width: 100%;
 }
 
 .active {
@@ -144,7 +185,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .nav-top-list-item a {
     font-size: 1.4rem;
   }
@@ -168,9 +209,17 @@
       padding: 0.8rem;
     }
   }
+
+  .nav-lang-wrapper {
+    gap: 0.8rem;
+  }
+
+  .nav-lang-item {
+    font-size: 1.4rem;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .nav-top,
   .nav-bottom {
     display: none;
@@ -178,5 +227,16 @@
 
   .mobile-nav {
     display: block;
+  }
+
+  .nav-lang-item {
+    font-size: 1.8rem;
+  }
+
+  .nav-lang-wrapper-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2.4rem;
   }
 }

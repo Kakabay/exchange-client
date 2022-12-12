@@ -6,7 +6,7 @@ import { Api } from '../helpers/api';
 import ChartTable from './ChartTable';
 import LineChart from './LineChart';
 
-const DataChart = () => {
+const DataChart = ({ lang }) => {
   // States
   const [activeRow, setActiveRow] = useState(0);
   const [activeTab, setActiveTab] = useState(1);
@@ -15,7 +15,7 @@ const DataChart = () => {
   useEffect(() => {
     // Table data fetch
     const TabData = new Api('http://tmex.gov.tm:8765/api/categories', tabData, setTabData);
-    TabData.get({ 'X-Localization': 'ru' });
+    TabData.get({ 'X-Localization': lang });
   }, []);
 
   return (

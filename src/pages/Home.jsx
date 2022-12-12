@@ -13,28 +13,30 @@ import arrow from '../assets/icons/arrow.svg';
 import { Api } from '../helpers/api';
 import { dateReverse } from '../helpers/functions';
 
-const Home = () => {
+const Home = ({ lang }) => {
   // Sets
-  const [docsData, setDocsData] = useState();
   const [newsData, setNewsData] = useState();
   const [videoData, setVideoData] = useState();
 
   useEffect(() => {
     // Video fetch
-    const VideoApi = new Api('http://tmex.gov.tm:8765/api/video', videoData, setVideoData);
-    VideoApi.get();
+    const VideoApi = new Api('http://tmex.gov.tm:8765/api/video', videoData, setVideoData).get();
 
     // News fetch
-    const NewsApi = new Api('http://tmex.gov.tm:8765/api/news', newsData, setNewsData);
-    NewsApi.get({ 'X-Localization': 'ru' });
-
-    // Documents fetch
-    const DocumentsApi = new Api('http://tmex.gov.tm:8765/api/documents', docsData, setDocsData);
-    DocumentsApi.get({ 'X-Localization': 'ru' });
+    const NewsApi = new Api('http://tmex.gov.tm:8765/api/news', newsData, setNewsData).get({
+      'X-Localization': lang,
+    });
 
     // Scroll to top
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    // News fetch
+    const NewsApi = new Api('http://tmex.gov.tm:8765/api/news', newsData, setNewsData).get({
+      'X-Localization': lang,
+    });
+  }, [lang]);
 
   return (
     <main className="home-main">
@@ -90,7 +92,7 @@ const Home = () => {
       {/* About section ./========= */}
 
       {/* Chart section */}
-      <DataChart />
+      <DataChart lang={lang} />
       {/* Chart section ./========= */}
 
       {/* News section ./========= */}
