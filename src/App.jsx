@@ -41,7 +41,7 @@ const App = () => {
         <Route path="/fin" element={<Finance lang={lang} />} />
         <Route path="/register" element={<Register lang={lang} />} />
         <Route path="/tarif" element={<Tarif lang={lang} />} />
-        <Route path="/post" element={<NewsPostPage />} />
+        <Route path="/post" element={<NewsPostPage lang={lang} />} />
       </Routes>
       <Footer />
     </div>
