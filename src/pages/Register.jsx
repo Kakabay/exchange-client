@@ -1,11 +1,19 @@
 // Modules
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { Api } from '../helpers/api';
 // Components
 import SectionTitle from '../components/SectionTitle';
+import DocumentLink from '../components/DocumentLink';
 
 export const Register = () => {
-  // Scroll to top
+  const [docsData, setDocsData] = useState();
+
   useEffect(() => {
+    // Documents fetch
+    const DocumentsApi = new Api('http://tmex.gov.tm:8765/api/documents', docsData, setDocsData);
+    DocumentsApi.get({ 'X-Localization': 'en' });
+
+    // Scroll to top
     window.scrollTo(0, 0);
   }, []);
 
@@ -95,6 +103,21 @@ export const Register = () => {
                     Документы, подтверждающие происхождение товара.
                   </h3>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="sub-page-title-text">
+            <h2 className="sub-page-title">Документы для скачивания</h2>
+            <div className="documents-wrapper">
+              <div className="documents-links-wrapper">
+                {
+                  docsData
+                    ? docsData.data.map((doc) => {
+                        return <DocumentLink key={doc.id} title={doc.title} link={doc.file} />;
+                      })
+                    : '' //loader
+                }
               </div>
             </div>
           </div>

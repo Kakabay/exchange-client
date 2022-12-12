@@ -26,11 +26,11 @@ const Home = () => {
 
     // News fetch
     const NewsApi = new Api('http://tmex.gov.tm:8765/api/news', newsData, setNewsData);
-    NewsApi.get({ 'X-Localization': 'en' });
+    NewsApi.get({ 'X-Localization': 'ru' });
 
     // Documents fetch
     const DocumentsApi = new Api('http://tmex.gov.tm:8765/api/documents', docsData, setDocsData);
-    DocumentsApi.get({ 'X-Localization': 'en' });
+    DocumentsApi.get({ 'X-Localization': 'ru' });
 
     // Scroll to top
     // window.scrollTo(0, 0);
@@ -125,7 +125,7 @@ const Home = () => {
       {/* News section ./========= */}
 
       {/* Documents section ./========= */}
-      <section className="documents">
+      {/* <section className="documents">
         <div className="container">
           <div className="documents-wrapper">
             <SectionTitle title="Документы для скачивания" />
@@ -140,7 +140,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Documents section ./========= */}
     </main>
   );
