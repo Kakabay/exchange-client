@@ -63,3 +63,9 @@ h5,
 h6 {
   line-height: 150%;
 }
+
+@media (max-width: 425px) {
+  .container {
+    padding: 0 2rem;
+  }
+}

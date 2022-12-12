@@ -103,6 +103,11 @@
   color: $base-black;
 }
 
+@media (max-width: 1440px) {
+  .sub-page-wrapper {
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
   .sub-page-list-wrapper {
     padding: 2.4rem 1.6rem;
@@ -115,7 +120,7 @@
 
 @media (max-width: 425px) {
   .sub-page-list-wrapper {
-    padding: 1.6rem 1.6rem;
+    padding: 1.6rem 0rem;
   }
 
   .sub-page-list-item {

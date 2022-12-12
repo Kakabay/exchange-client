@@ -101,6 +101,12 @@
     row-gap: 1.6rem;
     justify-content: center;
   }
+
+  .footer {
+    .container {
+      width: 100%;
+    }
+  }
 }
 
 @media (max-width: 500px) {
