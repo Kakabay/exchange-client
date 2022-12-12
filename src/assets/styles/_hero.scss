@@ -45,6 +45,14 @@
   }
 }
 
+@media (max-width: 1440px) {
+  .hero-button {
+    width: 28rem;
+    height: 8rem;
+    font-size: 1.6rem;
+    padding: 1.6rem;
+  }
+}
 @media (max-width: 768px) {
   .hero-button {
     width: 24rem;
