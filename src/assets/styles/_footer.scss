@@ -68,15 +68,21 @@
 }
 
 @media (max-width: 1440px) {
-  .footer-top-content {
-    grid-template-columns: repeat(2, 47.4rem);
-    column-gap: 8rem;
-  }
+  // .footer-top-content {
+  //   grid-template-columns: repeat(2, 47.4rem);
+  //   column-gap: 8rem;
+  // }
 
-  .footer-nav-list {
-    grid-template-columns: repeat(2, 47.4rem);
-    column-gap: 8rem;
-    row-gap: 1.6rem;
+  // .footer-nav-list {
+  //   grid-template-columns: repeat(2, 47.4rem);
+  //   column-gap: 8rem;
+  //   row-gap: 1.6rem;
+  // }
+
+  .footer {
+    .container {
+      width: 80%;
+    }
   }
 }
 

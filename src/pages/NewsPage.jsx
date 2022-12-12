@@ -17,7 +17,7 @@ const NewsPage = () => {
   return (
     <main>
       <div className="container">
-        <div className="sub-page-wrapper">
+        <div className="sub-page-wrapper sub-page-full">
           <SectionTitle title="Новости" />
           <div className="news-page-wrapper">
             {postsData

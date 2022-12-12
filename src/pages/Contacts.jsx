@@ -14,7 +14,7 @@ const Contacts = () => {
       contactsData,
       setContactsData,
     );
-    ContactsApi.get();
+    ContactsApi.get({ 'X-Localization': 'ru' });
 
     // Scroll to top
     window.scrollTo(0, 0);

@@ -41,7 +41,7 @@ const Multimedia = () => {
   return (
     <main>
       <div className="container">
-        <div className="sub-page-wrapper">
+        <div className="sub-page-wrapper sub-page-full">
           <SectionTitle title="Мультимедия" />
           <div className="multimedia-wrapper">
             <nav className="multimedia-nav">

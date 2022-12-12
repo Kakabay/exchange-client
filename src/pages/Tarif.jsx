@@ -13,13 +13,13 @@ const Tarif = () => {
 
   useEffect(() => {
     const TarifApi = new Api('http://tmex.gov.tm:8765/api/tariffs', tarifData, setTarifData);
-    TarifApi.get({ 'X-Localization': 'en' });
+    TarifApi.get({ 'X-Localization': 'ru' });
   }, []);
 
   return (
     <main>
       <div className="container">
-        <div className="sub-page-wrapper">
+        <div className="sub-page-wrapper sub-page-full">
           <SectionTitle title="Тарифы и сборы" />
           <div className="tarif-wrapper">
             <div className="tarif-wrapper-top">
