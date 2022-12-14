@@ -40,6 +40,7 @@
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+  margin-left: 2.4rem;
 }
 
 .sub-page-list-wrapper {
@@ -104,13 +105,14 @@
 }
 
 @media (max-width: 1440px) {
-  .sub-page-wrapper {
-    width: 100%;
-  }
 }
 @media (max-width: 768px) {
   .sub-page-list-wrapper {
-    padding: 2.4rem 1.6rem;
+    padding: 1.6rem 0rem;
+  }
+
+  .sub-page-wrapper {
+    width: 100%;
   }
 
   .sub-page-list-item {
@@ -119,10 +121,6 @@
 }
 
 @media (max-width: 425px) {
-  .sub-page-list-wrapper {
-    padding: 1.6rem 0rem;
-  }
-
   .sub-page-list-item {
     display: flex;
     flex-direction: column;
