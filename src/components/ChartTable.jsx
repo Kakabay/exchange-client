@@ -4,7 +4,7 @@ import { Api } from '../helpers/api';
 // Components
 import TableRow from './TableRow';
 
-const ChartTable = ({ activeRow, setActiveRow }) => {
+const ChartTable = ({ activeRow, setActiveRow, tabIndex }) => {
   const [dataTable, setDataTable] = useState();
 
   // Functions
@@ -15,7 +15,8 @@ const ChartTable = ({ activeRow, setActiveRow }) => {
   useEffect(() => {
     // Table data fetch
     const TableApi = new Api(
-      'http://tmex.gov.tm:8765/api/categories/8/tradings',
+      // `http://tmex.gov.tm:8765/api/categories/${tabIndex}/tradings`,
+      `http://tmex.gov.tm:8765/api/categories/8/tradings`,
       dataTable,
       setDataTable,
     );
