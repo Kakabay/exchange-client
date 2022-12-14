@@ -25,23 +25,30 @@ import Multimedia from './pages/Multimedia';
 
 const App = () => {
   const [lang, setLang] = useState('ru');
+  const [postId, setPostId] = useState();
 
   return (
     <div className="App">
       <Ticker />
       <Header lang={lang} setLang={setLang} />
       <Routes>
-        <Route index element={<Home lang={lang} />} />
+        <Route index element={<Home lang={lang} setPostId={setPostId} />} />
         <Route path="/gtsbt" element={<Gtsbt />} />
         <Route path="/norm" element={<Normative lang={lang} />} />
-        <Route path="/news" element={<NewsPage lang={lang} />} />
+        <Route
+          path="/news"
+          element={<NewsPage lang={lang} setPostId={setPostId} postId={postId} />}
+        />
         <Route path="/multimedia" element={<Multimedia lang={lang} />} />
         <Route path="/contacts" element={<Contacts lang={lang} />} />
         <Route path="/trade" element={<Trade lang={lang} />} />
         <Route path="/fin" element={<Finance lang={lang} />} />
         <Route path="/register" element={<Register lang={lang} />} />
         <Route path="/tarif" element={<Tarif lang={lang} />} />
-        <Route path="/post" element={<NewsPostPage lang={lang} />} />
+        <Route
+          path="/post"
+          element={<NewsPostPage lang={lang} postId={postId} setPostId={setPostId} />}
+        />
       </Routes>
       <Footer />
     </div>

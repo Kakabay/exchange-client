@@ -13,7 +13,7 @@ import arrow from '../assets/icons/arrow.svg';
 import { Api } from '../helpers/api';
 import { dateReverse } from '../helpers/functions';
 
-const Home = ({ lang }) => {
+const Home = ({ lang, setPostId }) => {
   // Sets
   const [newsData, setNewsData] = useState();
   const [videoData, setVideoData] = useState();
@@ -112,6 +112,8 @@ const Home = ({ lang }) => {
                             shortDes={news.short_description}
                             date={dateReverse(news.date)}
                             image={news.image}
+                            id={news.id}
+                            setPostId={setPostId}
                           />
                         );
                       } else {

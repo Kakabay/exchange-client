@@ -7,7 +7,7 @@ import { dateReverse } from '../helpers/functions';
 import SectionTitle from '../components/SectionTitle';
 import NewsPost from '../components/NewsPost';
 
-const NewsPage = ({ lang }) => {
+const NewsPage = ({ lang, setPostId }) => {
   const [postsData, setPostsData] = useState();
 
   useEffect(() => {
@@ -40,6 +40,8 @@ const NewsPage = ({ lang }) => {
                       description={news.description}
                       date={dateReverse(news.date)}
                       image={news.image}
+                      id={news.id}
+                      setPostId={setPostId}
                     />
                   );
                 })
