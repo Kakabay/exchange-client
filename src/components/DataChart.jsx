@@ -37,8 +37,7 @@ const DataChart = ({ lang }) => {
           <div className="chart-tabs">
             {tabData
               ? tabData.data.map((tab, index) => {
-                  console.log(tab.title);
-                  return index <= 2 ? (
+                  return tab.id <= 3 ? (
                     <div
                       key={tab.id}
                       className={`${activeTab === index ? 'active' : ''} tab`}
