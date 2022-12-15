@@ -69,7 +69,9 @@ const Finance = ({ lang }) => {
                   {
                     docsData
                       ? docsData.data.map((doc) => {
-                          return <DocumentLink key={doc.id} title={doc.title} link={doc.file} />;
+                          return doc.page === 'Финансовый мониторинг' ? (
+                            <DocumentLink key={doc.id} title={doc.title} link={doc.file} />
+                          ) : null;
                         })
                       : '' //loader
                   }

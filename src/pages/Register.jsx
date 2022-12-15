@@ -123,7 +123,9 @@ export const Register = ({ lang }) => {
                 {
                   docsData
                     ? docsData.data.map((doc) => {
-                        return <DocumentLink key={doc.id} title={doc.title} link={doc.file} />;
+                        return doc.page === 'Регистрация договоров' ? (
+                          <DocumentLink key={doc.id} title={doc.title} link={doc.file} />
+                        ) : null;
                       })
                     : '' //loader
                 }

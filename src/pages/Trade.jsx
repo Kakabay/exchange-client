@@ -203,7 +203,9 @@ const Trade = ({ lang }) => {
                   {
                     docsData
                       ? docsData.data.map((doc) => {
-                          return <DocumentLink key={doc.id} title={doc.title} link={doc.file} />;
+                          return doc.page === 'Биржевые торги' ? (
+                            <DocumentLink key={doc.id} title={doc.title} link={doc.file} />
+                          ) : null;
                         })
                       : '' //loader
                   }

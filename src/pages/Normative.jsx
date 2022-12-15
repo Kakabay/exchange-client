@@ -105,7 +105,9 @@ export const Normative = ({ lang }) => {
                   {
                     docsData
                       ? docsData.data.map((doc) => {
-                          return <DocumentLink key={doc.id} title={doc.title} link={doc.file} />;
+                          return doc.page === 'Нормативная база' ? (
+                            <DocumentLink key={doc.id} title={doc.title} link={doc.file} />
+                          ) : null;
                         })
                       : '' //loader
                   }
