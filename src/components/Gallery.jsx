@@ -13,14 +13,6 @@ const Gallery = ({ imageTabIndex }) => {
       galleryData,
       setGalleryData,
     ).get();
-  }, []);
-
-  useEffect(() => {
-    const GalleryApi = new Api(
-      `http://tmex.gov.tm:8765/api/medias/${imageTabIndex}`,
-      galleryData,
-      setGalleryData,
-    ).get();
   }, [imageTabIndex]);
 
   return (

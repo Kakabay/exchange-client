@@ -18,12 +18,6 @@ const Tarif = ({ lang }) => {
 
     // Scroll to top
     window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    const TarifApi = new Api('http://tmex.gov.tm:8765/api/tariffs', tarifData, setTarifData).get({
-      'X-Localization': lang,
-    });
   }, [lang]);
 
   return (

@@ -10,14 +10,11 @@ const NewsPostPage = ({ postId, lang, setPostId }) => {
   const [newsPageData, setNewsPageData] = useState();
 
   useEffect(() => {
-    const NewsPageApi = new Api('http://tmex.gov.tm:8765/api/news', newsPageData, setNewsPageData);
-    NewsPageApi.get({ 'X-localization': lang });
-    console.log(postId);
-  }, []);
-
-  useEffect(() => {
-    const NewsPageApi = new Api('http://tmex.gov.tm:8765/api/news', newsPageData, setNewsPageData);
-    NewsPageApi.get({ 'X-localization': lang });
+    const NewsPageApi = new Api(
+      'http://tmex.gov.tm:8765/api/news',
+      newsPageData,
+      setNewsPageData,
+    ).get({ 'X-localization': lang });
   }, [lang]);
 
   return (

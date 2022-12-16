@@ -17,14 +17,6 @@ const Contacts = ({ lang }) => {
 
     // Scroll to top
     window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    const ContactsApi = new Api(
-      'http://tmex.gov.tm:8765/api/contacts',
-      contactsData,
-      setContactsData,
-    ).get({ 'X-Localization': lang });
   }, [lang]);
 
   return (

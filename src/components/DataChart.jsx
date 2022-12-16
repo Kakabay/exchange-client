@@ -18,13 +18,6 @@ const DataChart = ({ lang }) => {
     const TabData = new Api('http://tmex.gov.tm:8765/api/categories', tabData, setTabData).get({
       'X-Localization': lang,
     });
-  }, []);
-
-  useEffect(() => {
-    // Table data fetch
-    const TabData = new Api('http://tmex.gov.tm:8765/api/categories', tabData, setTabData).get({
-      'X-Localization': lang,
-    });
   }, [lang]);
 
   // console.log(tabIndex);
@@ -37,7 +30,7 @@ const DataChart = ({ lang }) => {
           <div className="chart-tabs">
             {tabData
               ? tabData.data.map((tab, index) => {
-                  return tab.id <= 3 ? (
+                  return index <= 2 ? (
                     <div
                       key={tab.id}
                       className={`${activeTab === index ? 'active' : ''} tab`}

@@ -29,13 +29,6 @@ const Home = ({ lang, setPostId }) => {
 
     // Scroll to top
     window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    // News fetch
-    const NewsApi = new Api('http://tmex.gov.tm:8765/api/news', newsData, setNewsData).get({
-      'X-Localization': lang,
-    });
   }, [lang]);
 
   return (

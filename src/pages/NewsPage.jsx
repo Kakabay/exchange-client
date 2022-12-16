@@ -15,13 +15,6 @@ const NewsPage = ({ lang, setPostId }) => {
     const PostsData = new Api('http://tmex.gov.tm:8765/api/news', postsData, setPostsData).get({
       'X-Localization': lang,
     });
-  }, []);
-
-  useEffect(() => {
-    // News fetch
-    const PostsData = new Api('http://tmex.gov.tm:8765/api/news', postsData, setPostsData).get({
-      'X-Localization': lang,
-    });
   }, [lang]);
 
   return (

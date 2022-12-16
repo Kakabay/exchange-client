@@ -10,20 +10,14 @@ export const Register = ({ lang }) => {
 
   useEffect(() => {
     // Documents fetch
-    const DocumentsApi = new Api('http://tmex.gov.tm:8765/api/documents', docsData, setDocsData);
-    DocumentsApi.get({ 'X-Localization': lang });
-
-    // Scroll to top
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    // Documents fetch
     const DocumentsApi = new Api(
       'http://tmex.gov.tm:8765/api/documents',
       docsData,
       setDocsData,
     ).get({ 'X-Localization': lang });
+
+    // Scroll to top
+    window.scrollTo(0, 0);
   }, [lang]);
 
   return (

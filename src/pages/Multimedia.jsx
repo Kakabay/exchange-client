@@ -26,14 +26,6 @@ const Multimedia = ({ lang }) => {
 
     // Scroll to top
     window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    const MultimediaApi = new Api(
-      'http://tmex.gov.tm:8765/api/media/categories',
-      multimediaData,
-      setMultimediaData,
-    ).get({ 'X-Localization': lang });
   }, [lang]);
 
   const imageTabSwitch = (imageIndex, imageTabId) => {
