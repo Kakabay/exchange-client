@@ -15,13 +15,12 @@ const ChartTable = ({ activeRow, setActiveRow, tabIndex }) => {
   useEffect(() => {
     // Table data fetch
     const TableApi = new Api(
-      // `http://tmex.gov.tm:8765/api/categories/${tabIndex}/tradings`,
-      `http://tmex.gov.tm:8765/api/categories/8/tradings`,
+      `http://tmex.gov.tm:8765/api/categories/${tabIndex}/tradings`,
+      // `http://tmex.gov.tm:8765/api/categories/8/tradings`,
       dataTable,
       setDataTable,
-    );
-    TableApi.get();
-  }, []);
+    ).get();
+  }, [tabIndex]);
 
   return (
     <div className="table">

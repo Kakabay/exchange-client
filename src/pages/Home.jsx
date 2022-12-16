@@ -20,7 +20,7 @@ const Home = ({ lang, setPostId }) => {
 
   useEffect(() => {
     // Video fetch
-    const VideoApi = new Api('http://tmex.gov.tm:8765/api/video', videoData, setVideoData).get();
+    // const VideoApi = new Api('http://tmex.gov.tm:8765/api/video', videoData, setVideoData).get();
 
     // News fetch
     const NewsApi = new Api('http://tmex.gov.tm:8765/api/news', newsData, setNewsData).get({
@@ -42,17 +42,14 @@ const Home = ({ lang, setPostId }) => {
         <div className="container">
           <div className="about-wrapper">
             <div className="about-left">
-              <SectionTitle title="услуги биржы" />
+              <SectionTitle title="О бирже" />
               <div className="about-text-wrapper">
                 <p className="about-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu nisl, rhoncus aenean
-                  dignissim velit vestibulum cras ultrices etiam. Iaculis vitae imperdiet eget
-                  fringilla a egestas purus. Iaculis vitae imperdiet eget fringilla a egestas purus.
-                </p>
-                <p className="about-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu nisl, rhoncus aenean
-                  dignissim velit vestibulum cras ultrices etiam. Iaculis vitae imperdiet eget
-                  fringilla a egestas purus. Iaculis vitae imperdiet eget fringilla a egestas purus.
+                  Государственная товарно-сырьевая биржа Туркменистана была создана Указом
+                  Президента Туркменистана от 29 июля 1994 года и является важнейшим экономическим
+                  институтом страны. Биржа выполняет функцию главного органа государственного
+                  регулирования экспортно-импортных операций. Отлаженный механизм функционирования
+                  позволяет ей успешно интегрироваться в международную экономическую систему.
                 </p>
               </div>
               <div className="about-link-wrapper">
@@ -77,7 +74,8 @@ const Home = ({ lang, setPostId }) => {
               </div>
             </div>
             <div className="about-right">
-              {videoData ? <VideoPlayer videoUrl={videoData.data.video} /> : null}
+              {/* {videoData ? <VideoPlayer videoUrl={videoData.data.video} /> : null} */}
+              <VideoPlayer videoUrl={'https://www.exchange.gov.tm/page/normative-base?lang=ru'} />
             </div>
           </div>
         </div>

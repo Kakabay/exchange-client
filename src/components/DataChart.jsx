@@ -20,8 +20,11 @@ const DataChart = ({ lang }) => {
     });
   }, [lang]);
 
-  // console.log(tabIndex);
-  // setTabIndex(tabData.data[0].id);
+  // Functions
+  const tabDataFetch = (id, index) => {
+    setTabIndex(id);
+    setActiveTab(index);
+  };
 
   return (
     <section className="chart">
@@ -33,10 +36,9 @@ const DataChart = ({ lang }) => {
                   return index <= 2 ? (
                     <div
                       key={tab.id}
-                      className={`${activeTab === index ? 'active' : ''} tab`}
+                      className={`${tabIndex === tab.id ? 'active' : ''} tab`}
                       onClick={() => {
-                        setActiveTab(index);
-                        // setTabIndex(tab.id);
+                        tabDataFetch(tab.id, index);
                       }}>
                       <span>{tab.title}</span>
                     </div>
@@ -45,9 +47,9 @@ const DataChart = ({ lang }) => {
               : null}
           </div>
           <div className="chart-data">
-            <ChartTable activeRow={activeRow} setActiveRow={setActiveRow} activeTab={activeTab} />
+            <ChartTable activeRow={activeRow} setActiveRow={setActiveRow} tabIndex={tabIndex} />
             <div className="line-chart-wrapper">
-              <LineChart activeRow={activeRow} />
+              <LineChart activeRow={activeRow} tabIndex={tabIndex} />
             </div>
           </div>
         </div>

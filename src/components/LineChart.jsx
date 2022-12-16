@@ -13,17 +13,16 @@ import { useState, useEffect } from 'react';
 
 ChartJS.register(LineElement, PointElement, LinearScale, Tooltip, CategoryScale);
 
-const LineChart = ({ activeRow }) => {
+const LineChart = ({ activeRow, tabIndex }) => {
   const [dataLineChart, setDataLineChart] = useState();
   useEffect(() => {
     // Table data fetch
     const LineChartData = new Api(
-      'http://tmex.gov.tm:8765/api/categories/8/tradings',
+      `http://tmex.gov.tm:8765/api/categories/${tabIndex}/tradings`,
       dataLineChart,
       setDataLineChart,
-    );
-    LineChartData.get();
-  }, []);
+    ).get();
+  }, [tabIndex]);
 
   let delayed;
 
