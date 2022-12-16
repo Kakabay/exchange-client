@@ -194,7 +194,7 @@ const Trade = ({ lang }) => {
                   {
                     docsData
                       ? docsData.data.map((doc) => {
-                          return doc.page === 'Биржевые торги' ? (
+                          return doc.page === 'Биржевые торги' && doc.title != '-' ? (
                             <DocumentLink key={doc.id} title={doc.title} link={doc.file} />
                           ) : null;
                         })

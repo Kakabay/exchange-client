@@ -60,7 +60,7 @@ const Finance = ({ lang }) => {
                   {
                     docsData
                       ? docsData.data.map((doc) => {
-                          return doc.page === 'Финансовый мониторинг' ? (
+                          return doc.page === 'Финансовый мониторинг' && doc.title != '-' ? (
                             <DocumentLink key={doc.id} title={doc.title} link={doc.file} />
                           ) : null;
                         })

@@ -8,12 +8,12 @@ const Hero = () => {
       <div className="container">
         <div className="hero-wrapper">
           <div className="buttons-wrapper">
-            <Link to={'/'} className="hero-button">
+            <a href="https://tmex.gov.tm/tm" target="_blank" className="hero-button">
               Перейти на торговую площадку
-            </Link>
-            <Link to={'/'} className="hero-button">
+            </a>
+            <a href="" className="hero-button">
               Подать документы онлайн
-            </Link>
+            </a>
           </div>
         </div>
       </div>
