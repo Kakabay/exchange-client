@@ -42,7 +42,7 @@ const Header = ({ lang, setLang }) => {
             </ul>
             <div className="sign-in">
               <a href="https://tmex.gov.tm/tm/habarlar/1" target="_blank" className="sign-in-item">
-                Войти / Регистрация
+                Личный кабинет
               </a>
             </div>
           </div>
