@@ -24,26 +24,63 @@ const Tarif = ({ lang }) => {
     <main>
       <div className="container">
         <div className="sub-page-wrapper sub-page-full">
-          <SectionTitle title="Тарифы и сборы" />
+          {lang === 'ru' ? (
+            <SectionTitle title="Тарифы и сборы" />
+          ) : lang === 'tm' ? (
+            <SectionTitle title="Nyrhlar we ýygymlar" />
+          ) : lang === 'en' ? (
+            <SectionTitle title="Tariffs and fees" />
+          ) : null}
+
           <div className="tarif-wrapper">
             <div className="tarif-wrapper-top">
-              <Tab
-                text="Для резидентов"
-                active={activeTab === 1 ? true : false}
-                onClick={() => setActiveTab(1)}
-              />
-              <Tab
-                text="Для не резидентов"
-                active={activeTab === 2 ? true : false}
-                onClick={() => setActiveTab(2)}
-              />
+              {lang === 'ru' ? (
+                <>
+                  <Tab
+                    text="Для резидентов"
+                    active={activeTab === 1 ? true : false}
+                    onClick={() => setActiveTab(1)}
+                  />
+                  <Tab
+                    text="Для не резидентов"
+                    active={activeTab === 2 ? true : false}
+                    onClick={() => setActiveTab(2)}
+                  />
+                </>
+              ) : lang === 'tm' ? (
+                <>
+                  <Tab
+                    text="Ýerli ýaşaýjylar üçin"
+                    active={activeTab === 1 ? true : false}
+                    onClick={() => setActiveTab(1)}
+                  />
+                  <Tab
+                    text="Ýerli bolmadyk ýaşaýjylar üçin"
+                    active={activeTab === 2 ? true : false}
+                    onClick={() => setActiveTab(2)}
+                  />
+                </>
+              ) : lang === 'en' ? (
+                <>
+                  <Tab
+                    text="For residents"
+                    active={activeTab === 1 ? true : false}
+                    onClick={() => setActiveTab(1)}
+                  />
+                  <Tab
+                    text="For non-residents"
+                    active={activeTab === 2 ? true : false}
+                    onClick={() => setActiveTab(2)}
+                  />
+                </>
+              ) : null}
             </div>
           </div>
           {activeTab === 1 ? (
             <div className="tarif-table">
               {tarifData
                 ? tarifData.data.map((tarif) => {
-                    return tarif.type === 'resident' ? (
+                    return tarif.type === 'resident' && tarif.title != '-' ? (
                       <TarifService
                         title={tarif.title}
                         price={tarif.prices.map((tarifPrice) => tarifPrice.price + ' ')}
@@ -57,7 +94,7 @@ const Tarif = ({ lang }) => {
             <div className="tarif-table">
               {tarifData
                 ? tarifData.data.map((tarif) => {
-                    return tarif.type === 'non_resident' ? (
+                    return tarif.type === 'non_resident' && tarif.title != '-' ? (
                       <TarifService
                         title={tarif.title}
                         price={tarif.prices.map((tarifPrice) => tarifPrice.price + ' ')}

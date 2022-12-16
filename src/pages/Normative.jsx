@@ -25,84 +25,164 @@ export const Normative = ({ lang }) => {
     <main>
       <div className="container">
         <div className="sub-page-wrapper">
-          <SectionTitle title="Нормативная база" />
+          {lang === 'ru' ? (
+            <>
+              <SectionTitle title="Нормативная база" />
 
-          <div className="sub-page-content-wrapper">
-            <div className="sub-page-text-wrapper">
-              <p>
-                Арбитражная комиссия в своей деятельности руководствуется Конституцией, законами,
-                актами Президента, положением Биржи, правилами биржевой торговли и другими
-                нормативно-правовыми актами.
-              </p>
-            </div>
+              <div className="sub-page-content-wrapper">
+                <div className="sub-page-text-wrapper">
+                  <p>
+                    Арбитражная комиссия в своей деятельности руководствуется Конституцией,
+                    законами, актами Президента, положением Биржи, правилами биржевой торговли и
+                    другими нормативно-правовыми актами.
+                  </p>
+                </div>
 
-            <div className="sub-page-list-wrapper">
-              <h2 className="sub-page-title">В компетенцию Арбитражной комиссии входит:</h2>
-              <div className="sub-page-list">
-                <div className="sub-page-list-item">
-                  <div className="sub-page-list-num">1</div>
-                  <h3 className="sub-page-list-item-text">
-                    Аннулирование действия сделок, заключенных на биржевых торгах.
-                  </h3>
+                <div className="sub-page-list-wrapper">
+                  <h2 className="sub-page-title">В компетенцию Арбитражной комиссии входит:</h2>
+                  <div className="sub-page-list">
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">1</div>
+                      <h3 className="sub-page-list-item-text">
+                        Аннулирование действия сделок, заключенных на биржевых торгах.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">2</div>
+                      <h3 className="sub-page-list-item-text">
+                        Аннулирование зарегистрированных и невостребованных на Бирже договоров.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">3</div>
+                      <h3 className="sub-page-list-item-text">
+                        Рассмотрение споров по биржевым сделкам и вопросам биржевой торговли.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">4</div>
+                      <h3 className="sub-page-list-item-text">
+                        Рассмотрение споров по договорам, при их заключении, внесении изменений и
+                        расторжении.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">5</div>
+                      <h3 className="sub-page-list-item-text">
+                        Комиссия вправе изменить, отменить и восстановить принятое решение.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">6</div>
+                      <h3 className="sub-page-list-item-text">
+                        Рассмотрение нарушений, допущенных участниками биржевой торговли.
+                      </h3>
+                    </div>
+                  </div>
                 </div>
-                <div className="sub-page-list-item">
-                  <div className="sub-page-list-num">2</div>
-                  <h3 className="sub-page-list-item-text">
-                    Аннулирование зарегистрированных и невостребованных на Бирже договоров.
-                  </h3>
-                </div>
-                <div className="sub-page-list-item">
-                  <div className="sub-page-list-num">3</div>
-                  <h3 className="sub-page-list-item-text">
-                    Рассмотрение споров по биржевым сделкам и вопросам биржевой торговли.
-                  </h3>
-                </div>
-                <div className="sub-page-list-item">
-                  <div className="sub-page-list-num">4</div>
-                  <h3 className="sub-page-list-item-text">
-                    Рассмотрение споров по договорам, при их заключении, внесении изменений и
-                    расторжении.
-                  </h3>
-                </div>
-                <div className="sub-page-list-item">
-                  <div className="sub-page-list-num">5</div>
-                  <h3 className="sub-page-list-item-text">
-                    Комиссия вправе изменить, отменить и восстановить принятое решение.
-                  </h3>
-                </div>
-                <div className="sub-page-list-item">
-                  <div className="sub-page-list-num">6</div>
-                  <h3 className="sub-page-list-item-text">
-                    Рассмотрение нарушений, допущенных участниками биржевой торговли.
-                  </h3>
+
+                <div className="sub-page-text-wrapper">
+                  <p>Инструкция о порядке консульской легализации</p>
+                  <p>
+                    Консульская легализация заключается в установлении и засвидетельствовании
+                    подлинности подписей на ъдокументах и актах, а также соответствия их законам
+                    государства пребывания консула путем совершения легализационной надписи или
+                    проставления легализационного штампа на государственном и английском языках.
+                  </p>
                 </div>
               </div>
-            </div>
+            </>
+          ) : null}
 
-            <div className="sub-page-text-wrapper">
-              <p>Инструкция о порядке консульской легализации</p>
-              <p>
-                Консульская легализация заключается в установлении и засвидетельствовании
-                подлинности подписей на ъдокументах и актах, а также соответствия их законам
-                государства пребывания консула путем совершения легализационной надписи или
-                проставления легализационного штампа на государственном и английском языках.
-              </p>
-            </div>
+          {lang === 'tm' ? (
+            <>
+              <SectionTitle title="Kadalaşdyrylan toplum" />
 
-            <div className="sub-page-title-text">
-              <h2 className="sub-page-title">Документы для скачивания</h2>
-              <div className="documents-wrapper">
-                <div className="documents-links-wrapper">
-                  {
-                    docsData
-                      ? docsData.data.map((doc) => {
-                          return doc.page === 'Нормативная база' && doc.title != '-' ? (
-                            <DocumentLink key={doc.id} title={doc.title} link={doc.file} />
-                          ) : null;
-                        })
-                      : '' //loader
-                  }
+              <div className="sub-page-content-wrapper">
+                <div className="sub-page-text-wrapper">
+                  <p>
+                    Arbitraž geňeşi öz işinde Konstitusiýa, Prezidentiň Kanunlary, biržanyň
+                    düzgünleri, alyş-çalyş söwdasynyň kadalary we beýleki kadalaşdyryjy hukuk
+                    hereketlerine esaslanýar.
+                  </p>
                 </div>
+
+                <div className="sub-page-list-wrapper">
+                  <h2 className="sub-page-title">
+                    Arbitraž geňeşiniň ygtyýarlygy şulary öz içine alýar:{' '}
+                  </h2>
+                  <div className="sub-page-list">
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">1</div>
+                      <h3 className="sub-page-list-item-text">
+                        Birža auksionlarynda baglanyşylan ylalaşyklaryň täsiriniň ýatyrylmagy.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">2</div>
+                      <h3 className="sub-page-list-item-text">
+                        Biržada hasaba alnan we talap edilmedik şertnamalaryň ýatyrylmagy.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">3</div>
+                      <h3 className="sub-page-list-item-text">
+                        Birža amallary we alyş-çalyş söwdasy baradaky jedellere garamak.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">4</div>
+                      <h3 className="sub-page-list-item-text">
+                        Jedeller baglanyşylanda, üýtgedilende we ýatyrylanda şertnamalara garamak.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">5</div>
+                      <h3 className="sub-page-list-item-text">
+                        Geňeşiň kabul edilen karary üýtgetmäge, ýatyrmaga we dikeltmäge hukugy bar.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">6</div>
+                      <h3 className="sub-page-list-item-text">
+                        Birža söwdasyna gatnaşyjylar tarapyndan edilen düzgün bozmalara garamak.
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="sub-page-text-wrapper">
+                  <p>Konsullygy kanunlaşdyrmagyň tertibi boýunça görkezmeler</p>
+                  <p>
+                    Konsullygyň kanunlaşdyrylmagy resminamalara we hereketlere gollaryň dogrudygyny
+                    kesgitlemekden, şeýle hem kanunlaşdyrmak ýazgysyny ýazmak ýa-da döwlet we iňlis
+                    dillerinde kanunlaşdyryş möhürini goýmak arkaly konsulyň kabul edýän döwletiniň
+                    kanunlaryna laýyk gelmegini kesgitlemekden ybaratdyr.
+                  </p>
+                </div>
+              </div>
+            </>
+          ) : null}
+
+          <div className="sub-page-title-text">
+            <h2 className="sub-page-title">
+              {lang === 'ru'
+                ? 'Документы для скачивания'
+                : lang === 'tm'
+                ? 'Göçürip almak üçin resminamalar'
+                : null}
+            </h2>
+            <div className="documents-wrapper">
+              <div className="documents-links-wrapper">
+                {
+                  docsData
+                    ? docsData.data.map((doc) => {
+                        return doc.page === 'Нормативная база' && doc.title != '-' ? (
+                          <DocumentLink key={doc.id} title={doc.title} link={doc.file} />
+                        ) : null;
+                      })
+                    : '' //loader
+                }
               </div>
             </div>
           </div>

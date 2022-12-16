@@ -33,7 +33,7 @@ const App = () => {
       <Header lang={lang} setLang={setLang} />
       <Routes>
         <Route index element={<Home lang={lang} setPostId={setPostId} />} />
-        <Route path="/gtsbt" element={<Gtsbt />} />
+        <Route path="/gtsbt" element={<Gtsbt lang={lang} />} />
         <Route path="/norm" element={<Normative lang={lang} />} />
         <Route
           path="/news"
