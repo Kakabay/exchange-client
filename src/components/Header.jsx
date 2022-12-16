@@ -41,7 +41,10 @@ const Header = ({ lang, setLang }) => {
               </li>
             </ul>
             <div className="sign-in">
-              <a href="https://tmex.gov.tm/tm/habarlar/1" target="_blank" className="sign-in-item">
+              <a
+                href="https://shahsyotag.exchange.gov.tm/login"
+                target="_blank"
+                className="sign-in-item">
                 Личный кабинет
               </a>
             </div>
