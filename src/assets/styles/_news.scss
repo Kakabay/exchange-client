@@ -14,6 +14,42 @@
   gap: 1.6rem;
 }
 
+.pagination {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 4.8rem;
+
+  .arr-left {
+    transform: rotate(180deg);
+  }
+}
+
+.pagination-arrow {
+  padding: 1.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  border-radius: 0.8rem;
+
+  &:hover {
+    background: rgb(247, 247, 247);
+  }
+
+  &:disabled {
+    &:hover {
+      background: none;
+      cursor: default;
+    }
+    .arr-pagination-svg {
+      fill: $base-gray;
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   .news-post-wrapper {
     grid-template-columns: repeat(2, 1fr);
