@@ -1,19 +1,21 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React from "react";
+import { useState, useEffect } from "react";
 // Functions
-import { Api } from '../helpers/api';
-import { dateReverse } from '../helpers/functions';
+import { Api } from "../helpers/api";
+import { dateReverse } from "../helpers/functions";
 // Components
-import SectionTitle from '../components/SectionTitle';
-import NewsPost from '../components/NewsPost';
+import SectionTitle from "../components/SectionTitle";
+import NewsPost from "../components/NewsPost";
 
-const NewsPage = ({ lang, setPostId }) => {
-  const [postsData, setPostsData] = useState();
-
+const NewsPage = ({ lang, setPostId, postsData, setPostsData }) => {
   useEffect(() => {
     // News fetch
-    const PostsData = new Api('http://tmex.gov.tm:8765/api/news', postsData, setPostsData).get({
-      'X-Localization': lang,
+    const PostsData = new Api(
+      "http://tmex.gov.tm:8765/api/news",
+      postsData,
+      setPostsData
+    ).get({
+      "X-Localization": lang,
     });
   }, [lang]);
 

@@ -1,6 +1,6 @@
 // Icons
-import { Link } from 'react-router-dom';
-import arrow from '../assets/icons/arrow.svg';
+import { Link } from "react-router-dom";
+import arrow from "../assets/icons/arrow.svg";
 
 const NewsPost = ({ title, shortDes, date, image, setPostId, id }) => {
   return (
@@ -13,7 +13,11 @@ const NewsPost = ({ title, shortDes, date, image, setPostId, id }) => {
         <h2 className="news-post-title">{title}</h2>
         <p className="news-post-text">{shortDes}</p>
       </div>
-      <Link className="news-post-link" to={'/post'} onClick={() => setPostId(id)}>
+      <Link
+        className="news-post-link"
+        to={`/post/${id}`}
+        onClick={() => setPostId(id)}
+      >
         <img src={arrow} alt="arrow" />
         <h3>Читать полностью </h3>
       </Link>
