@@ -1,8 +1,8 @@
 // Modules
-import { useState, useEffect } from 'react';
-import { Api } from '../helpers/api';
+import { useState, useEffect } from "react";
+import { Api } from "../helpers/api";
 // Components
-import TableRow from './TableRow';
+import TableRow from "./TableRow";
 
 const ChartTable = ({ activeRow, setActiveRow, tabIndex }) => {
   const [dataTable, setDataTable] = useState();
@@ -14,12 +14,14 @@ const ChartTable = ({ activeRow, setActiveRow, tabIndex }) => {
 
   useEffect(() => {
     // Table data fetch
-    const TableApi = new Api(
-      `http://tmex.gov.tm:8765/api/categories/${tabIndex}/tradings`,
-      // `http://tmex.gov.tm:8765/api/categories/8/tradings`,
-      dataTable,
-      setDataTable,
-    ).get();
+    if (tabIndex) {
+      const TableApi = new Api(
+        `http://tmex.gov.tm:8765/api/categories/${tabIndex}/tradings`,
+        // `http://tmex.gov.tm:8765/api/categories/8/tradings`,
+        dataTable,
+        setDataTable
+      ).get();
+    }
   }, [tabIndex]);
 
   return (
@@ -36,12 +38,12 @@ const ChartTable = ({ activeRow, setActiveRow, tabIndex }) => {
                 <TableRow
                   key={tableRow.id}
                   title={tableRow.title}
-                  titleHide={tableRow.title.length > 7 ? 'title-hide' : null}
+                  titleHide={tableRow.title.length > 7 ? "title-hide" : null}
                   priceChange={tableRow.price_change}
                   price={tableRow.price}
                   currency={tableRow.currency}
                   onClick={() => rowActive(index)}
-                  active={activeRow === index ? 'active' : ''}
+                  active={activeRow === index ? "active" : ""}
                 />
               );
             })
