@@ -1,6 +1,6 @@
 // Functions
 
 // reverse date
-export const dateReverse = (s) => {
-  return s.split('-').reverse().join('.');
+export const dateReverse = (date) => {
+  return date.split("-").reverse().join(".");
 };
