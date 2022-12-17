@@ -1,15 +1,15 @@
 // Modules
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { Api } from '../helpers/api';
+import React from "react";
+import { useState, useEffect } from "react";
+import { Api } from "../helpers/api";
 // Components
-import SectionTitle from '../components/SectionTitle';
-import MultimediaTab from '../components/MultimediaTab';
-import Gallery from '../components/Gallery';
-import Videos from '../components/Videos';
+import SectionTitle from "../components/SectionTitle";
+import MultimediaTab from "../components/MultimediaTab";
+import Gallery from "../components/Gallery";
+import Videos from "../components/Videos";
 
 const Multimedia = ({ lang }) => {
-  const [imageTab, setImageTab] = useState();
+  const [imageTab, setImageTab] = useState(0);
   const [imageTabIndex, setImageTabIndex] = useState();
 
   const [videoTab, setVideoTab] = useState(0);
@@ -18,15 +18,23 @@ const Multimedia = ({ lang }) => {
   const [multimediaData, setMultimediaData] = useState();
 
   useEffect(() => {
-    const MultimediaApi = new Api(
-      'http://tmex.gov.tm:8765/api/media/categories',
-      multimediaData,
-      setMultimediaData,
-    ).get({ 'X-Localization': lang });
-
     // Scroll to top
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const MultimediaApi = new Api(
+      "http://tmex.gov.tm:8765/api/media/categories",
+      multimediaData,
+      setMultimediaData
+    ).get({ "X-Localization": lang });
   }, [lang]);
+
+  useEffect(() => {
+    if (multimediaData) {
+      setImageTabIndex(multimediaData.data[0].id);
+    }
+  }, [multimediaData]);
 
   const imageTabSwitch = (imageIndex, imageTabId) => {
     setImageTab(imageIndex);
@@ -44,13 +52,13 @@ const Multimedia = ({ lang }) => {
     <main>
       <div className="container">
         <div className="sub-page-wrapper sub-page-full">
-          <SectionTitle title="Мультимедия" />
+          <SectionTitle title="Мультимедиа" />
           <div className="multimedia-wrapper">
             <nav className="multimedia-nav">
               <div className="multimedia-top-gallery">
                 {multimediaData
                   ? multimediaData.data.map((tab, index) => {
-                      return tab.type === 'image' ? (
+                      return tab.type === "image" ? (
                         <MultimediaTab
                           key={tab.id}
                           title={tab.title}
@@ -64,7 +72,7 @@ const Multimedia = ({ lang }) => {
               <div className="multimedia-top-video">
                 {multimediaData
                   ? multimediaData.data.map((tab, index) => {
-                      return tab.type === 'video' ? (
+                      return tab.type === "video" ? (
                         <MultimediaTab
                           key={tab.id}
                           title={tab.title}
