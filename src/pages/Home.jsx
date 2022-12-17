@@ -41,38 +41,115 @@ const Home = ({ lang, setPostId }) => {
       <section className="about">
         <div className="container">
           <div className="about-wrapper">
-            <div className="about-left">
-              <SectionTitle title="О бирже" />
-              <div className="about-text-wrapper">
-                <p className="about-text">
-                  Государственная товарно-сырьевая биржа Туркменистана была создана Указом
-                  Президента Туркменистана от 29 июля 1994 года и является важнейшим экономическим
-                  институтом страны. Биржа выполняет функцию главного органа государственного
-                  регулирования экспортно-импортных операций. Отлаженный механизм функционирования
-                  позволяет ей успешно интегрироваться в международную экономическую систему.
-                </p>
+            {lang === 'ru' ? (
+              <div className="about-left">
+                <SectionTitle title="О бирже" />
+                <div className="about-text-wrapper">
+                  <p className="about-text">
+                    Государственная товарно-сырьевая биржа Туркменистана была создана Указом
+                    Президента Туркменистана от 29 июля 1994 года и является важнейшим экономическим
+                    институтом страны. Биржа выполняет функцию главного органа государственного
+                    регулирования экспортно-импортных операций. Отлаженный механизм функционирования
+                    позволяет ей успешно интегрироваться в международную экономическую систему.
+                  </p>
+                </div>
+                <div className="about-link-wrapper">
+                  <Link to={'/'} className="about-link">
+                    <img src={arrow} alt="link" className="about-link-text" />
+                    <h3 className="about-link-text">Подать документы онлайн</h3>
+                  </Link>
+                  <Link to={'/'} className="about-link">
+                    <img src={arrow} alt="link" className="about-link-text" />
+                    <h3 className="about-link-text">Проверить статус подписания контрактов</h3>
+                  </Link>
+                  <Link to={'/'} className="about-link">
+                    <img src={arrow} alt="link" className="about-link-text" />
+                    <h3 className="about-link-text">Узнать импортные цены можно здесь</h3>
+                  </Link>
+                  <Link to={'/'} className="about-link">
+                    <img src={arrow} alt="link" className="about-link-text" />
+                    <h3 className="about-link-text">
+                      Просмотреть тарифы и сборы для участников биржы
+                    </h3>
+                  </Link>
+                </div>
               </div>
-              <div className="about-link-wrapper">
-                <Link to={'/'} className="about-link">
-                  <img src={arrow} alt="link" className="about-link-text" />
-                  <h3 className="about-link-text">Подать документы онлайн</h3>
-                </Link>
-                <Link to={'/'} className="about-link">
-                  <img src={arrow} alt="link" className="about-link-text" />
-                  <h3 className="about-link-text">Проверить статус подписания контрактов</h3>
-                </Link>
-                <Link to={'/'} className="about-link">
-                  <img src={arrow} alt="link" className="about-link-text" />
-                  <h3 className="about-link-text">Узнать импортные цены можно здесь</h3>
-                </Link>
-                <Link to={'/'} className="about-link">
-                  <img src={arrow} alt="link" className="about-link-text" />
-                  <h3 className="about-link-text">
-                    Просмотреть тарифы и сборы для участников биржы
-                  </h3>
-                </Link>
+            ) : null}
+
+            {lang === 'tm' ? (
+              <div className="about-left">
+                <SectionTitle title="BIRŽA BARADA" />
+                <div className="about-text-wrapper">
+                  <p className="about-text">
+                    Türkmenistanyň Döwlet haryt we çig mal biržasy (TDHÇMB) Türkmenistanyň
+                    Prezidentiniň 1994-nji ýylyň 29-njy iýulyndaky Karary bilen döredildi we ýurduň
+                    iň möhüm ykdysady instituty bolup durýar. Birža eksport we import amallaryny
+                    amala aşyrmakda döwleti düzgünleşdirýän esasy edaranyň wezipesini ýerine
+                    ýetirýär. Sazlaşykly döredilen mehanizm halkara ykdysady ulgamyna üstünlikli
+                    birleşmäge mümkinçilik berýär. TDHÇMB-nyň işiniň gerimi örän giňdir – dürli
+                    haryt we maddy baýlyklary (intellektual eýeçiligi hasaba almazdan), sungat
+                    eserlerini we gozgalmaýan emläkleri kabul edip satýan köptaraplaýyn biržasydyr.
+                  </p>
+                </div>
+                <div className="about-link-wrapper">
+                  <Link to={'/'} className="about-link">
+                    <img src={arrow} alt="link" className="about-link-text" />
+                    <h3 className="about-link-text">Подать документы онлайн</h3>
+                  </Link>
+                  <Link to={'/'} className="about-link">
+                    <img src={arrow} alt="link" className="about-link-text" />
+                    <h3 className="about-link-text">Проверить статус подписания контрактов</h3>
+                  </Link>
+                  <Link to={'/'} className="about-link">
+                    <img src={arrow} alt="link" className="about-link-text" />
+                    <h3 className="about-link-text">Узнать импортные цены можно здесь</h3>
+                  </Link>
+                  <Link to={'/'} className="about-link">
+                    <img src={arrow} alt="link" className="about-link-text" />
+                    <h3 className="about-link-text">
+                      Просмотреть тарифы и сборы для участников биржы
+                    </h3>
+                  </Link>
+                </div>
               </div>
-            </div>
+            ) : null}
+
+            {lang === 'en' ? (
+              <div className="about-left">
+                <SectionTitle title="About the Exchange" />
+                <div className="about-text-wrapper">
+                  <p className="about-text">
+                    The State Commodity and Raw Materials Exchange of Turkmenistan (SCRMET) was
+                    established by the Decree of the President of Turkmenistan on July 29, 1994 and
+                    is the most important economic institution of the country. The Exchange
+                    functions as the main body of state regulation of export-import operations. Its
+                    smoothly functioning mechanism enables it to successfully integrate into the
+                    international economic system.
+                  </p>
+                </div>
+                <div className="about-link-wrapper">
+                  <Link to={'/'} className="about-link">
+                    <img src={arrow} alt="link" className="about-link-text" />
+                    <h3 className="about-link-text">Подать документы онлайн</h3>
+                  </Link>
+                  <Link to={'/'} className="about-link">
+                    <img src={arrow} alt="link" className="about-link-text" />
+                    <h3 className="about-link-text">Проверить статус подписания контрактов</h3>
+                  </Link>
+                  <Link to={'/'} className="about-link">
+                    <img src={arrow} alt="link" className="about-link-text" />
+                    <h3 className="about-link-text">Узнать импортные цены можно здесь</h3>
+                  </Link>
+                  <Link to={'/'} className="about-link">
+                    <img src={arrow} alt="link" className="about-link-text" />
+                    <h3 className="about-link-text">
+                      Просмотреть тарифы и сборы для участников биржы
+                    </h3>
+                  </Link>
+                </div>
+              </div>
+            ) : null}
+
             <div className="about-right">
               {/* {videoData ? <VideoPlayer videoUrl={videoData.data.video} /> : null} */}
               <VideoPlayer videoUrl={'https://www.exchange.gov.tm/page/normative-base?lang=ru'} />
