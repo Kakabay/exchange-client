@@ -1,5 +1,5 @@
 // Modules
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 // Styles
@@ -23,10 +23,19 @@ import NewsPostPage from "./pages/NewsPostPage";
 import Tarif from "./pages/Tarif";
 import Multimedia from "./pages/Multimedia";
 
+// Classes
+import { LanguageManager } from "./helpers/languageManager";
+
 const App = () => {
-  const [lang, setLang] = useState("ru");
+  const languageManager = new LanguageManager();
+
+  const [lang, setLang] = useState(languageManager.getLang());
   const [postId, setPostId] = useState();
   const [postsData, setPostsData] = useState();
+
+  useEffect(() => {
+    languageManager.saveLang(lang);
+  }, [lang]);
 
   return (
     <div className="App">
