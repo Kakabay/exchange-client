@@ -10,6 +10,7 @@ import {
 } from "chart.js";
 import { Api } from "../helpers/api";
 import { useState, useEffect } from "react";
+import { parseDate } from "../helpers/functions";
 
 ChartJS.register(
   LineElement,
@@ -37,7 +38,7 @@ const LineChart = ({ activeRow, tabIndex }) => {
   const data = {
     labels: dataLineChart
       ? dataLineChart.data[activeRow].all_prices.map((price) =>
-          price.date.split(" ")[0].replace("-", ".").replace("-", ".")
+          parseDate(price.date)
         )
       : [""],
 
