@@ -200,6 +200,70 @@ const Gtsbt = ({ lang }) => {
             </div>
           </div>
         ) : null}
+
+        {lang === 'en' ? (
+          <div className="sub-page-wrapper">
+            <SectionTitle title="About the Exchange" />
+            <div className="sub-page-content-wrapper">
+              <div className="sub-page-text-wrapper">
+                <p>
+                  The State Commodity and Raw Materials Exchange of Turkmenistan (SCRMET) was
+                  established by the Decree of the President of Turkmenistan on July 29, 1994 and is
+                  the most important economic institution of the country. The Exchange functions as
+                  the main body of state regulation of export-import operations. Its smoothly
+                  functioning mechanism enables it to successfully integrate into the international
+                  economic system.
+                </p>
+                <p>
+                  The range of the SCRMET activities is extremely wide – it is a universal exchange,
+                  accepting and selling various commodities and materials (except intellectual
+                  property objects), works of art and real estate through auctions.
+                </p>
+              </div>
+
+              <div className="sub-page-list-wrapper">
+                <h2 className="sub-page-title">Objectives and aims of the exchange:</h2>
+                <div className="sub-page-list">
+                  <div className="sub-page-list-item">
+                    <div className="sub-page-list-num">1</div>
+                    <h3 className="sub-page-list-item-text">
+                      to create an equal playing field for its participants – foreign businessmen
+                      and entrepreneurs of Turkmenistan;
+                    </h3>
+                  </div>
+                  <div className="sub-page-list-item">
+                    <div className="sub-page-list-num">2</div>
+                    <h3 className="sub-page-list-item-text">
+                      to increase and accelerate trade turnover;
+                    </h3>
+                  </div>
+                  <div className="sub-page-list-item">
+                    <div className="sub-page-list-num">3</div>
+                    <h3 className="sub-page-list-item-text">
+                      to saturate domestic market with necessary consumer goods, production of
+                      industrial-technical purpose and equipment for modernization of national
+                      economy complex.
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              <div className="sub-page-text-wrapper">
+                <p>
+                  Qualified specialists of the exchange evaluate expediency of import and export of
+                  products, analyze influence of various factors on import and export of goods and
+                  products.
+                </p>
+                <p>
+                  Domestic products, which are exported to more than 40 countries, are traded at
+                  commodity exchanges. Among them are Turkey, China, Russia, UAE, Germany, USA, UK,
+                  Ukraine and Switzerland. The main export items are petroleum products, cotton
+                  fibre, textile and chemical products, etc.
+                </p>
+              </div>
+            </div>
+          </div>
+        ) : null}
       </div>
     </main>
   );
