@@ -215,12 +215,112 @@ export const Register = ({ lang }) => {
             </>
           ) : null}
 
+          {lang === 'en' ? (
+            <>
+              <SectionTitle title="Registration of contracts" />
+
+              <div className="sub-page-content-wrapper">
+                <div className="sub-page-list-wrapper">
+                  <h2 className="sub-page-title">
+                    Registration of contracts at the The State Commodity and Raw Materials Exchange
+                    of Turkmenistan is carried out according to the following scheme:
+                  </h2>
+                  <div className="sub-page-list">
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">1</div>
+                      <h3 className="sub-page-list-item-text">
+                        Acceptance of documents from 9.00 to 17.00.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">2</div>
+                      <h3 className="sub-page-list-item-text">
+                        Department of Analysis and Securities market.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">3</div>
+                      <h3 className="sub-page-list-item-text">Management of Law and Personnel.</h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">4</div>
+                      <h3 className="sub-page-list-item-text">Registration Department.</h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">5</div>
+                      <h3 className="sub-page-list-item-text">Mutual Settlements Department.</h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">6</div>
+                      <h3 className="sub-page-list-item-text">
+                        Transfer to managers for signature.
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="sub-page-text-wrapper">
+                <p>
+                  Also, exchange participants can track the process of registering contracts online
+                  on the website using their Personal Account. To do this, it is enough to register
+                  in the system, go to the appropriate section and follow further instructions.
+                  Working on the site is identical to working through terminals in the exchange
+                  building.
+                </p>
+              </div>
+
+              <div className="sub-page-content-wrapper">
+                <div className="sub-page-list-wrapper">
+                  <h2 className="sub-page-title">
+                    The list of necessary documents for placing goods on the stock exchange:
+                  </h2>
+                  <div className="sub-page-list">
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">1</div>
+                      <h3 className="sub-page-list-item-text">
+                        A letter of request for permission to put the goods on the stock exchange.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">2</div>
+                      <h3 className="sub-page-list-item-text">
+                        A letter of appeal for the sale of goods, filled out in the prescribed form.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">3</div>
+                      <h3 className="sub-page-list-item-text">
+                        Product specification, compiled in accordance with the requirements of the
+                        SCRMET.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">4</div>
+                      <h3 className="sub-page-list-item-text">
+                        Documents confirming the right to engage in entrepreneurial activity.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">5</div>
+                      <h3 className="sub-page-list-item-text">
+                        Documents confirming the origin of the goods.
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : null}
+
           <div className="sub-page-title-text">
             <h2 className="sub-page-title">
               {lang === 'ru'
                 ? 'Документы для скачивания'
                 : lang === 'tm'
                 ? 'Göçürip almak üçin resminamalar'
+                : lang === 'en'
+                ? 'Documents for download'
                 : null}
             </h2>
             <div className="documents-wrapper">
