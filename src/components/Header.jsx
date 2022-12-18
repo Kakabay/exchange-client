@@ -23,31 +23,99 @@ const Header = ({ lang, setLang }) => {
             <Link to={'/'} className="logo">
               <img src={logo} alt="logo" />
             </Link>
-            <ul className="nav-top-list">
-              <li className="nav-top-list-item">
-                <Link to={'/gtsbt'}>ГТСБТ</Link>
-              </li>
-              <li className="nav-top-list-item">
-                <Link to={'/norm'}>Нормативная база</Link>
-              </li>
-              <li className="nav-top-list-item">
-                <Link to={'/news'}>Новости</Link>
-              </li>
-              <li className="nav-top-list-item">
-                <Link to={'/multimedia'}>Мультимедиа</Link>
-              </li>
-              <li className="nav-top-list-item">
-                <Link to={'/contacts'}>Контакты</Link>
-              </li>
-            </ul>
-            <div className="sign-in">
-              <a
-                href="https://shahsyotag.exchange.gov.tm/login"
-                target="_blank"
-                className="sign-in-item">
-                Личный кабинет
-              </a>
-            </div>
+
+            {lang === 'ru' ? (
+              <ul className="nav-top-list">
+                <li className="nav-top-list-item">
+                  <Link to={'/gtsbt'}>ГТСБТ</Link>
+                </li>
+                <li className="nav-top-list-item">
+                  <Link to={'/norm'}>Нормативная база</Link>
+                </li>
+                <li className="nav-top-list-item">
+                  <Link to={'/news'}>Новости</Link>
+                </li>
+                <li className="nav-top-list-item">
+                  <Link to={'/multimedia'}>Мультимедиа</Link>
+                </li>
+                <li className="nav-top-list-item">
+                  <Link to={'/contacts'}>Контакты</Link>
+                </li>
+              </ul>
+            ) : null}
+
+            {lang === 'tm' ? (
+              <ul className="nav-top-list">
+                <li className="nav-top-list-item">
+                  <Link to={'/gtsbt'}>TDHÇMB</Link>
+                </li>
+                <li className="nav-top-list-item">
+                  <Link to={'/norm'}>Kanunçylyk</Link>
+                </li>
+                <li className="nav-top-list-item">
+                  <Link to={'/news'}>Habarlar</Link>
+                </li>
+                <li className="nav-top-list-item">
+                  <Link to={'/multimedia'}>Multimediýa</Link>
+                </li>
+                <li className="nav-top-list-item">
+                  <Link to={'/contacts'}>Salgymyz</Link>
+                </li>
+              </ul>
+            ) : null}
+
+            {lang === 'en' ? (
+              <ul className="nav-top-list">
+                <li className="nav-top-list-item">
+                  <Link to={'/gtsbt'}>SCRMET</Link>
+                </li>
+                <li className="nav-top-list-item">
+                  <Link to={'/norm'}>Normative base</Link>
+                </li>
+                <li className="nav-top-list-item">
+                  <Link to={'/news'}>News</Link>
+                </li>
+                <li className="nav-top-list-item">
+                  <Link to={'/multimedia'}>Multimedia</Link>
+                </li>
+                <li className="nav-top-list-item">
+                  <Link to={'/contacts'}>Contacts</Link>
+                </li>
+              </ul>
+            ) : null}
+
+            {lang === 'ru' ? (
+              <div className="sign-in">
+                <a
+                  href="https://shahsyotag.exchange.gov.tm/login"
+                  target="_blank"
+                  className="sign-in-item">
+                  Личный кабинет
+                </a>
+              </div>
+            ) : null}
+
+            {lang === 'tm' ? (
+              <div className="sign-in">
+                <a
+                  href="https://shahsyotag.exchange.gov.tm/login"
+                  target="_blank"
+                  className="sign-in-item">
+                  Şahsy otagy
+                </a>
+              </div>
+            ) : null}
+
+            {lang === 'en' ? (
+              <div className="sign-in">
+                <a
+                  href="https://shahsyotag.exchange.gov.tm/login"
+                  target="_blank"
+                  className="sign-in-item">
+                  My account
+                </a>
+              </div>
+            ) : null}
           </div>
         </div>
       </nav>
@@ -57,20 +125,56 @@ const Header = ({ lang, setLang }) => {
       <nav className="nav-bottom">
         <div className="container">
           <div className="nav-bottom-wrapper">
-            <ul className="nav-bottom-list">
-              <li className="nav-bottom-list-item">
-                <Link to={'/trade'}>Биржевые торги</Link>
-              </li>
-              <li className="nav-bottom-list-item">
-                <Link to={'/fin'}>Финансовый мониторинг</Link>
-              </li>
-              <li className="nav-bottom-list-item">
-                <Link to={'/register'}>Регистрация договоров</Link>
-              </li>
-              <li className="nav-bottom-list-item">
-                <Link to={'/tarif'}>Тарифы и сборы</Link>
-              </li>
-            </ul>
+            {lang === 'ru' ? (
+              <ul className="nav-bottom-list">
+                <li className="nav-bottom-list-item">
+                  <Link to={'/trade'}>Биржевые торги</Link>
+                </li>
+                <li className="nav-bottom-list-item">
+                  <Link to={'/fin'}>Финансовый мониторинг</Link>
+                </li>
+                <li className="nav-bottom-list-item">
+                  <Link to={'/register'}>Регистрация договоров</Link>
+                </li>
+                <li className="nav-bottom-list-item">
+                  <Link to={'/tarif'}>Тарифы и сборы</Link>
+                </li>
+              </ul>
+            ) : null}
+
+            {lang === 'tm' ? (
+              <ul className="nav-bottom-list">
+                <li className="nav-bottom-list-item">
+                  <Link to={'/trade'}>Birža söwdalary</Link>
+                </li>
+                <li className="nav-bottom-list-item">
+                  <Link to={'/fin'}>Maliýe gözegçiligi</Link>
+                </li>
+                <li className="nav-bottom-list-item">
+                  <Link to={'/register'}>Şertnamalary hasaba almak</Link>
+                </li>
+                <li className="nav-bottom-list-item">
+                  <Link to={'/tarif'}>Nyrhlar we ýygymlar</Link>
+                </li>
+              </ul>
+            ) : null}
+
+            {lang === 'en' ? (
+              <ul className="nav-bottom-list">
+                <li className="nav-bottom-list-item">
+                  <Link to={'/trade'}>Exchange auctions</Link>
+                </li>
+                <li className="nav-bottom-list-item">
+                  <Link to={'/fin'}>Financial monitoring</Link>
+                </li>
+                <li className="nav-bottom-list-item">
+                  <Link to={'/register'}>Contracts registration</Link>
+                </li>
+                <li className="nav-bottom-list-item">
+                  <Link to={'/tarif'}>Tariffs and fees</Link>
+                </li>
+              </ul>
+            ) : null}
             <div className="nav-lang-wrapper">
               <button
                 className={`nav-lang-item ${lang === 'en' ? 'lang-active' : ''}`}
