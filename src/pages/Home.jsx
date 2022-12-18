@@ -34,7 +34,7 @@ const Home = ({ lang, setPostId }) => {
   return (
     <main className="home-main">
       {/* Hero section */}
-      <Hero />
+      <Hero lang={lang} />
       {/* Hero section ./ =========== */}
 
       {/* About section */}
@@ -43,7 +43,7 @@ const Home = ({ lang, setPostId }) => {
           <div className="about-wrapper">
             {lang === 'ru' ? (
               <div className="about-left">
-                <SectionTitle title="О бирже" />
+                <SectionTitle title="О ГТСБТ" />
                 <div className="about-text-wrapper">
                   <p className="about-text">
                     Государственная товарно-сырьевая биржа Туркменистана была создана Указом
@@ -78,7 +78,7 @@ const Home = ({ lang, setPostId }) => {
 
             {lang === 'tm' ? (
               <div className="about-left">
-                <SectionTitle title="BIRŽA BARADA" />
+                <SectionTitle title="TDHÇMB BARADA" />
                 <div className="about-text-wrapper">
                   <p className="about-text">
                     Türkmenistanyň Döwlet haryt we çig mal biržasy (TDHÇMB) Türkmenistanyň
@@ -94,20 +94,24 @@ const Home = ({ lang, setPostId }) => {
                 <div className="about-link-wrapper">
                   <Link to={'/'} className="about-link">
                     <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">Подать документы онлайн</h3>
-                  </Link>
-                  <Link to={'/'} className="about-link">
-                    <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">Проверить статус подписания контрактов</h3>
-                  </Link>
-                  <Link to={'/'} className="about-link">
-                    <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">Узнать импортные цены можно здесь</h3>
+                    <h3 className="about-link-text">Resminamalary onlaýn tabşyrmak</h3>
                   </Link>
                   <Link to={'/'} className="about-link">
                     <img src={arrow} alt="link" className="about-link-text" />
                     <h3 className="about-link-text">
-                      Просмотреть тарифы и сборы для участников биржы
+                      Gol çekilen şertnamalaryň ýagdaýlaryny barlamak
+                    </h3>
+                  </Link>
+                  <Link to={'/'} className="about-link">
+                    <img src={arrow} alt="link" className="about-link-text" />
+                    <h3 className="about-link-text">
+                      Import bahalaryny şu ýerden tapyp bilersiňiz
+                    </h3>
+                  </Link>
+                  <Link to={'/'} className="about-link">
+                    <img src={arrow} alt="link" className="about-link-text" />
+                    <h3 className="about-link-text">
+                      Biržanyň agzalary üçin nyrhlary we tölegleri görüň
                     </h3>
                   </Link>
                 </div>
@@ -116,7 +120,7 @@ const Home = ({ lang, setPostId }) => {
 
             {lang === 'en' ? (
               <div className="about-left">
-                <SectionTitle title="About the Exchange" />
+                <SectionTitle title="About the SCRMET" />
                 <div className="about-text-wrapper">
                   <p className="about-text">
                     The State Commodity and Raw Materials Exchange of Turkmenistan (SCRMET) was
@@ -130,21 +134,19 @@ const Home = ({ lang, setPostId }) => {
                 <div className="about-link-wrapper">
                   <Link to={'/'} className="about-link">
                     <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">Подать документы онлайн</h3>
+                    <h3 className="about-link-text">Apply documents online</h3>
                   </Link>
                   <Link to={'/'} className="about-link">
                     <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">Проверить статус подписания контрактов</h3>
+                    <h3 className="about-link-text">Check the status of signed contracts</h3>
                   </Link>
                   <Link to={'/'} className="about-link">
                     <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">Узнать импортные цены можно здесь</h3>
+                    <h3 className="about-link-text">You can find import prices here</h3>
                   </Link>
                   <Link to={'/'} className="about-link">
                     <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">
-                      Просмотреть тарифы и сборы для участников биржы
-                    </h3>
+                    <h3 className="about-link-text">View rates and fees for exchange members</h3>
                   </Link>
                 </div>
               </div>
@@ -182,6 +184,7 @@ const Home = ({ lang, setPostId }) => {
                             image={news.image}
                             id={news.id}
                             setPostId={setPostId}
+                            lang={lang}
                           />
                         );
                       } else {
