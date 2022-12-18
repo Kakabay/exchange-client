@@ -1,10 +1,10 @@
 // Modules
-import React from "react";
-import { useState, useEffect } from "react";
-import { Api } from "../helpers/api";
+import React from 'react';
+import { useState, useEffect } from 'react';
+import { Api } from '../helpers/api';
 // Components
-import ChartTable from "./ChartTable";
-import LineChart from "./LineChart";
+import ChartTable from './ChartTable';
+import LineChart from './LineChart';
 
 const DataChart = ({ lang }) => {
   // States
@@ -15,12 +15,8 @@ const DataChart = ({ lang }) => {
 
   useEffect(() => {
     // Table data fetch
-    const TabData = new Api(
-      "http://tmex.gov.tm:8765/api/categories",
-      tabData,
-      setTabData
-    ).get({
-      "X-Localization": lang,
+    const TabData = new Api('http://tmex.gov.tm:8765/api/categories', tabData, setTabData).get({
+      'X-Localization': lang,
     });
   }, [lang]);
 
@@ -48,11 +44,10 @@ const DataChart = ({ lang }) => {
                   return index <= 2 ? (
                     <div
                       key={tab.id}
-                      className={`${tabIndex === tab.id ? "active" : ""} tab`}
+                      className={`${tabIndex === tab.id ? 'active' : ''} tab`}
                       onClick={() => {
                         tabDataFetch(tab.id, index);
-                      }}
-                    >
+                      }}>
                       <span>{tab.title}</span>
                     </div>
                   ) : null;
@@ -64,6 +59,7 @@ const DataChart = ({ lang }) => {
               activeRow={activeRow}
               setActiveRow={setActiveRow}
               tabIndex={tabIndex}
+              lang={lang}
             />
             <div className="line-chart-wrapper">
               <LineChart activeRow={activeRow} tabIndex={tabIndex} />
