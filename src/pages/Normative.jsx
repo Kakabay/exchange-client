@@ -164,12 +164,87 @@ export const Normative = ({ lang }) => {
             </>
           ) : null}
 
+          {lang === 'en' ? (
+            <>
+              <SectionTitle title="Regulatory framework" />
+
+              <div className="sub-page-content-wrapper">
+                <div className="sub-page-text-wrapper">
+                  <p>
+                    The Arbitration Commission in its activities is guided by the Constitution,
+                    laws, acts of the President, the regulations of the Exchange, the rules of
+                    exchange trading and other regulatory legal acts.
+                  </p>
+                </div>
+
+                <div className="sub-page-list-wrapper">
+                  <h2 className="sub-page-title">
+                    The competence of the Arbitration Commission includes:
+                  </h2>
+                  <div className="sub-page-list">
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">1</div>
+                      <h3 className="sub-page-list-item-text">
+                        Cancellation of transactions concluded at exchange trading.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">2</div>
+                      <h3 className="sub-page-list-item-text">
+                        Cancellation of contracts registered and unclaimed on the Exchange.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">3</div>
+                      <h3 className="sub-page-list-item-text">
+                        Consideration of disputes on exchange transactions and issues of exchange
+                        trading.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">4</div>
+                      <h3 className="sub-page-list-item-text">
+                        Consideration of disputes under contracts, when they are concluded, amended
+                        and terminated.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">5</div>
+                      <h3 className="sub-page-list-item-text">
+                        The Commission has the right to change, cancel and restore the adopted
+                        decision.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">6</div>
+                      <h3 className="sub-page-list-item-text">
+                        Consideration of violations committed by participants of exchange trading.
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="sub-page-text-wrapper">
+                  <p>Instructions on the procedure of consular legalization</p>
+                  <p>
+                    Consular legalization consists in establishing and certifying the authenticity
+                    of signatures on legal documents and acts, as well as their compliance with the
+                    laws of the consul's state of residence by making a legalization inscription or
+                    affixing a legalization stamp in the state and English languages.
+                  </p>
+                </div>
+              </div>
+            </>
+          ) : null}
+
           <div className="sub-page-title-text">
             <h2 className="sub-page-title">
               {lang === 'ru'
                 ? 'Документы для скачивания'
                 : lang === 'tm'
                 ? 'Göçürip almak üçin resminamalar'
+                : lang === 'en'
+                ? 'Documents for download'
                 : null}
             </h2>
             <div className="documents-wrapper">
