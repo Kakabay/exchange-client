@@ -96,12 +96,51 @@ const Finance = ({ lang }) => {
             </>
           ) : null}
 
+          {lang === 'en' ? (
+            <>
+              <SectionTitle title="Financial monitoring" />
+              <div className="sub-page-content-wrapper">
+                <div className="sub-page-text-wrapper">
+                  <p>
+                    In order to organize counteraction to the legalization of proceeds from criminal
+                    activity and the financing of terrorism, the exchange has established Rules that
+                    define the main goals and objectives, internal control requirements. The
+                    exchange also appoints a person responsible for compliance with these rules.
+                  </p>
+                  <p>
+                    An employee of the commission, based on the information received from the
+                    client, carefully checks it taking into account the types of activities and
+                    operations of the client, evaluates and assigns the appropriate level of risk,
+                    and also enters it into the AES.
+                  </p>
+                </div>
+                <div className="sub-page-title-text">
+                  <h2 className="sub-page-title">
+                    Registration in the financial monitoring department
+                  </h2>
+                  <div className="sub-page-text-wrapper">
+                    <p>
+                      You can submit documents for the legalization of a legal entity or
+                      entrepreneur online. The user's personal account allows you to enter data and
+                      upload documents, download forms and application samples, communicate with
+                      exchange administrators, supplement the package of documents if necessary. In
+                      fact, all work with the exchange becomes automated using the Internet.
+                    </p>
+                    <p>To use the service, register in your Personal Account.</p>
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : null}
+
           <div className="sub-page-title-text">
             <h2 className="sub-page-title">
               {lang === 'ru'
                 ? 'Документы для скачивания'
                 : lang === 'tm'
                 ? 'Göçürip almak üçin resminamalar'
+                : lang === 'en'
+                ? 'Documents for download'
                 : null}
             </h2>
             <div className="documents-wrapper">
