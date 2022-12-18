@@ -47,6 +47,7 @@ const NewsPage = ({ lang, setPostId, postsData, setPostsData }) => {
                       image={news.image}
                       id={news.id}
                       setPostId={setPostId}
+                      lang={lang}
                     />
                   );
                 })
