@@ -1,21 +1,21 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React from 'react';
+import { useState, useEffect } from 'react';
 // Functions
-import { Api } from "../helpers/api";
-import { dateReverse } from "../helpers/functions";
+import { Api } from '../helpers/api';
+import { dateReverse } from '../helpers/functions';
 // Components
-import SectionTitle from "../components/SectionTitle";
-import NewsPost from "../components/NewsPost";
+import SectionTitle from '../components/SectionTitle';
+import NewsPost from '../components/NewsPost';
 // Icons
-import { ReactComponent as Arrow } from "../assets/icons/arrow.svg";
+import { ReactComponent as Arrow } from '../assets/icons/arrow.svg';
 
 const NewsPage = ({ lang, setPostId, postsData, setPostsData }) => {
-  const [url, setUrl] = useState("http://tmex.gov.tm:8765/api/news");
+  const [url, setUrl] = useState('http://tmex.gov.tm:8765/api/news');
 
   useEffect(() => {
     // News fetch
     const PostsData = new Api(url, postsData, setPostsData).get({
-      "X-Localization": lang,
+      'X-Localization': lang,
     });
   }, [lang, url]);
 
@@ -29,7 +29,11 @@ const NewsPage = ({ lang, setPostId, postsData, setPostsData }) => {
     <main>
       <div className="container">
         <div className="sub-page-wrapper sub-page-full">
-          <SectionTitle title="Новости" />
+          <SectionTitle
+            title={`${
+              lang === 'ru' ? 'Новости' : lang === 'tm' ? 'Habarlar' : lang === 'en' ? 'News' : null
+            }`}
+          />
           <div className="news-page-wrapper">
             {postsData
               ? postsData.data.map((news) => {
@@ -52,33 +56,31 @@ const NewsPage = ({ lang, setPostId, postsData, setPostsData }) => {
             <div className="pagination">
               <button
                 disabled={!postsData.meta.pagination.links.previous}
-                className={"arr-left pagination-arrow"}
+                className={'arr-left pagination-arrow'}
                 onClick={() => {
                   postsData
                     ? postsData.meta.pagination.links.previous
                       ? setUrl(postsData.meta.pagination.links.previous)
                       : null
                     : null;
-                }}
-              >
+                }}>
                 <Arrow className="arr-pagination-svg" />
               </button>
               <div className="pagination-count">
                 {postsData
                   ? `${postsData.meta.pagination.current_page} / ${postsData.meta.pagination.total_pages}`
-                  : "1 / 1"}
+                  : '1 / 1'}
               </div>
               <button
                 disabled={!postsData.meta.pagination.links.next}
-                className={"arr-right pagination-arrow"}
+                className={'arr-right pagination-arrow'}
                 onClick={() => {
                   postsData
                     ? postsData.meta.pagination.links.next
                       ? setUrl(postsData.meta.pagination.links.next)
                       : null
                     : null;
-                }}
-              >
+                }}>
                 <Arrow className="arr-pagination-svg" />
               </button>
             </div>
