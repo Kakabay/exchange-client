@@ -366,12 +366,191 @@ const Trade = ({ lang }) => {
             </>
           ) : null}
 
+          {lang === 'en' ? (
+            <>
+              <SectionTitle title="Exchange trading Rules" />
+              <div className="sub-page-content-wrapper">
+                <div className="sub-page-text-wrapper">
+                  <p>
+                    In accordance with the Law of Turkmenistan "On Commodity Exchanges", enterprises
+                    and organizations of all forms of ownership, citizens of Turkmenistan and other
+                    states can participate in exchange trading by purchasing a brokerage place or
+                    concluding a service contract with exchange brokers.
+                  </p>
+                </div>
+
+                <div className="sub-page-list-wrapper">
+                  <h2 className="sub-page-title">
+                    Exchange trading is organized on the basis of the following principles:
+                  </h2>
+                  <div className="sub-page-list">
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">1</div>
+                      <h3 className="sub-page-list-item-text">
+                        Transparency and publicity of exchange trading.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">2</div>
+                      <h3 className="sub-page-list-item-text">
+                        Freedom of price formation at stock trading.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">3</div>
+                      <h3 className="sub-page-list-item-text">
+                        Voluntary conclusion of exchange transactions.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">4</div>
+                      <h3 className="sub-page-list-item-text">
+                        Equality of conditions of participation in exchange trading for participants
+                        of exchange trading.
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="sub-page-text-wrapper">
+                  <p>
+                    To participate in stock trading, you need to purchase a brokerage place.
+                    Individuals and legal entities of Turkmenistan and foreign states of all forms
+                    of ownership can act as a seller or buyer.
+                  </p>
+                  <p>
+                    Persons who have not acquired a brokerage place in order to carry out
+                    transactions for the purchase and sale of goods can conclude a contract for the
+                    provision of brokerage services with brokers of the Exchange.
+                  </p>
+                </div>
+
+                <div className="sub-page-list-wrapper">
+                  <h2 className="sub-page-title">To register a brokerage place, you must:</h2>
+                  <div className="sub-page-list">
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">1</div>
+                      <h3 className="sub-page-list-item-text">
+                        Go through the registration procedure in the Financial Monitoring
+                        Department.
+                      </h3>
+                    </div>
+
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">2</div>
+                      <div className="sub-page-list-item-content">
+                        <h3 className="sub-page-list-item-text">Provide a package of documents:</h3>
+                        <ul className="sub-page-list-item-list">
+                          <li className="sub-page-list-item-list-item">
+                            letter of appeal addressed to the representative of the SCRMET about
+                            registration and purchase of a brokerage place;
+                          </li>
+                          <li className="sub-page-list-item-list-item">
+                            power of attorney for a representative (broker) with the original seal
+                            and signature of the head of the company;
+                          </li>
+                          <li className="sub-page-list-item-list-item">
+                            a copy of the general power of attorney (legalized);
+                          </li>
+                          <li className="sub-page-list-item-list-item">
+                            a copy of the passport of the representative (broker) and the head of
+                            the company;
+                          </li>
+                          <li className="sub-page-list-item-list-item">
+                            a completed form of bank details, certified with the original seal and
+                            signature of the head of the company;
+                          </li>
+                          <li className="sub-page-list-item-list-item">
+                            a copy of the constituent documents (charter, register);
+                          </li>
+                          <li className="sub-page-list-item-list-item">one 3x4 broker photo;</li>
+                          <li className="sub-page-list-item-list-item">
+                            a completed "Commitment" form, stamped and signed by the head of the
+                            company.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">3</div>
+                      <div className="sub-page-list-item-content">
+                        <h3 className="sub-page-list-item-text">
+                          Get invoices from the SCRMET "Mutual Settlements" department and pay:
+                        </h3>
+                        <h3 className="sub-page-list-item-text">For non-residents:</h3>
+                        <ul className="sub-page-list-item-list">
+                          <li className="sub-page-list-item-list-item">
+                            The cost of a brokerage place for light industry for a period of 1 year
+                            is $ 5,000. The deposit is $6,000.
+                          </li>
+                          <li className="sub-page-list-item-list-item">
+                            The cost of a brokerage place for the oil industry for a period of 1
+                            year is $ 10,000. The deposit is 50,000 US dollars.
+                          </li>
+                        </ul>
+                        <h3 className="sub-page-list-item-text">For residents:</h3>
+                        <ul className="sub-page-list-item-list">
+                          <li className="sub-page-list-item-list-item">
+                            The cost of a brokerage place for a period of 1 year is 10,000 manats.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="sub-page-list-wrapper">
+                  <h2 className="sub-page-title">
+                    Grounds for termination of the broker's activity:
+                  </h2>
+                  <div className="sub-page-list">
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">1</div>
+                      <h3 className="sub-page-list-item-text">
+                        Application for the closure of the brokerage place.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">2</div>
+                      <h3 className="sub-page-list-item-text">
+                        Failure to pay the annual fee for the brokerage place within the established
+                        time limits.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">3</div>
+                      <h3 className="sub-page-list-item-text">
+                        Failure to pay the annual fee for the brokerage place within the established
+                        time limits.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">4</div>
+                      <h3 className="sub-page-list-item-text">
+                        The decision of the Arbitration Commission of the Exchange.
+                      </h3>
+                    </div>
+                    <div className="sub-page-list-item">
+                      <div className="sub-page-list-num">5</div>
+                      <h3 className="sub-page-list-item-text">
+                        Termination or liquidation of the activity of a legal entity.
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : null}
+
           <div className="sub-page-title-text">
             <h2 className="sub-page-title">
               {lang === 'ru'
                 ? 'Документы для скачивания'
                 : lang === 'tm'
                 ? 'Göçürip almak üçin resminamalar'
+                : lang === 'en'
+                ? 'Documents for download'
                 : null}
             </h2>
             <div className="documents-wrapper">
