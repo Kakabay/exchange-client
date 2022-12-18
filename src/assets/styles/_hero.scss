@@ -1,10 +1,10 @@
 .hero {
   height: 60rem;
-  background: url('../images/hero-remake.png');
+  background: url("../images/hero-remake.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  z-index: -2;
+  // z-index: -2;
 }
 
 .hero-wrapper,
@@ -61,6 +61,9 @@
   }
 }
 @media (max-width: 768px) {
+  .hero {
+    background-position: right;
+  }
   .hero-button {
     width: 24rem;
     height: 8rem;
