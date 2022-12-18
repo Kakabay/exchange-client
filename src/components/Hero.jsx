@@ -17,7 +17,7 @@ const Hero = ({ lang }) => {
                 ? 'Go to the marketplace'
                 : null}
             </a>
-            <a href="/" className="hero-button">
+            <a href="https://shahsyotag.exchange.gov.tm/login" className="hero-button">
               {lang === 'ru'
                 ? 'Подать документы онлайн'
                 : lang === 'tm'
