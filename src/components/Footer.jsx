@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // Components
 import SectionTitle from './SectionTitle';
 
-const Footer = () => {
+const Footer = ({ lang }) => {
   return (
     <footer className="footer">
       <div className="footer-top">
@@ -12,12 +12,36 @@ const Footer = () => {
             <SectionTitle title="Контакты" />
             <div className="footer-top-content">
               <div className="footer-top-item">
-                <h3 className="footer-top-item-title">Телефон:</h3>
+                <h3 className="footer-top-item-title">
+                  {lang === 'ru'
+                    ? 'Телефон:'
+                    : lang === 'tm'
+                    ? 'Telefon belgisi'
+                    : lang === 'en'
+                    ? 'Phone'
+                    : null}
+                </h3>
                 <h4 className="footer-top-item-text">+993 12 44-60-15</h4>
               </div>
               <div className="footer-top-item">
-                <h3 className="footer-top-item-title">Время работы:</h3>
-                <h4 className="footer-top-item-text">Понедельник - пятница: с 9-00 по 18-00</h4>
+                <h3 className="footer-top-item-title">
+                  {lang === 'ru'
+                    ? 'Время работы:'
+                    : lang === 'tm'
+                    ? 'Iş wagty'
+                    : lang === 'en'
+                    ? 'Working time'
+                    : null}
+                </h3>
+                <h4 className="footer-top-item-text">
+                  {lang === 'ru'
+                    ? 'Понедельник - пятница: 9:00 - 18:00'
+                    : lang === 'tm'
+                    ? 'Duşenbe - anna: 9:00 - 18:00'
+                    : lang === 'en'
+                    ? 'Monday - friday: 9:00 - 18:00'
+                    : null}
+                </h4>
               </div>
               <div className="footer-top-item">
                 <h3 className="footer-top-item-title">Email:</h3>
@@ -29,14 +53,52 @@ const Footer = () => {
                 </Link>
               </div>
               <div className="footer-top-item">
-                <h3 className="footer-top-item-title">Приемные дни:</h3>
-                <h4 className="footer-top-item-text">Понедельник - четверг: с 9-00 по 17-00</h4>
-                <h4 className="footer-top-item-text">Пятница: с 9-00 по 13-00</h4>
+                <h3 className="footer-top-item-title">
+                  {lang === 'ru'
+                    ? 'Приемные дни:'
+                    : lang === 'tm'
+                    ? 'Kabul ediş günleri'
+                    : lang === 'en'
+                    ? 'Reception days'
+                    : null}
+                </h3>
+                <h4 className="footer-top-item-text">
+                  {lang === 'ru'
+                    ? 'Понедельник - четверг: 9:00 - 17:00'
+                    : lang === 'tm'
+                    ? 'Duşenbe - penşenbe: 9:00 - 17:00'
+                    : lang === 'en'
+                    ? 'Monday - thursday: 9:00 - 17:00'
+                    : null}
+                </h4>
+                <h4 className="footer-top-item-text">
+                  {lang === 'ru'
+                    ? 'Пятница: 9:00 - 13:00'
+                    : lang === 'tm'
+                    ? 'Anna: 9:00 - 17:00'
+                    : lang === 'en'
+                    ? 'Friday: 9:00 - 17:00'
+                    : null}
+                </h4>
               </div>
               <div className="footer-top-item">
-                <h3 className="footer-top-item-title">Адресс::</h3>
+                <h3 className="footer-top-item-title">
+                  {lang === 'ru'
+                    ? 'Адрес:'
+                    : lang === 'tm'
+                    ? 'Salgy'
+                    : lang === 'en'
+                    ? 'Adress'
+                    : null}
+                </h3>
                 <h4 className="footer-top-item-text">
-                  744000, Туркменистан г. Ашхабат, Арчабиль шаелы 52
+                  {lang === 'ru'
+                    ? '744000, Туркменистан г. Ашхабат, Арчабиль шаелы 52'
+                    : lang === 'tm'
+                    ? '744000, Türkmenistan ş. Aşgabat, Arçabil şaýoly 52'
+                    : lang === 'en'
+                    ? '744000, Turkmenistan c. Ashgabat, Archabil shayoly 52'
+                    : null}
                 </h4>
               </div>
             </div>
@@ -50,42 +112,90 @@ const Footer = () => {
             <ul className="footer-nav-list">
               <li className="footer-nav-list-item">
                 <Link to={'/gtsbt'} className="footer-nav-list-link">
-                  ГТСБТ
+                  {lang === 'ru'
+                    ? 'ГТСБТ'
+                    : lang === 'tm'
+                    ? 'TDHÇMB'
+                    : lang === 'en'
+                    ? 'SCRMET'
+                    : null}
                 </Link>
               </li>
               <li className="footer-nav-list-item">
                 <Link to={'/norm'} className="footer-nav-list-link">
-                  Нормативная база
+                  {lang === 'ru'
+                    ? 'Нормативная база'
+                    : lang === 'tm'
+                    ? 'Kanunçylyk'
+                    : lang === 'en'
+                    ? 'Normative base'
+                    : null}
                 </Link>
               </li>
               <li className="footer-nav-list-item">
                 <Link to={'/trade'} className="footer-nav-list-link">
-                  Биржевые торги
+                  {lang === 'ru'
+                    ? 'Биржевые торги'
+                    : lang === 'tm'
+                    ? 'Birža söwdalary'
+                    : lang === 'en'
+                    ? 'Exchange auctions'
+                    : null}
                 </Link>
               </li>
               <li className="footer-nav-list-item">
                 <Link to={'/multimedia'} className="footer-nav-list-link">
-                  Мультимедиа
+                  {lang === 'ru'
+                    ? 'Мультимедиа'
+                    : lang === 'tm'
+                    ? 'Multimediýa'
+                    : lang === 'en'
+                    ? 'Multimedia'
+                    : null}
                 </Link>
               </li>
               <li className="footer-nav-list-item">
                 <Link to={'/fin'} className="footer-nav-list-link">
-                  Финансовый мониторинг
+                  {lang === 'ru'
+                    ? 'Финансовый мониторинг'
+                    : lang === 'tm'
+                    ? 'Maliýe gözegçiligi'
+                    : lang === 'en'
+                    ? 'Financial monitoring'
+                    : null}
                 </Link>
               </li>
               <li className="footer-nav-list-item">
                 <Link to={'/news'} className="footer-nav-list-link">
-                  Новости
+                  {lang === 'ru'
+                    ? 'Новости'
+                    : lang === 'tm'
+                    ? 'Habarlar'
+                    : lang === 'en'
+                    ? 'News'
+                    : null}
                 </Link>
               </li>
               <li className="footer-nav-list-item">
                 <Link to={'/register'} className="footer-nav-list-link">
-                  Регистрация договоров
+                  {lang === 'ru'
+                    ? 'Регистрация договоров'
+                    : lang === 'tm'
+                    ? 'Şertnamalary hasaba almak'
+                    : lang === 'en'
+                    ? 'Contracts registration'
+                    : null}
                 </Link>
               </li>
               <li className="footer-nav-list-item">
                 <Link to={'/contacts'} className="footer-nav-list-link">
-                  Контакты
+                  {lang === 'ru'
+                    ? 'Контакты'
+                    : lang === 'tm'
+                    ? 'Salgymyz'
+                    : lang === 'en'
+                    ? 'Contacts'
+                    : null}
                 </Link>
               </li>
             </ul>
