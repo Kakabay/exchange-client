@@ -30,6 +30,11 @@ const Header = ({ lang, setLang }) => {
                   <Link to={'/gtsbt'}>ГТСБТ</Link>
                 </li>
                 <li className="nav-top-list-item">
+                  <a href={`https://tmex.gov.tm/${lang}`} target="_blank">
+                    Котировки
+                  </a>
+                </li>
+                <li className="nav-top-list-item">
                   <Link to={'/norm'}>Нормативная база</Link>
                 </li>
                 <li className="nav-top-list-item">
@@ -50,6 +55,11 @@ const Header = ({ lang, setLang }) => {
                   <Link to={'/gtsbt'}>TDHÇMB</Link>
                 </li>
                 <li className="nav-top-list-item">
+                  <a href={`https://tmex.gov.tm/${lang}`} target="_blank">
+                    Kotirowkalar
+                  </a>
+                </li>
+                <li className="nav-top-list-item">
                   <Link to={'/norm'}>Kanunçylyk</Link>
                 </li>
                 <li className="nav-top-list-item">
@@ -68,6 +78,11 @@ const Header = ({ lang, setLang }) => {
               <ul className="nav-top-list">
                 <li className="nav-top-list-item">
                   <Link to={'/gtsbt'}>SCRMET</Link>
+                </li>
+                <li className="nav-top-list-item">
+                  <a href={`https://tmex.gov.tm/${lang}`} target="_blank">
+                    Quotations
+                  </a>
                 </li>
                 <li className="nav-top-list-item">
                   <Link to={'/norm'}>Normative base</Link>
@@ -216,6 +231,11 @@ const Header = ({ lang, setLang }) => {
           <ul className="mobile-nav-list">
             <li className="mobile-nav-list-item" onClick={toggleNav}>
               <Link to={'/gtsbt'}>ГТСБТ</Link>
+            </li>
+            <li className="mobile-nav-list-item">
+              <a href={`https://tmex.gov.tm/${lang}`} target="_blank">
+                Катировки
+              </a>
             </li>
             <li className="mobile-nav-list-item" onClick={toggleNav}>
               <Link to={'/norm'}>Нормативная база</Link>
