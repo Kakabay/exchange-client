@@ -9,7 +9,18 @@ const Footer = ({ lang }) => {
       <div className="footer-top">
         <div className="container">
           <div className="footer-top-wrapper">
-            <SectionTitle title="Контакты" />
+            <SectionTitle
+              title={`
+            ${
+              lang === 'ru'
+                ? 'Контакты'
+                : lang === 'tm'
+                ? 'Salgymyz'
+                : lang === 'en'
+                ? 'Contacts'
+                : null
+            }`}
+            />
             <div className="footer-top-content">
               <div className="footer-top-item">
                 <h3 className="footer-top-item-title">

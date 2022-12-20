@@ -1,5 +1,5 @@
 // Modules
-import { Line } from "react-chartjs-2";
+import { Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
   LineElement,
@@ -7,18 +7,12 @@ import {
   LinearScale,
   PointElement,
   Tooltip,
-} from "chart.js";
-import { Api } from "../helpers/api";
-import { useState, useEffect } from "react";
-import { parseDate } from "../helpers/functions";
+} from 'chart.js';
+import { Api } from '../helpers/api';
+import { useState, useEffect } from 'react';
+import { parseDate } from '../helpers/functions';
 
-ChartJS.register(
-  LineElement,
-  PointElement,
-  LinearScale,
-  Tooltip,
-  CategoryScale
-);
+ChartJS.register(LineElement, PointElement, LinearScale, Tooltip, CategoryScale);
 
 const LineChart = ({ activeRow, tabIndex }) => {
   const [dataLineChart, setDataLineChart] = useState();
@@ -28,7 +22,7 @@ const LineChart = ({ activeRow, tabIndex }) => {
       const LineChartData = new Api(
         `http://tmex.gov.tm:8765/api/categories/${tabIndex}/tradings`,
         dataLineChart,
-        setDataLineChart
+        setDataLineChart,
       ).get();
     }
   }, [tabIndex]);
@@ -37,10 +31,8 @@ const LineChart = ({ activeRow, tabIndex }) => {
 
   const data = {
     labels: dataLineChart
-      ? dataLineChart.data[activeRow].all_prices.map((price) =>
-          parseDate(price.date)
-        )
-      : [""],
+      ? dataLineChart.data[activeRow].all_prices.map((price) => parseDate(price.date))
+      : [''],
 
     datasets: [
       {
@@ -49,13 +41,13 @@ const LineChart = ({ activeRow, tabIndex }) => {
               if (index <= 9) {
                 return price.price;
               } else {
-                return "";
+                return '';
               }
             })
-          : [""],
-        borderColor: "#4b8dff",
+          : [''],
+        borderColor: '#4b8dff',
         pointBorderWidth: 2,
-        pointBackgroundColor: "#4b8dff",
+        pointBackgroundColor: '#4b8dff',
         tension: 0.1,
 
         animation: {
@@ -64,11 +56,7 @@ const LineChart = ({ activeRow, tabIndex }) => {
           },
           delay: (context) => {
             let delay = 0;
-            if (
-              context.type === "data" &&
-              context.mode === "default" &&
-              !delayed
-            ) {
+            if (context.type === 'data' && context.mode === 'default' && !delayed) {
               delay = context.dataIndex * 100 + context.datasetIndex * 100;
             }
             return delay;

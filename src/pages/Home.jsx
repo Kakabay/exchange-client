@@ -169,7 +169,12 @@ const Home = ({ lang, setPostId }) => {
       <section className="news">
         <div className="container">
           <div className="news-wrapper">
-            <SectionTitle title="Новости" />
+            <SectionTitle
+              title={`
+            ${
+              lang === 'ru' ? 'Новости' : lang === 'tm' ? 'Habarlar' : lang === 'en' ? 'News' : null
+            }`}
+            />
             <div className="news-post-wrapper">
               {
                 newsData

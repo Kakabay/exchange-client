@@ -1,22 +1,21 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-import { useEffect, useRef } from "react";
-import { Api } from "../helpers/api";
-import { dateReverse } from "../helpers/functions";
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
+import { Api } from '../helpers/api';
+import { dateReverse } from '../helpers/functions';
 // Images
 // import postPageImg from "../assets/images/post-img.png";
-import LatestNew from "../components/LatestNew";
+import LatestNew from '../components/LatestNew';
+import SectionTitle from '../components/SectionTitle';
 
 const NewsPostPage = ({ lang, setPostId, postsData, setPostsData }) => {
   const { id } = useParams();
   const isFirstLoad = useRef(true);
   useEffect(() => {
     if (!postsData) {
-      const NewsPageApi = new Api(
-        "http://tmex.gov.tm:8765/api/news",
-        postsData,
-        setPostsData
-      ).get({ "X-localization": lang });
+      const NewsPageApi = new Api('http://tmex.gov.tm:8765/api/news', postsData, setPostsData).get({
+        'X-localization': lang,
+      });
     }
   }, [postsData]);
 
@@ -25,11 +24,9 @@ const NewsPostPage = ({ lang, setPostId, postsData, setPostsData }) => {
       isFirstLoad.current = false;
       return;
     }
-    const NewsPageApi = new Api(
-      "http://tmex.gov.tm:8765/api/news",
-      postsData,
-      setPostsData
-    ).get({ "X-localization": lang });
+    const NewsPageApi = new Api('http://tmex.gov.tm:8765/api/news', postsData, setPostsData).get({
+      'X-localization': lang,
+    });
   }, [lang]);
 
   return (
@@ -57,7 +54,16 @@ const NewsPostPage = ({ lang, setPostId, postsData, setPostsData }) => {
         </main>
         <aside>
           <div className="post-page-latest-wrapper">
-            <h2 className="post-page-latest-title">Последние новости</h2>
+            <h2 className="post-page-latest-title">
+              {lang === 'ru'
+                ? 'Последние новости'
+                : lang === 'tm'
+                ? 'Soňky habarlar'
+                : lang === 'en'
+                ? 'The latest news'
+                : null}
+            </h2>
+
             <div className="post-page-latest-news">
               {postsData
                 ? postsData.data.map((post, index) => {
@@ -68,9 +74,9 @@ const NewsPostPage = ({ lang, setPostId, postsData, setPostsData }) => {
                         setPostId={setPostId}
                         id={post.id}
                         date={dateReverse(post.date)
-                          .split(" ")[0]
-                          .replace("-", ".")
-                          .replace("-", ".")}
+                          .split(' ')[0]
+                          .replace('-', '.')
+                          .replace('-', '.')}
                       />
                     ) : null;
                   })
