@@ -41,7 +41,7 @@ const DataChart = ({ lang }) => {
           <div className="chart-tabs">
             {tabData
               ? tabData.data.map((tab, index) => {
-                  return index <= 2 ? (
+                  return (
                     <div
                       key={tab.id}
                       className={`${tabIndex === tab.id ? 'active' : ''} tab`}
@@ -50,7 +50,7 @@ const DataChart = ({ lang }) => {
                       }}>
                       <span>{tab.title}</span>
                     </div>
-                  ) : null;
+                  );
                 })
               : null}
           </div>

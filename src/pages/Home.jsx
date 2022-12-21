@@ -20,7 +20,9 @@ const Home = ({ lang, setPostId }) => {
 
   useEffect(() => {
     // Video fetch
-    // const VideoApi = new Api('http://tmex.gov.tm:8765/api/video', videoData, setVideoData).get();
+    // const VideoApi = new Api('http://tmex.gov.tm:8765/api/video', videoData, setVideoData).get({
+    //   'X-Localization': lang,
+    // });
 
     // News fetch
     const NewsApi = new Api('http://tmex.gov.tm:8765/api/news', newsData, setNewsData).get({
