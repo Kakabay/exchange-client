@@ -163,8 +163,8 @@ const Gtsbt = ({ lang }) => {
                   <div className="sub-page-list-item">
                     <div className="sub-page-list-num">1</div>
                     <h3 className="sub-page-list-item-text">
-                      Biržanyň müşderileri – Türkmenistanyň daşary ýurtly işewür adamlary we
-                      telekeçileri üçin deň şertleri döretmek.
+                      Biržanyň müşderileri – Türkmenistanly telekeçiler we daşary ýurtly işewürler
+                      üçin deň şertleri döretmek.
                     </h3>
                   </div>
                   <div className="sub-page-list-item">
@@ -191,7 +191,7 @@ const Gtsbt = ({ lang }) => {
                 </p>
                 <p>
                   Birža söwdasynda ýerli öndürilen önümler dünýäniň 40-dan gowrak ýurduna eksport
-                  edilýär we alyş-çalyş auksionlarynda satylýar. Olaryň arasynda Türkiýe, Hytaý,
+                  edilýär we alyş-çalyş söwdalaşyklarynda satylýar. Olaryň arasynda Türkiýe, Hytaý,
                   Russiýa, BAE, Germaniýa, ABŞ, Beýik Britaniýa, Ukraina, Şweýsariýa ýaly ýurtlar
                   bar. Esasy eksport önümleri bolup nebit, pagta süýümi, dokma we himiýa senagatynyň
                   önümleri we ş.m. hyzmat edýär.

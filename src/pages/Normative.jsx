@@ -96,26 +96,26 @@ export const Normative = ({ lang }) => {
 
           {lang === 'tm' ? (
             <>
-              <SectionTitle title="Kadalaşdyrylan toplum" />
+              <SectionTitle title="KADALAŞDYRYLAN TOPLUM" />
 
               <div className="sub-page-content-wrapper">
                 <div className="sub-page-text-wrapper">
                   <p>
-                    Arbitraž geňeşi öz işinde Konstitusiýa, Prezidentiň Kanunlary, biržanyň
-                    düzgünleri, alyş-çalyş söwdasynyň kadalary we beýleki kadalaşdyryjy hukuk
-                    hereketlerine esaslanýar.
+                    Arbitraž geňeşi öz işinde Türkmenistanyň Konstitusiýasy, Türkmenistanyň
+                    Prezidentiniň Permanlary, Kararlary, Biržanyň düzgünleri, alyş-çalyş söwdasynyň
+                    kadalary we beýleki kadalaşdyryjy hukuk namalaryna esaslanýar.
                   </p>
                 </div>
 
                 <div className="sub-page-list-wrapper">
                   <h2 className="sub-page-title">
-                    Arbitraž geňeşiniň ygtyýarlygy şulary öz içine alýar:{' '}
+                    Arbitraž geňeşiniň ygtyýarlygy şulary öz içine alýar:
                   </h2>
                   <div className="sub-page-list">
                     <div className="sub-page-list-item">
                       <div className="sub-page-list-num">1</div>
                       <h3 className="sub-page-list-item-text">
-                        Birža auksionlarynda baglanyşylan ylalaşyklaryň täsiriniň ýatyrylmagy.
+                        Birža söwdalaşyklarynda baglanyşylan ylalaşyklaryň täsiriniň ýatyrylmagy.
                       </h3>
                     </div>
                     <div className="sub-page-list-item">
@@ -145,7 +145,8 @@ export const Normative = ({ lang }) => {
                     <div className="sub-page-list-item">
                       <div className="sub-page-list-num">6</div>
                       <h3 className="sub-page-list-item-text">
-                        Birža söwdasyna gatnaşyjylar tarapyndan edilen düzgün bozmalara garamak.
+                        Birža söwdasyna gatnaşyjylar tarapyndan ýol berlen düzgün bozulmalaryna
+                        garamak.
                       </h3>
                     </div>
                   </div>

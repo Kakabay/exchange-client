@@ -203,11 +203,11 @@ const Trade = ({ lang }) => {
               <div className="sub-page-content-wrapper">
                 <div className="sub-page-text-wrapper">
                   <p>
-                    “Haryt-çig mal biržalary barada” Türkmenisyanyň Kanunyna laýyklykda, alyş-çalyş
-                    söwdasyna gatnaşyjylary dellalçylyk ýerini satyn almak ýa-da alyş-çalyş
-                    dellallary bilen hyzmat şertnamasyny baglaşyp, ähli eýeçilik görnüşindäki
-                    kärhanalar we guramalar, Türkmenistanyň ýa-da beýleki döwletleriň raýatlary
-                    bolup bilerler.
+                    Türkmenistanyň “Haryt-çig mal biržalary baradaky” Kanunyna laýyklykda,
+                    eýeçiligiň ähli görnüşindäki kärhanalar we guramalar, Türkmenistanyň we beýleki
+                    döwletleriň raýatlary dellalçylyk ýerini satyn almak ýa-da alyş-çalyş dellallary
+                    bilen hyzmat şertnamasyny baglaşmak arkaly alyş-çalyş söwdasyna gatnaşyp
+                    bilerler.
                   </p>
                 </div>
 
@@ -231,7 +231,7 @@ const Trade = ({ lang }) => {
                     <div className="sub-page-list-item">
                       <div className="sub-page-list-num">3</div>
                       <h3 className="sub-page-list-item-text">
-                        Birža amallaryny baglaşdyrylmagynyň meýletin häsiýeti.
+                        Birža amallarynyň meýletin baglaşylmagy.
                       </h3>
                     </div>
                     <div className="sub-page-list-item">
@@ -298,7 +298,7 @@ const Trade = ({ lang }) => {
                       <div className="sub-page-list-num">3</div>
                       <div className="sub-page-list-item-content">
                         <h3 className="sub-page-list-item-text">
-                          GTSBT-yň özara hasaplaşyk bölüminden hasap-faktura almaly we tölegini
+                          TDHÇMB-nyň özara hasaplaşyk bölüminden hasap-faktura almaly we tölegini
                           geçirmeli:
                         </h3>
                         <h3 className="sub-page-list-item-text">
@@ -351,7 +351,7 @@ const Trade = ({ lang }) => {
                     <div className="sub-page-list-item">
                       <div className="sub-page-list-num">4</div>
                       <h3 className="sub-page-list-item-text">
-                        Biržanyň arbitrar komissiýasy toparynyň karary.
+                        Biržanyň Arbitraž Kommissiýasynyň karary esasynda
                       </h3>
                     </div>
                     <div className="sub-page-list-item">

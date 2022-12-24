@@ -56,23 +56,13 @@ const Home = ({ lang, setPostId }) => {
                   </p>
                 </div>
                 <div className="about-link-wrapper">
-                  <Link to={'/'} className="about-link">
+                  <Link href={`https://tmex.gov.tm/${lang}`} className="about-link">
                     <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">Подать документы онлайн</h3>
+                    <h3 className="about-link-text">Посмотреть котировки</h3>
                   </Link>
-                  <Link to={'/'} className="about-link">
+                  <Link to={'/tarif'} className="about-link">
                     <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">Проверить статус подписания контрактов</h3>
-                  </Link>
-                  <Link to={'/'} className="about-link">
-                    <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">Узнать импортные цены можно здесь</h3>
-                  </Link>
-                  <Link to={'/'} className="about-link">
-                    <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">
-                      Просмотреть тарифы и сборы для участников биржы
-                    </h3>
+                    <h3 className="about-link-text">Посмотреть тарифы и сборы</h3>
                   </Link>
                 </div>
               </div>
@@ -94,27 +84,13 @@ const Home = ({ lang, setPostId }) => {
                   </p>
                 </div>
                 <div className="about-link-wrapper">
-                  <Link to={'/'} className="about-link">
+                  <a href={`https://tmex.gov.tm/${lang}`} className="about-link">
                     <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">Resminamalary onlaýn tabşyrmak</h3>
-                  </Link>
-                  <Link to={'/'} className="about-link">
+                    <h3 className="about-link-text">Kotirowkalara geç</h3>
+                  </a>
+                  <Link to={'/tarif'} className="about-link">
                     <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">
-                      Gol çekilen şertnamalaryň ýagdaýlaryny barlamak
-                    </h3>
-                  </Link>
-                  <Link to={'/'} className="about-link">
-                    <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">
-                      Import bahalaryny şu ýerden tapyp bilersiňiz
-                    </h3>
-                  </Link>
-                  <Link to={'/'} className="about-link">
-                    <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">
-                      Biržanyň agzalary üçin nyrhlary we tölegleri görüň
-                    </h3>
+                    <h3 className="about-link-text">Nyrhlar we ýygymlar</h3>
                   </Link>
                 </div>
               </div>
@@ -134,21 +110,13 @@ const Home = ({ lang, setPostId }) => {
                   </p>
                 </div>
                 <div className="about-link-wrapper">
-                  <Link to={'/'} className="about-link">
+                  <a href={`https://tmex.gov.tm/${lang}`} className="about-link">
                     <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">Apply documents online</h3>
-                  </Link>
-                  <Link to={'/'} className="about-link">
+                    <h3 className="about-link-text">View Quotations</h3>
+                  </a>
+                  <Link to={'/tarif'} className="about-link">
                     <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">Check the status of signed contracts</h3>
-                  </Link>
-                  <Link to={'/'} className="about-link">
-                    <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">You can find import prices here</h3>
-                  </Link>
-                  <Link to={'/'} className="about-link">
-                    <img src={arrow} alt="link" className="about-link-text" />
-                    <h3 className="about-link-text">View rates and fees for exchange members</h3>
+                    <h3 className="about-link-text">View tariffs and fees</h3>
                   </Link>
                 </div>
               </div>
