@@ -56,10 +56,10 @@ const Home = ({ lang, setPostId }) => {
                   </p>
                 </div>
                 <div className="about-link-wrapper">
-                  <Link href={`https://tmex.gov.tm/${lang}`} className="about-link">
+                  <a href={`https://tmex.gov.tm/${lang}`} className="about-link">
                     <img src={arrow} alt="link" className="about-link-text" />
                     <h3 className="about-link-text">Посмотреть котировки</h3>
-                  </Link>
+                  </a>
                   <Link to={'/tarif'} className="about-link">
                     <img src={arrow} alt="link" className="about-link-text" />
                     <h3 className="about-link-text">Посмотреть тарифы и сборы</h3>
