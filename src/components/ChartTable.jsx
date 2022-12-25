@@ -60,7 +60,7 @@ const ChartTable = ({ activeRow, setActiveRow, tabIndex, lang }) => {
       <div className="table-bottom">
         {dataTable
           ? dataTable.data.map((tableRow, index) => {
-              return (
+              return index <= 2 ? (
                 <TableRow
                   key={uuidv4()}
                   title={tableRow.title}
@@ -71,7 +71,7 @@ const ChartTable = ({ activeRow, setActiveRow, tabIndex, lang }) => {
                   onClick={() => rowActive(index)}
                   active={activeRow === index ? 'active' : ''}
                 />
-              );
+              ) : null;
             })
           : null}
       </div>
