@@ -1,6 +1,8 @@
 // Modules
 import { useState, useEffect } from 'react';
 import { Api } from '../helpers/api';
+import { v4 as uuidv4 } from 'uuid';
+
 // Components
 import TableRow from './TableRow';
 
@@ -60,7 +62,7 @@ const ChartTable = ({ activeRow, setActiveRow, tabIndex, lang }) => {
           ? dataTable.data.map((tableRow, index) => {
               return (
                 <TableRow
-                  key={tableRow.id}
+                  key={uuidv4()}
                   title={tableRow.title}
                   titleHide={tableRow.title.length > 7 ? 'title-hide' : null}
                   priceChange={tableRow.price_change}

@@ -2,6 +2,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Api } from '../helpers/api';
+import { v4 as uuidv4 } from 'uuid';
 // Components
 import ChartTable from './ChartTable';
 import LineChart from './LineChart';
@@ -43,7 +44,7 @@ const DataChart = ({ lang }) => {
               ? tabData.data.map((tab, index) => {
                   return (
                     <div
-                      key={tab.id}
+                      key={uuidv4()}
                       className={`${tabIndex === tab.id ? 'active' : ''} tab`}
                       onClick={() => {
                         tabDataFetch(tab.id, index);
