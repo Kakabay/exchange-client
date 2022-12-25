@@ -1,20 +1,22 @@
 // Modules
 import { useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+
 // Functions
 import { Api } from '../helpers/api';
 // Components
 import SectionTitle from '../components/SectionTitle';
-import DocumentLink from '../components/DocumentLink';
+import DocumentSection from '../components/DocumentSection';
 
 export const Normative = ({ lang }) => {
-  const [docsData, setDocsData] = useState();
+  const [docsCategoryData, setDocsCategoryData] = useState();
 
   useEffect(() => {
     // Documents fetch
-    const DocumentsApi = new Api(
-      'http://tmex.gov.tm:8765/api/documents',
-      docsData,
-      setDocsData,
+    const DocumentsCategotyApi = new Api(
+      'http://tmex.gov.tm:8765/api/document/categories',
+      docsCategoryData,
+      setDocsCategoryData,
     ).get({ 'X-Localization': lang });
 
     // Scroll to top
@@ -248,19 +250,18 @@ export const Normative = ({ lang }) => {
                 ? 'Documents for download'
                 : null}
             </h2>
-            <div className="documents-wrapper">
-              <div className="documents-links-wrapper">
-                {
-                  docsData
-                    ? docsData.data.map((doc) => {
-                        return doc.page === 'Нормативная база' && doc.title != '-' ? (
-                          <DocumentLink key={doc.id} title={doc.title} link={doc.file} />
-                        ) : null;
-                      })
-                    : '' //loader
-                }
-              </div>
-            </div>
+            {docsCategoryData
+              ? docsCategoryData.data.map((category) => {
+                  return (
+                    <DocumentSection
+                      key={uuidv4()}
+                      id={category.id}
+                      lang={lang}
+                      title={category.title}
+                    />
+                  );
+                })
+              : null}
           </div>
         </div>
       </div>
