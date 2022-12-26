@@ -67,7 +67,6 @@ const LineChart = ({ activeRow, tabIndex }) => {
   };
 
   const options = {
-    // responsive: true,
     maintainAspectRatio: false,
     radius: 5,
     hitRadius: 30,
