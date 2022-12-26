@@ -252,14 +252,14 @@ export const Normative = ({ lang }) => {
             </h2>
             {docsCategoryData
               ? docsCategoryData.data.map((category) => {
-                  return (
+                  return category.title != '-' ? (
                     <DocumentSection
                       key={uuidv4()}
                       id={category.id}
                       lang={lang}
                       title={category.title}
                     />
-                  );
+                  ) : null;
                 })
               : null}
           </div>
