@@ -15,7 +15,7 @@ const Footer = ({ lang }) => {
               lang === 'ru'
                 ? 'Контакты'
                 : lang === 'tm'
-                ? 'Salgymyz'
+                ? 'Habarlaşmak üçin'
                 : lang === 'en'
                 ? 'Contacts'
                 : null
@@ -203,7 +203,7 @@ const Footer = ({ lang }) => {
                   {lang === 'ru'
                     ? 'Контакты'
                     : lang === 'tm'
-                    ? 'Salgymyz'
+                    ? 'Habarlaşmak üçin'
                     : lang === 'en'
                     ? 'Contacts'
                     : null}

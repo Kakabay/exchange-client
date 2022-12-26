@@ -69,7 +69,7 @@ const Header = ({ lang, setLang }) => {
                   <Link to={'/multimedia'}>Multimediýa</Link>
                 </li>
                 <li className="nav-top-list-item">
-                  <Link to={'/contacts'}>Salgymyz</Link>
+                  <Link to={'/contacts'}>Habarlaşmak üçin</Link>
                 </li>
               </ul>
             ) : null}
