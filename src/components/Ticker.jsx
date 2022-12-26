@@ -5,7 +5,7 @@ import { Api } from '../helpers/api';
 // Components
 import TickerBlock from './TickerBlock';
 
-const tickerSpeed = 40;
+const tickerSpeed = 30;
 
 const Ticker = () => {
   // States
