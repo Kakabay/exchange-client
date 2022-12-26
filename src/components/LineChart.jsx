@@ -31,7 +31,7 @@ const LineChart = ({ activeRow, tabIndex }) => {
 
   const data = {
     labels: dataLineChart
-      ? dataLineChart.data[activeRow].all_prices.map((price) => parseDate(price.date))
+      ? dataLineChart.data[activeRow].all_prices.map((price) => parseDate(price.date)).reverse()
       : [''],
 
     datasets: [
