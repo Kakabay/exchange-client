@@ -10,7 +10,7 @@ import NewsPost from '../components/NewsPost';
 import { ReactComponent as Arrow } from '../assets/icons/arrow.svg';
 
 const NewsPage = ({ lang, setPostId, postsData, setPostsData }) => {
-  const [url, setUrl] = useState('http://tmex.gov.tm:8765/api/news');
+  const [url, setUrl] = useState('https://tmex.gov.tm:8765/api/news');
 
   useEffect(() => {
     // News fetch

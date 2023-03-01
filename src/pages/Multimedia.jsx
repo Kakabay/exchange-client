@@ -24,7 +24,7 @@ const Multimedia = ({ lang }) => {
 
   useEffect(() => {
     const MultimediaApi = new Api(
-      'http://tmex.gov.tm:8765/api/media/categories',
+      'https://tmex.gov.tm:8765/api/media/categories',
       multimediaData,
       setMultimediaData,
     ).get({ 'X-Localization': lang });

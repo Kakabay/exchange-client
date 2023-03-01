@@ -16,7 +16,7 @@ const DataChart = ({ lang }) => {
 
   useEffect(() => {
     // Table data fetch
-    const TabData = new Api('http://tmex.gov.tm:8765/api/categories', tabData, setTabData).get({
+    const TabData = new Api('https://tmex.gov.tm:8765/api/categories', tabData, setTabData).get({
       'X-Localization': lang,
     });
   }, [lang]);

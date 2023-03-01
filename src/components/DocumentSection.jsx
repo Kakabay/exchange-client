@@ -10,7 +10,7 @@ const DocumentSection = ({ lang, id, title }) => {
   useEffect(() => {
     // Documents fetch
     const DocumentsFileApi = new Api(
-      `http://tmex.gov.tm:8765/api/documents?category=${id}`,
+      `https://tmex.gov.tm:8765/api/documents?category=${id}`,
       docsFileData,
       setDocsFileData,
     ).get({ 'X-Localization': lang });

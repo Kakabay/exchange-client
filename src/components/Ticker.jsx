@@ -13,7 +13,11 @@ const Ticker = () => {
 
   useEffect(() => {
     // Ticker fetch
-    const DocumentsApi = new Api('http://tmex.gov.tm:8765/api/tradings', tickerData, setTickerData);
+    const DocumentsApi = new Api(
+      'https://tmex.gov.tm:8765/api/tradings',
+      tickerData,
+      setTickerData,
+    );
     DocumentsApi.get();
   }, []);
 

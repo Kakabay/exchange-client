@@ -1,8 +1,8 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { Api } from "../helpers/api";
+import React from 'react';
+import { useState, useEffect } from 'react';
+import { Api } from '../helpers/api';
 // Components
-import GalleryItem from "../components/GalleryItem";
+import GalleryItem from '../components/GalleryItem';
 
 const Gallery = ({ imageTabIndex }) => {
   const [galleryData, setGalleryData] = useState();
@@ -10,9 +10,9 @@ const Gallery = ({ imageTabIndex }) => {
   useEffect(() => {
     if (imageTabIndex) {
       const GalleryApi = new Api(
-        `http://tmex.gov.tm:8765/api/medias/${imageTabIndex}`,
+        `https://tmex.gov.tm:8765/api/medias/${imageTabIndex}`,
         galleryData,
-        setGalleryData
+        setGalleryData,
       ).get();
     }
   }, [imageTabIndex]);

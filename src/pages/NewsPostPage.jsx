@@ -13,9 +13,11 @@ const NewsPostPage = ({ lang, setPostId, postsData, setPostsData }) => {
   const isFirstLoad = useRef(true);
   useEffect(() => {
     if (!postsData) {
-      const NewsPageApi = new Api('http://tmex.gov.tm:8765/api/news', postsData, setPostsData).get({
-        'X-localization': lang,
-      });
+      const NewsPageApi = new Api('https://tmex.gov.tm:8765/api/news', postsData, setPostsData).get(
+        {
+          'X-localization': lang,
+        },
+      );
     }
   }, [postsData]);
 
@@ -24,7 +26,7 @@ const NewsPostPage = ({ lang, setPostId, postsData, setPostsData }) => {
       isFirstLoad.current = false;
       return;
     }
-    const NewsPageApi = new Api('http://tmex.gov.tm:8765/api/news', postsData, setPostsData).get({
+    const NewsPageApi = new Api('https://tmex.gov.tm:8765/api/news', postsData, setPostsData).get({
       'X-localization': lang,
     });
   }, [lang]);

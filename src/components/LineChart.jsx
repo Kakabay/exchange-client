@@ -20,7 +20,7 @@ const LineChart = ({ activeRow, tabIndex }) => {
     // Table data fetch
     if (tabIndex) {
       const LineChartData = new Api(
-        `http://tmex.gov.tm:8765/api/categories/${tabIndex}/tradings`,
+        `https://tmex.gov.tm:8765/api/categories/${tabIndex}/tradings`,
         dataLineChart,
         setDataLineChart,
       ).get();

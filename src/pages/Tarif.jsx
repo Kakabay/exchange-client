@@ -12,7 +12,7 @@ const Tarif = ({ lang }) => {
   const [tarifData, setTarifData] = useState();
 
   useEffect(() => {
-    const TarifApi = new Api('http://tmex.gov.tm:8765/api/tariffs', tarifData, setTarifData).get({
+    const TarifApi = new Api('https://tmex.gov.tm:8765/api/tariffs', tarifData, setTarifData).get({
       'X-Localization': lang,
     });
 

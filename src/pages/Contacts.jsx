@@ -10,7 +10,7 @@ const Contacts = ({ lang }) => {
 
   useEffect(() => {
     const ContactsApi = new Api(
-      'http://tmex.gov.tm:8765/api/contacts',
+      'https://tmex.gov.tm:8765/api/contacts',
       contactsData,
       setContactsData,
     ).get({ 'X-Localization': lang });

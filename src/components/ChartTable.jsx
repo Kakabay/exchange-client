@@ -18,7 +18,7 @@ const ChartTable = ({ activeRow, setActiveRow, tabIndex, lang }) => {
     // Table data fetch
     if (tabIndex) {
       const TableApi = new Api(
-        `http://tmex.gov.tm:8765/api/categories/${tabIndex}/tradings`,
+        `https://tmex.gov.tm:8765/api/categories/${tabIndex}/tradings`,
         // `http://tmex.gov.tm:8765/api/categories/8/tradings`,
         dataTable,
         setDataTable,

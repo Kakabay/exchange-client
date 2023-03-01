@@ -14,7 +14,7 @@ export const Normative = ({ lang }) => {
   useEffect(() => {
     // Documents fetch
     const DocumentsCategotyApi = new Api(
-      'http://tmex.gov.tm:8765/api/document/categories',
+      'https://tmex.gov.tm:8765/api/document/categories',
       docsCategoryData,
       setDocsCategoryData,
     ).get({ 'X-Localization': lang });
